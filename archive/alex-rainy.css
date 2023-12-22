@@ -1,0 +1,57 @@
+@import url('./Alex/alex-core.css');
+:root {
+    --bg-color: hsla(252, 20%, 5%, 1);
+    --bg-80: hsla(252, 20%, 5%, 0.8);
+    --quote-color: hsla(252, 20%, 20%, 1);
+    --quote-80: hsla(252, 20%, 20%, 0.8);
+    --accent-color: hsla(12, 10%, 70%, 1);
+    --text-color: hsl(75, 100%, 95%);
+    --text-80: hsla(75, 100%, 95%, 0.8);
+    --header-color: hsla(200, 35%, 70%, 1);
+    --subheader-color: hsla(220, 25%, 70%, 1);
+    --md-char-color: hsla(200, 100%, 80%, 1);
+    --meta-content-color: hsla(200, 100%, 80%, 1);
+    --primary-color: hsla(10, 88%, 23%, 1);
+    --primary-btn-border-color: var(--header-color);
+    --primary-btn-text-color: hsla(0, 0%, 20%, 1);
+    --window-border: 1px solid hsla(240, 8%, 9%, 1);
+    --active-file-bg-color: var(--accent-color);
+    --active-file-text-color: var(--bg-color);
+    --active-file-border-color: hsla(45, 83%, 16%, 0.2);
+    --active-search-item-bg-color: var(--quote-color);
+    --side-bar-bg-color: var(--quote-color);
+    --item-hover-bg-color: var(--subheader-color);
+    --item-hover-text-color: var(--bg-color);
+    --search-select-text-color: hsla(0, 0%, 20%, 1);
+    --search-select-bg-color: hsla(0, 69%, 36%, 0.7);
+    --select-text-bg-color: hsla(0, 12%, 16%, 0.5);
+    --rawblock-edit-panel-bd: hsla(0, 0%, 81%, 1);
+    --node-fill: hsla(0, 0%, 98%, 1);
+    --node-border: #0000001a;
+    --filter: invert(78%) sepia(25%) saturate(437%) hue-rotate(59deg) brightness(101%) contrast(88%);
+}
+
+
+/* background image -- close comment after this to reactivate
+
+content {
+    background: url(./Alex/wiper.gif);
+    background-size: cover;
+    background-position: right;
+}
+
+#write {
+    backdrop-filter: brightness(75%) blur(10px) saturate(50%);
+}
+
+
+/* dark theme settings */
+
+p,
+table {
+    font-weight: 200;
+}
+
+mark {
+    font-weight: 400;
+}

@@ -1,0 +1,21 @@
+/* if a blockquote has a header or multiple paragraphs it's an aside */
+
+blockquote {
+	&:has(:is(p, h1, h2, h3, h4, h5, h6) + p) {
+		margin: 1em 0;
+		/* border: 2px solid var(--mg, var(--fg, darkgray)); */
+		background: var(--quote-color, lightgray);
+		padding: 1em;
+		font-style: normal;
+		opacity: 1;
+
+		& :is(h1, h2, h3) {
+			margin-block-start: 0;
+			font-size: 1.5rem;
+		}
+
+		& em {
+			font-style: italic;
+		}
+	}
+}

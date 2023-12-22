@@ -1,0 +1,265 @@
+:root {
+  --bg-color: #0f0f0a;
+  --text-color: #baab8c;
+  --header-color: #AA6128;
+  --accent-color: #6d3022;
+  --quote-color: #504930;
+  --md-char-color: #01baef;
+  --meta-content-color: #c4ad3b;
+  --primary-color: #6F1A07;
+  --primary-btn-border-color: var(--header-color);
+  --primary-btn-text-color: #333;
+  --window-border: 1px solid #16161a;
+  --active-file-bg-color: #16161a;
+  --active-file-text-color: var(--header-color);
+  --active-file-border-color: #6F1A07;
+  --active-search-item-bg-color: var(--bg-color);
+  --side-bar-bg-color: #482218;
+  --item-hover-bg-color: var(--header-color);
+  --item-hover-text-color: inherit;
+  --search-select-text-color: #333;
+  --search-select-bg-color: #9e1c1c;
+  --rawblock-edit-panel-bd: #d0d0d0;
+  --node-fill: #fbfbfb;
+  --node-border: #0000001a;
+}
+
+*.in-text-selection,
+::selection {
+    background: #baab8c50;
+    text-shadow: none;
+}
+
+ pre.md-meta-block	{
+   background: #baab8c50;
+ }
+
+html, body {
+  font-size: 16px;
+  font-family: "Artifex CF Light";
+  line-height: 1.8em;
+}
+
+#write {
+  max-width: 60em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--header-color);
+  font-family: "Artifex CF Book";
+  font-weight: normal;
+  line-height: 1.1em;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to right, var(--accent-color) 0%, transparent 66%, transparent 100%);
+  border-image-slice: 1;
+}
+
+blockquote {
+  font-family: "Artifex CF Light";
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0.5em 2.5em;
+  position: relative;
+  background: var(--quote-color);
+  margin: 1.5em 0em;
+}
+
+blockquote p {
+  padding: 0;
+  margin: 0;
+}
+
+blockquote::before {
+  color: var(--accent-color);
+  content: "\201C";
+  font-size: 5em;
+  position: absolute;
+  left: 0px;
+  top: -3px;
+}
+
+blockquote::after {
+  color: var(--accent-color);
+  content: "\201D";
+  font-size: 5em;
+  position: absolute;
+  right: 0px;
+  bottom: -39px;
+}
+
+blockquote blockquote {
+  text-align: right;
+  font-style: italic;
+  font-size: 0.9em;
+  text-decoration: none;
+  color: var(--header-color);
+  background: transparent;
+  margin: 0em;
+  padding: 0em;
+}
+
+blockquote blockquote::before {
+  content: "";
+}
+
+blockquote blockquote p::before {
+    content: "– ";
+    color: var(--header-color);
+}
+
+blockquote blockquote::after {
+  content: "";
+}
+
+code {
+  font-size: .9em;
+  border: 1px solid var(--accent-color);
+  border-radius: .25rem;
+  padding: 0 .125rem;
+}
+
+a {
+  color: var(--header-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  padding: 3px;
+  margin: 0px 50px;
+  border-top: 2px dashed transparent;
+  border-image: linear-gradient(to right, transparent, var(--accent-color), transparent);
+  border-image-slice: 1;
+}
+
+table {
+  padding: 10px;
+}
+
+table thead {
+  border-bottom: 2px solid var(--header-color);
+}
+
+table tr {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+th, td {
+  padding: 5px;
+}
+
+#write ul {
+  list-style-type: disc;
+  color: var(--accent-color);
+  line-height: 1.5em;
+}
+
+#write ol {
+  list-style-type: lower-roman;
+  color: var(--accent-color);
+  line-height: 1.5em;
+}
+
+#write ol > li, #write ul > li {
+  color: var(--accent-color);
+}
+
+#write ol > li > *, #write ul > li > * {
+  color: var(--text-color);
+}
+
+#write .md-task-list-item > input {
+  -webkit-appearance: initial;
+  display: block;
+  position: absolute;
+  border: 1px solid #b4b4b4;
+  border-radius: .25rem;
+  margin-top: .1rem;
+  margin-left: -1.8rem;
+  height: 1.2rem;
+  width: 1.2rem;
+  transition: background 0.3s;
+}
+
+#write .md-task-list-item > input[checked]::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  height: 60%;
+  width: 2px;
+  transform: rotate(40deg);
+  background: #333;
+}
+
+#write .md-task-list-item > input[checked]::after {
+  content: '';
+  position: absolute;
+  top: 46%;
+  left: 25%;
+  height: 30%;
+  width: 2px;
+  transform: rotate(-40deg);
+  background: #333;
+}
+
+#write .md-task-list-item.task-list-done > p {
+  opacity: .5;
+  text-decoration: line-through;
+}
+
+/*
+
+    Name:       Bespin
+    Author:     Mozilla / Jan T. Sott
+
+    CodeMirror template by Jan T. Sott (https://github.com/idleberg/base16-codemirror)
+    Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+
+*/
+
+.cm-s-inner.CodeMirror {background: #28211c; color: #9d9b97;}
+.cm-s-inner div.CodeMirror-selected {background: #36312e !important;}
+.cm-s-inner .CodeMirror-gutters {background: #28211c; border-right: 0px;}
+.cm-s-inner .CodeMirror-linenumber {color: #666666;}
+.cm-s-inner .CodeMirror-cursor {border-left: 1px solid #797977 !important;}
+
+.cm-s-inner span.cm-comment {color: #937121;}
+.cm-s-inner span.cm-atom {color: #9b859d;}
+.cm-s-inner span.cm-number {color: #9b859d;}
+
+.cm-s-inner span.cm-property, .cm-s-inner span.cm-attribute {color: #54be0d;}
+.cm-s-inner span.cm-keyword {color: #cf6a4c;}
+.cm-s-inner span.cm-string {color: #f9ee98;}
+
+.cm-s-inner span.cm-variable {color: #54be0d;}
+.cm-s-inner span.cm-variable-2 {color: #5ea6ea;}
+.cm-s-inner span.cm-def {color: #cf7d34;}
+.cm-s-inner span.cm-error {background: #cf6a4c; color: #797977;}
+.cm-s-inner span.cm-bracket {color: #9d9b97;}
+.cm-s-inner span.cm-tag {color: #cf6a4c;}
+.cm-s-inner span.cm-link {color: #9b859d;}
+
+.cm-s-inner .CodeMirror-matchingbracket { text-decoration: underline; color: white !important;}
+.cm-s-inner .CodeMirror-activeline-background { background: #404040; }
+
+table {
+  page-break-inside: avoid;
+}
+
+h1 {
+  page-break-before: always;
+}

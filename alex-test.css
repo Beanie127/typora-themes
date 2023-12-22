@@ -1,0 +1,458 @@
+@import url("./Alex/alex-core.css");
+
+:root {
+	--bg-color: hsl(38 45% 95%);
+	--quote-color: hsl(38 45% 85%);
+	--quote-80: hsl(38 85% 90%);
+	--accent-color: var(--fg);
+	--text-color: hsl(286 4% 16%);
+	--text-80: hsl(286 4% 16% / 0.8);
+	--hl: hsl(286 42% 28%);
+	--hl-op5: hsl(286 42% 28% / 0.5);
+	--fg: hsl(349 52% 44% 1);
+	--mg: var(--fg);
+	--md-char-color: hsl(0 95% 20% 1);
+	--meta-content-color: hsl(0 95% 20% 1);
+	--primary-color: hsl(10, 88% 23% 1);
+	--primary-btn-border-color: var(--hl);
+	--primary-btn-text-color: hsl(0 0% 20%);
+	--window-border: 1px solid hsl(240 8% 9%);
+	--active-file-border-color: hsl(45 83% 16% / 0.2);
+	--search-select-text-color: hsl(0 0% 20%);
+	--search-select-bg-color: hsl(0 69% 36% / 0.7);
+	--select-text-bg-color: hsl(60 33% 1% / 0.5);
+	--rawblock-edit-panel-bd: hsl(0 0% 81%);
+	--node-fill: hsl(0, 0% 98% 1);
+	--node-border: #0000001a;
+	--filter: invert(11%) sepia(66%) saturate(5190%) hue-rotate(4deg)
+		brightness(92%) contrast(122%);
+}
+
+/* Floating h2 */
+
+/* #write:has(h2) {
+	transform: translateX(6rem);
+	& h1 {
+		transform: translateX(-3rem);
+	}
+} */
+
+#write h2 {
+	position: relative;
+	float: left;
+	margin-block-end: 0;
+	transform: translate(calc(-100% - 1rem), -1em);
+	margin-inline-end: -15rem;
+	inline-size: 15rem;
+	/* text-align: right; */
+	line-height: 1;
+	clear: both;
+	text-wrap: balance;
+	&::before {
+		content: "";
+		display: block;
+		margin-block-start: -1rem;
+		padding-block-end: 1rem;
+		inline-size: 31rem;
+		block-size: 1px;
+		border-block-start: 1px solid var(--hl);
+		opacity: 0.25;
+	}
+}
+
+#write *:not(h1):has(+ h2) {
+	margin-block-end: 3rem;
+	/* &::after {
+		content: "";
+		display: block;
+		padding-block-start: 2rem;
+		margin-inline-start: -16rem;
+		inline-size: 31rem;
+		block-size: 1px;
+		border-block-end: 1px solid var(--hl);
+		opacity: 0.25;
+	} */
+}
+
+#write :is(ul, ol):has(+ h2)::after {
+	margin-inline-start: -17.75rem;
+}
+
+#write h1 + h2 {
+	transform: translate(calc(-100% - 1rem), 0);
+}
+
+#write h1 {
+	padding: 1rem 1rem 2rem;
+	margin: 2em 0;
+}
+
+/**** header gradient fill *
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: transparent;
+	-webkit-text-fill-color: transparent;
+	background: linear-gradient(to right in oklch, var(--hl), var(--fg));
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+
+:is(h1, h2, h3, h4, h5, h6) strong {
+	opacity: revert;
+	background: linear-gradient(to right in oklch, var(--hl), var(--fg));
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+
+/**** rainbow markers ****/
+
+#write li::marker {
+	font-weight: bold;
+}
+#write li:nth-of-type(7n + 1)::marker {
+	color: hsl(0 40% 50%);
+}
+#write li:nth-of-type(7n + 2)::marker {
+	color: hsl(30 50% 50%);
+}
+#write li:nth-of-type(7n + 3)::marker {
+	color: hsl(60 50% 50%);
+}
+#write li:nth-of-type(7n + 4)::marker {
+	color: hsl(120 30% 50%);
+}
+#write li:nth-of-type(7n + 5)::marker {
+	color: hsl(180 40% 40%);
+}
+#write li:nth-of-type(7n + 6)::marker {
+	color: hsl(240 30% 50%);
+}
+#write li:nth-of-type(7n)::marker {
+	color: hsl(300 30% 50%);
+}
+
+/**** bubble-y tables ****
+
+table {
+    margin: 2em 1em;
+    padding: 0;
+    font-size: 0.9rem;
+    border: 1px solid var(--hl);
+    border-radius: 1rem;
+    border-collapse: separate;
+    overflow: hidden;
+}
+
+:is(td, th):not(:last-of-type) {
+    border-right: 1px solid lightgray;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+tr:nth-of-type(2n) {
+    background: var(--quote-80, var(--quote-color));
+}
+
+thead {
+    color: var(--bg-color);
+    background: var(--hl-op5, var(--hl));
+}
+ 
+/**** line before lists 
+
+#write ul {
+   line-height: inherit;
+   padding-left: 1em;
+}
+
+#write ul li {
+   list-style: none;
+   line-height: inherit;
+   margin-block: 0;
+   padding-block: 0;
+}
+
+#write ul::before {
+   content: "";
+   display: inline-block;
+   width: 1px;
+   background: var(--mg);
+   position: absolute;
+   left: 0;
+   height: 100%;
+   opacity: 0.2;
+} 
+
+/**** pencil superscripts 
+
+sup {
+    display: inline-block;
+    position: absolute;
+    will-change: transform;
+    transform: rotate(-10deg) translate(-5px, 0.5em);
+    font-family: "Noted";
+    
+
+ }
+
+ sup::before {
+    content: '^';
+    display: inline-block;
+    color: red;
+    position: relative;
+    will-change: transform;
+    transform: translateY(1.25em) scale(150%);
+ }
+
+ /**** uncertainty strikethrough design
+
+
+del {
+    text-decoration: line-through wavy red 1px;
+}
+
+/**** ordered list numbering for legal docs ****
+
+ol {
+    list-style-type: none !important;
+    counter-reset: list;
+}
+
+ol li {
+    counter-increment: list;
+}
+
+ol li::marker {
+    content: counters(list, ".") ".  ";
+    display:inline;
+}
+
+ /**** checklists in columns ****
+
+ ul:has(.md-task-list-item) {
+     column-width: 30ch;
+     column-gap: 5ch;
+     padding-block: 0;
+ }
+
+ /**** headers ****
+
+ /* header fleurons 
+
+ #write h1::after {
+     display: block;
+     margin: 0;
+     color: var(--hl);
+     opacity: 0.2;
+     content: url(./Alex/divider.svg);
+     height: 40px;
+     aspect-ratio: 1;
+     margin-inline: auto;
+ }
+
+
+
+ /* initial letter accent 
+
+#write :is(
+    h1, h2, h3,
+    :is(h1, h2, div)+p,
+    blockquote>*:first-of-type)::first-letter  {
+    font-family: 'Grenze Gotisch';
+    text-transform: uppercase;
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+/* header fleurons
+
+#write h1::before {
+    position: absolute;
+    left: -2rem;
+    top:0.5rem;
+    font-size: 1.5em;
+    line-height: 1;
+    font-weight: normal;
+    content: "🙟";
+    margin-right: 1em;
+    color: var(--hl);
+    opacity: 0.5;
+}
+
+#write h1::after {
+    position: absolute;
+    right: -2rem;
+    top: 0.5rem;
+    font-size: 1.5em;
+    line-height: 1;
+    font-weight: normal;
+    content: "🙝";
+    margin-left: 1em;
+    color: var(--hl);
+    opacity: 0.5;
+}
+
+
+/**** list tree
+
+#write ul::before,
+#write ul li ul::before {
+    content: " ";
+    display: inline-block;
+    width: 1px;
+    height: calc(100% - 1.8em);
+    background: var(--accent-1, var(--hl));
+    position: absolute;
+    left: 0;
+    margin-block-start: calc(0.9em + 1px);
+    opacity: 0.5;
+}
+
+#write ul li::before,
+#write ul li ul li::before {
+    content: "— ";
+    color: var(--accent-1, var(--hl));
+    position: absolute;
+    left: -1.8em;
+    opacity: 0.5;
+}
+
+/** list tree no bullets option 
+ #write ul, #write ul>li>ul {
+ list-style-type: none;
+}
+
+*/
+
+/**** background image
+
+
+#write {
+    backdrop-filter: blur(0px) brightness(105%);
+}
+
+content {
+    background: url('Alex/texture.png');
+}
+
+
+
+/**** first letter styling option 1
+
+:is(h1, h2, h3, h3, h4, h5, h6)::first-letter {
+    background: radial-gradient(circle at top left, hsl(16, 83% 40%), hsl(286, 52% 28%) 66%);
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+/** first letter styling option 2
+:is(h1,
+h2,
+h3,
+h3,
+h4,
+h5,
+h6)::first-letter {
+    color: var(--fg);
+}
+
+/**** slowly lightening headers ****
+
+h2 {opacity:0.9}
+h3 {opacity:0.8}
+h4 {opacity:0.7}
+h5 {opacity:0.6}
+h6 {opacity:0.5}
+
+/**** slowly lightening headers (overly complex version
+
+h1 {
+    --hl-l: 50%;
+}
+
+h2, h3 {
+    --hl-l: 70%;
+}
+
+h4, h5, h6 {
+    --hl-l: 90%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: hsl(var(--hl-h), var(--hl-s), var(--hl-l));
+}
+
+/**** dark theme settings 
+
+p,
+table {
+    font-weight: 200;
+}
+
+mark {
+    font-weight: 400;
+}
+
+
+/**** cycling bullets
+
+#write li:nth-of-type(4n) {
+    list-style-type: "♠  ";
+}
+
+#write li:nth-of-type(4n+1) {
+    list-style-type: "♣  ";
+}
+
+#write li:nth-of-type(4n+2) {
+    list-style-type: "♦  ";
+}
+
+#write li:nth-of-type(4n+3) {
+    list-style-type: "♥  ";
+}
+
+
+/**** alt hyperlink styles 
+
+#write a {
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+
+#write a::before {
+    background-color: var(--hl);
+    background-position: bottom;
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: translateY(2px) scaleY(0.2);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    z-index: -1;
+    opacity: 0.5;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+#write a:hover::before {
+    transform: translateY(2px) scaleY(1.2);
+    transform-origin: bottom;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+*/

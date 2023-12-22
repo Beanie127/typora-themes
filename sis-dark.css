@@ -1,0 +1,59 @@
+@import url('./sis/sis-core.css');
+:root {
+    --bg-color: hsla(210, 60%, 0%, 1);
+    --bg-2: hsla(210, 20%, 5%, 1);
+    --text-color: hsla(43, 37%, 96%, 1);
+    --accent-1: hsla(195, 57%, 45%, 1);
+    --accent-2: hsla(216, 55%, 29%, 1);
+    --grad: linear-gradient(120deg, var(--accent-1), var(--accent-2));
+    --quote: linear-gradient(135deg, hsla(195, 57%, 45%, 0.3) 0%, hsla(216, 55%, 29%, 0.3) 100%);
+    --md-char-color: hsl(0, 100%, 60%);
+    --meta-content-color: var(--md-char-color);
+    --primary-color: hsl(10, 90%, 25%);
+    --primary-btn-border-color: var(--header-color);
+    --primary-btn-text-color: hsl(0, 0%, 20%);
+    --window-border: 1px solid hsl(240, 8%, 9%);
+    --active-file-bg-color: var(--bg-2);
+    --active-file-text-color: var(--text-color);
+    --active-file-border-color: var(--accent-2);
+    --active-search-item-bg-color: var(--bg-grad);
+    --side-bar-bg-color: var(--bg-2);
+    --item-hover-bg-color: var(--bg-color);
+    --item-hover-text-color: (--text-color);
+    --search-select-text-color: #333;
+    --search-select-bg-color: hsla(0, 70%, 36%, 0.7);
+    --select-text-bg-color: hsla(60, 40%, 2%, 0.5);
+    --rawblock-edit-panel-bd: hsl(0, 0%, 82%);
+    --node-fill: hsl(0, 0%, 98%);
+    --node-border: #0000001a;
+    --mermaid-theme: forest;
+    --mermaid-font-family: sans-serif;
+}
+
+content {
+    background: url('./sis/background-min.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+#write {
+    backdrop-filter: brightness(30%) blur(4px);
+}
+
+body {
+    font-weight: 200;
+}
+
+html::after {
+    filter: invert(100%);
+}
+
+#write ol > li > *,
+#write ul > li > * {
+    font-weight: 200;
+}
+
+hr {
+    filter: invert(100%);
+}

@@ -1,0 +1,332 @@
+:root {
+    --active-file-bg-color: #f0ede6;
+    --side-bar-bg-color: #f0ede6;
+    --text-color: #4A412A;
+    --meta-content-color: #a19a8a;
+}
+
+/*forked from https://github.com/chloerei/scribble*/
+
+#write {
+    --bg-color: #f0ede6;
+}
+
+#write div ,
+#write p {
+    width: auto;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    background: #f0ede6;
+    font-family: "Artifex CF";
+    line-height: 18px;
+    text-align: justify;
+    padding: 0;
+    margin: 0;
+}
+
+#footer-word-count-info {
+    background: var(--bg-color);
+}
+
+header,
+.dropmenu {
+    --text-color: #4A412A;
+}
+
+header {
+    color: #333;
+}
+
+#typora-sidebar {
+    font-size: 14px;
+    font: "Artifex CF Extra Light"
+}
+
+.file-list-item {
+    border: 0;
+}
+
+.file-list-item:hover,
+.file-tree-node[data-is-directory='false']:hover>.file-node-background {
+    transition: background-color 0.6s ease;
+    background: var(--active-file-bg-color);
+}
+
+.file-node-content {
+    cursor: default;
+}
+
+.file-list-item-summary {
+    height: 34px;
+ }
+
+ .show-folder-name .file-list-item {
+    padding-top: 16px;
+    padding-bottom: 24px;
+}
+
+.file-list-item {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.file-list-item-file-name {
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+#sidebar-files-menu,
+#ty-sidebar-footer {
+    background: var(--bg-color);
+}
+
+body,
+html {
+    background-color: #f0ede6;
+    background-repeat: repeat;
+}
+
+#write {
+    width: 100%;
+    max-width: 768px;
+    background: #f0ede6;
+    margin: 40px auto 20px;
+    border-radius: 7px;
+    border: 1px solid #eee;
+    min-height: calc(100vh - 6em);
+    margin-bottom: 120px;
+    padding: 60px;
+    line-height: 1.5em;
+}
+
+
+@media screen and (max-width: 820px) {
+    body,
+    html {
+        --side-bar-bg-color: #f0ede6;
+        background: #f0ede6;
+    }
+
+    #write {
+        border: none;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    body.pin-outline {
+        --side-bar-bg-color: #f0ede6;
+        background: #f0ede6;
+    }
+
+    body.pin-outline #write{ 
+        border: none;
+        margin-top: 0;
+    }
+}
+
+.typora-node #write {
+  min-height: calc(100% - 6em);
+}
+
+h1 {
+    text-align: center;
+    line-height: 2em;
+    margin-bottom: 40px;
+}
+
+h2, h3, h4, h5 {
+    margin:1.5em 0 1em; }
+
+ul, ol {
+    padding: 0 0 0 20px;
+}
+
+blockquote {
+    padding: 0 1em;
+    margin: 14px 0;
+    border-left: 3px solid #a19a8a;
+    color: #a19a8a;
+    font-style: italic;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid #a19a8a;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+
+ #write .md-toc {
+    margin: 2em -60px;
+    border-bottom: 1px solid #a19a8a;
+    border-top: 1px solid #a19a8a;
+    width: calc(100% + 120px);
+    border-radius: 0;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+#write>.md-toc:first-child {
+    margin-top: 0;
+    border-top: 0;
+}
+
+#write>.md-meta-block:first-child {
+    margin: 2em -60px;
+    margin-top: -60px;
+    width: calc(100% + 120px);
+    border-bottom: 1px solid #a19a8a;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background: #f0ede6;
+    font-size: 14px;
+    border-radius: 0;
+    color: var(--text-color);
+
+    /*margin-top: -24px;
+    margin-bottom: 64px;
+    padding: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 14px;*/
+}
+
+.md-toc:focus .md-toc-content {
+    border: none;
+    border-color: inherit;
+    margin: auto;
+    margin-top: auto;
+    margin: 20px 0px;
+}
+
+.md-toc-content {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#write div.md-toc-tooltip {
+    left: 0;
+    padding-left: 60px;
+    padding-right: 20px;
+    top: -24px;
+    border-top: 1px dotted #a19a8a;
+}
+
+pre[mdtype] {
+    word-wrap: break-word;
+    background: #f8f8f8;
+    padding: 1em;
+    border-radius: 5px;
+    width: 100%;
+    line-height: 1.2em;
+}
+
+code {
+    background: #f8f8f8;
+    padding: 0.05rem;
+    font-size: 0.9rem;
+    border-radius: 3px;
+    color: #009688;
+    color: #8a0004;;
+}
+
+p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+blockquote >:first-child {
+    margin-top: 1em;
+}
+
+blockquote >:last-child {
+    margin-bottom: inherit;
+}
+
+.md-fences {
+    font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #13694b;
+  line-height: 1.4em;
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s; 
+}
+
+
+#write .code-tooltip {
+    width: auto;
+}
+
+#write [cid]>table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #CCCACC;
+}
+
+#write table th {
+    padding:10px 15px;
+    border-right:1px solid #CCCACC;
+    background:#E9E7E9;
+    text-shadow: 1px 1px 1px #f3f3f3;
+    font-weight: inherit;
+}
+
+#write table [cid]>td{
+    padding:10px;
+    border-right:1px solid #CCCACC;
+    border-top:1px solid #CCCACC;
+}
+
+.cm-s-typora-default .cm-header, .cm-s-typora-default .cm-property {
+    color: #4A412A;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor{
+    border-left: 3px solid #4A412A;
+}
+
+.outline-content li, .outline-content ul {
+    line-height: 1.4rem;
+}
+
+.dropdown-menu {
+    background-color:  #f9f9f9;;
+}
+
+.cm-s-inner .cm-header, .cm-s-inner.cm-header {color: #566ada;}
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color:#75787b; }
+.cm-s-inner .cm-keyword, .cm-s-inner .cm-property, .cm-s-inner.cm-keyword, .cm-s-inner.cm-property { color:#1d75b3; }
+.cm-s-inner .cm-atom,.cm-s-inner .cm-number, .cm-s-inner.cm-atom,.cm-s-inner.cm-number { color:#75438a; }
+.cm-s-inner .cm-node,.cm-s-inner .cm-tag, .cm-s-inner.cm-node,.cm-s-inner.cm-tag { color:#9c3328; }
+.cm-s-inner .cm-string, .cm-s-inner.cm-string { color:#b35e14; }
+.cm-s-inner .cm-variable, .cm-s-inner .cm-qualifier, .cm-s-inner.cm-variable, .cm-s-inner.cm-qualifier { color:#047d65; }
+
+.file-node-open-state, .file-node-icon {
+    color: #9E9E9E;
+}
+
+.code-tooltip.md-hover-tip {
+    background: #000;
+}

@@ -1,0 +1,75 @@
+@import url("./Alex/alex-core.css");
+
+:root {
+	--bg-color: hsl(0, 0%, 100%);
+	--quote-color: hsl(208, 40%, 97%);
+	--text-color: hsl(0, 0%, 0%);
+	--text-80: hsla(0, 100%, 0%, 0.8);
+	--hl: hsl(0, 40%, 20%);
+	--fg: hsl(0, 0%, 0%);
+	--mg: hsl(0, 0%, 20%);
+	--md-char-color: hsl(0, 100%, 15%);
+	--meta-content-color: hsl(0, 100%, 15%);
+	--primary-color: hsl(10, 85%, 20%);
+	--primary-btn-border-color: var(--hl);
+	--primary-btn-text-color: hsl(0, 0%, 20%);
+	--window-border: 1px solid hsl(240, 8%, 9%);
+	--active-file-bg-color: hsl(240, 8%, 9%);
+	--active-file-text-color: var(--bg-color);
+	--active-file-border-color: hsla(45, 83%, 16%, 0.2);
+	--active-search-item-bg-color: var(--bg-color);
+	--side-bar-bg-color: var(--quote-color);
+	--item-hover-bg-color: var(--fg);
+	--item-hover-text-color: inherit;
+	--search-select-text-color: hsl(0, 0%, 20%);
+	--search-select-bg-color: hsla(0, 69%, 36%, 0.7);
+	--select-text-bg-color: hsla(60, 33%, 1%, 0.5);
+	--rawblock-edit-panel-bd: hsl(0, 0%, 81%);
+	--node-fill: hsl(0, 0%, 98%);
+	--node-border: #0000001a;
+}
+
+/* font settings */
+
+html,
+body {
+	font-size: 12px;
+}
+
+#write {
+	padding-bottom: 1em;
+	max-width: 75em;
+	min-height: 1em;
+}
+
+#write::after {
+	display: none;
+}
+
+/* header font settings */
+
+/* #write :is(h1, h2, h3, h4, h5, h6) {
+    font-family: "Glacial Indifference";
+} */
+
+#write h1 {
+	border-block-end: 1px solid var(--hl);
+	padding: 2rem;
+	margin: 1em 0;
+}
+
+#write a {
+	text-decoration: underline;
+	text-decoration-color: var(--text-color);
+}
+
+#write a::after,
+#write a::before {
+	content: none;
+}
+
+/* bullet adjustment */
+
+#write ul li ul::before {
+	display: none;
+}

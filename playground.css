@@ -1,0 +1,115 @@
+:root {
+    --side-bar-bg-color: hsl(180 25% 10%);
+    --text-color: hsl(160 25% 90%);
+    --bg-color: hsl(180 25% 5%);
+    --active-file-bg-color: hsl(180 25% 25%);
+    --active-file-border-color: hsl(180 25% 25%);
+}
+
+html {
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 1.25em;
+
+}
+
+#write {
+    margin: auto;
+    max-width: 75ch;
+    padding: 3em 1em;
+    line-height: 1.75;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 2rem 0 0.5rem;
+    color: hsl(180 25% 60%);
+}
+
+:is(h1, h2, h3, h4, h5, h6)::before {
+    color: hsl(180 25% 25%); 
+}
+
+h1::before {
+    content: ". ";
+}
+
+h2::before {
+    content: ".. ";
+}
+
+h3::before {
+    content: "... ";
+}
+
+p,
+:is(ul, ol):not(> ul, > ol) {
+    margin-bottom: 2rem;
+}
+
+blockquote {
+    padding-inline-start: 1em;
+    border-inline-start: 2px solid darkslategray;
+}
+
+hr {
+    margin-block:2rem;
+    width:80%;
+    margin-inline: auto;
+    border: none;
+    border-block-end: 2px solid darkslategray;
+}
+
+a {
+    color: lightslategray;
+}
+
+th,
+td {
+    padding: 0px 3px;
+}
+
+th {
+    border: 1px solid darkslategray;
+}
+
+td {
+    border: 1px solid darkslategray;
+}
+
+/* subtitle (legacy) */
+
+:is(h1,
+    h4)+h4 {
+    text-align: center;
+    color: darkslategray;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    padding: 0;
+    font-style: italic;
+}
+
+
+/* subheading */
+
+#write :is(h1, h2) strong {
+    display: block;
+    text-transform: uppercase;
+    font-size: 60%;
+    opacity: 0.75;
+    font-weight: inherit;
+}
+
+hr,
+* + h1, * + h2 {
+    break-before: always;
+}
+
+table,
+tr {
+    break-inside: avoid;
+}

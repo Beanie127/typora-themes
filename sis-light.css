@@ -1,0 +1,49 @@
+@import url('sis/sis-core.css');
+:root {
+    --bg-color: hsla(43, 37%, 96%, 1);
+    --bg-2: var(--bg-color);
+    --text-color: hsla(210, 20%, 5%, 1);
+    --accent-1: hsla(195, 57%, 45%, 1);
+    --accent-2: hsla(216, 55%, 29%, 1);
+    --grad: linear-gradient(120deg, var(--accent-2), var(--accent-1));
+    --quote: linear-gradient(135deg, hsla(216, 55%, 29%, 0.3) 0%, hsla(195, 57%, 45%, 0.3) 100%);
+    --md-char-color: hsl(0, 100%, 35%);
+    --meta-content-color: hsl(0, 100%, 60%);
+    --primary-color: hsl(10, 90%, 25%);
+    --primary-btn-border-color: var(--header-color);
+    --primary-btn-text-color: hsl(0, 0%, 20%);
+    --window-border: 1px solid hsl(240, 8%, 9%);
+    --active-file-bg-color: var(--bg-color);
+    --active-file-text-color: var(--accent-2);
+    --active-file-border-color: var(--accent-2);
+    --active-search-item-bg-color: var(--bg-2);
+    --side-bar-bg-color: var(--bg-2);
+    --item-hover-bg-color: var(--bg-color);
+    --item-hover-text-color: (--text-color);
+    --search-select-text-color: #333;
+    --search-select-bg-color: hsla(0, 70%, 36%, 0.7);
+    --select-text-bg-color: hsla(60, 40%, 2%, 0.5);
+    --rawblock-edit-panel-bd: hsl(0, 0%, 82%);
+    --node-fill: hsl(0, 0%, 98%);
+    --node-border: #0000001a;
+    --mermaid-theme: forest;
+    --mermaid-font-family: "Inter";
+}
+
+/*content {
+    background: url('./sis/bg-light.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;*/
+
+#write {
+    background: hsla(43, 37%, 96%, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+/*
+h1 {
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+*/

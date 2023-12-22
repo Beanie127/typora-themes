@@ -1,0 +1,125 @@
+@import url('./plugins/subtitles.css');
+
+@font-face {
+    font-family: "Bellefair";
+    src: url(/heartbreaker/fonts/Bellefair-Regular.otf);
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url(/heartbreaker/fonts/Gilroy-Light[1].otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url(/heartbreaker/fonts/Gilroy-ExtraBold[1].otf);
+    font-weight: bold;
+}
+
+:root {
+    --side-bar-bg-color: oldlace;
+}
+
+html {
+    font-family: sans-serif;
+    font-size: 150%;
+    background: whitesmoke;
+    color: black;
+}
+
+#write {
+    margin: auto;
+    max-width: 75ch;
+    min-height: calc(100% - 4rem);
+    padding-block-start: 3rem;
+    padding-inline: 1rem;
+    padding-block-end: 33vh;
+    font-family: "Bellefair", serif;
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    transform: scale(75%);
+    transform-origin: bottom left;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+h3 {
+    font-weight:normal;
+    font-style: italic;
+}
+
+h4 {
+    font-weight:normal;
+    font-variant: small-caps;
+}
+
+#write :is(h1, h2) strong {
+    display: block;
+    text-transform: uppercase;
+    font-size: 60%;
+    opacity: 0.33;
+}
+
+
+a {
+    color: hsl(130 40% 40%);
+}
+
+u {
+    text-decoration: none;
+    font-variant: small-caps;
+    font-size: 1.15em;
+    line-height: 1.25rem;
+}
+
+blockquote {
+    border: thin solid gainsboro;
+    padding: 1em;
+    background: hsl(0 0% 90% / 0.2);
+    position:relative;
+}
+
+blockquote blockquote {
+    border:0;
+    background:0;
+    padding:0;
+}
+
+blockquote:not(blockquote > blockquote)::before {
+    content: "\“";
+    font-size: 16rem;
+    position:absolute;
+    left:-1.2rem;
+    top:-6.8rem;
+    opacity: 0.05;
+}
+
+#write table {
+    font-family: "Gilroy", sans-serif;
+    font-size: 0.9rem;
+    break-inside: avoid;
+}
+
+th,
+td {
+    border: 1px solid gainsboro;
+    padding: 0px 3px;
+}
+
+hr {
+    margin-block: 3rem;
+    margin-inline: auto;
+    border: 0;
+    border-block-start: thin solid gainsboro;
+    width: 80%;
+}

@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+:root {
+    --bg-color: hsl(20, 10%, 5%);
+    --quote-color: hsl(20, 10%, 15%);
+    --select-color: hsl(20, 60%, 20%);
+    --accent-color: hsl(20, 60%, 70%);
+    --text-color: hsl(20, 95%, 95%);
+    --text-80: hsla(20, 95%, 95%, 0.8);
+    --header-color: hsl(0, 40%, 70%);
+    --subheader-color: hsl(50, 60%, 70%);
+    --md-char-color: hsl(200, 60%, 70%);
+    --meta-content-color: hsl(200, 60%, 70%);
+    --primary-color: hsl(10, 88%, 23%);
+    --primary-btn-border-color: var(--header-color);
+    --primary-btn-text-color: hsl(0, 0%, 20%);
+    --window-border: 1px solid hsl(20, 10%, 10%);
+    --active-file-bg-color: var(--accent-color);
+    --active-file-text-color: var(--bg-color);
+    --active-file-border-color: hsla(45, 83%, 16%, 0.2);
+    --active-search-item-bg-color: var(--quote-color);
+    --side-bar-bg-color: var(--quote-color);
+    --item-hover-bg-color: var(--subheader-color);
+    --item-hover-text-color: var(--bg-color);
+    --search-select-text-color: hsl(0, 0%, 20%);
+    --search-select-bg-color: hsla(0, 69%, 36%, 0.7);
+    --select-text-bg-color: hsla(0, 12%, 16%, 0.5);
+    --rawblock-edit-panel-bd: hsl(0, 0%, 81%);
+    --node-fill: hsl(0, 0%, 98%);
+    --node-border: #0000001a;
+    --filter: invert(78%) sepia(25%) saturate(437%) hue-rotate(59deg) brightness(101%) contrast(88%);
+}
+
+
+/* workspace */
+
+#write {
+    margin-top: 24px;
+    background-color: var(--bg-color);
+    margin-bottom: 24px;
+    padding-bottom: 30%;
+    max-width: 65em;
+    min-height: calc (100% - 48px);
+}
+
+::selection {
+    background: var(--select-color);
+}
+
+pre.md-meta-block,
+sup.md-footnote {
+    background: var(--quote-color);
+    color: var(--header-color);
+}
+
+
+/* font settings */
+
+html,
+body {
+    font-size: 14px;
+    font-family: "Fira Sans";
+    line-height: 1.8em;
+    --monospace: "Tabular Variable";
+    font-variant-numeric: lining-nums tabular-nums slashed-zero;
+}
+
+p,
+table {
+    font-weight: 300;
+}
+
+
+/* bold */
+
+p strong {
+    font-weight: 700;
+}
+
+mark {
+    background: var(--text-color);
+    color: var(--bg-color);
+    border-radius: .25rem;
+    padding: 0 .25rem;
+    font-weight: 500;
+}
+
+
+/* headers and subheaders */
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+    font-family: "Barlow Semi Condensed";
+    font-weight: 400;
+    color: var(--subheader-color);
+}
+
+#write h1 {
+    color: var(--header-color);
+    font-weight: 700;
+    border-bottom: 1px solid var(--accent-color);
+    padding: 0.3em 1em;
+    margin: 0.4em 0 0.2em;
+    font-stretch: semi-expanded;
+    display: inline-block;
+}
+
+#write h2 {
+    font-weight: 600;
+    font-stretch: semi-expanded;
+}
+
+#write h3,
+#write h5 {
+    font-style: italic;
+}
+
+#write h6 {
+    text-transform: uppercase;
+}
+
+
+/* blockquotes */
+
+blockquote {
+    border-left: 3px solid var(--header-color);
+    page-break-inside: avoid;
+}
+
+blockquote p {
+    font-weight: 400;
+}
+
+blockquote p,
+blockquote h1,
+blockquote h2,
+blockquote h3,
+blockquote h4,
+blockquote h5,
+blockquote h6 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+/* variant blockquote (>>) */
+
+blockquote blockquote {
+    background-color: var(--quote-color);
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    border-style: solid;
+    border-color: var(--header-color);
+    border-width: 1px 5px;
+    margin: 1rem 1rem 1rem -3px;
+}
+
+blockquote ol,
+blockquote ul {
+    text-align: left !important;
+}
+
+
+/* Code */
+
+code {
+    font-size: .9em;
+    border: 1px solid var(--accent-color);
+    border-radius: .25rem;
+    padding: 0 .25rem;
+}
+
+
+/* hyperlinks */
+
+#write a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* horizontal breaks */
+
+hr {
+    margin: 5em;
+    height: 0;
+    border-bottom: 1px dotted var(--accent-color);
+    border-top: none;
+    opacity: 0.5;
+}
+
+
+/* tables */
+
+table thead {
+    border-bottom: 2px solid var(--header-color);
+}
+
+table tr {
+    border-bottom: 1px solid var(--accent-color);
+}
+
+th,
+td {
+    padding: 5px;
+}
+
+
+/* lists and checklists */
+
+#write ul {
+    list-style-type: disc;
+    color: var(--accent-color);
+    line-height: 1.5em;
+}
+
+#write ul > li > ul {
+    list-style-type: circle;
+    margin-left: -1em;
+}
+
+#write ol {
+    list-style-type: decimal;
+    color: var(--accent-color);
+    line-height: 1.5em;
+}
+
+#write ol > li > ol {
+    list-style-type: lower-alpha;
+    margin-left: -1em;
+}
+
+#write ol > li > ol > li > ol {
+    list-style-type: lower-roman;
+}
+
+#write ol > li > ol > li > ol > li > ol {
+    list-style-type: lower-greek;
+}
+
+#write ol > li,
+#write ul > li {
+    color: var(--accent-color);
+}
+
+#write ol > li > *,
+#write ul > li > * {
+    color: var(--text-color);
+}
+
+#write .md-task-list-item > input {
+    -webkit-appearance: initial;
+    display: block;
+    position: absolute;
+    border: 1px solid #b4b4b4;
+    border-radius: .25rem;
+    margin-top: .1rem;
+    margin-left: -1.8rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    transition: background 0.3s;
+}
+
+#write .md-task-list-item > input[checked]::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 60%;
+    width: 2px;
+    transform: rotate(40deg);
+    background: #333;
+}
+
+#write .md-task-list-item > input[checked]::after {
+    content: '';
+    position: absolute;
+    top: 46%;
+    left: 25%;
+    height: 30%;
+    width: 2px;
+    transform: rotate(-40deg);
+    background: #333;
+}
+
+#write .md-task-list-item.task-list-done > p {
+    opacity: .5;
+    text-decoration: line-through;
+}
+
+
+/* table of contents */
+
+.md-toc-h4,
+.md-toc-h5,
+.md-toc-h6 {
+    display: none;
+}
+
+
+/* Pandoc export settings */
+
+hr + h1,
+p + h1 {
+    break-before: always;
+}
+
+table {
+    padding: 10px;
+    break-inside: avoid;
+}
+
+tr {
+    break-inside: avoid;
+}
+
+
+/* source-code mode */
+
+.cm-s-typora-default .cm-header {
+    color: var(--header-color);
+}
+
+
+/*
+
+    Name:       Bespin
+    Author:     Mozilla / Jan T. Sott
+
+    CodeMirror template by Jan T. Sott (https://github.com/idleberg/base16-codemirror)
+    Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+
+*/
+
+.cm-s-inner {
+    font-size: 1em;
+    line-height: 1.5em;
+    font-family: inconsolata, monospace;
+    letter-spacing: 0.3px;
+    word-spacing: 1px;
+    background: #191919;
+    color: #929292;
+}
+
+.cm-s-inner .CodeMirror-lines {
+    padding: 8px 0;
+}
+
+.cm-s-inner .CodeMirror-gutters {
+    box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.5);
+    background-color: #191919;
+    padding-right: 10px;
+    z-index: 3;
+    border: none;
+}
+
+.cm-s-inner div.CodeMirror-cursor {
+    border-left: 3px solid #929292;
+}
+
+.cm-s-inner .CodeMirror-activeline-background {
+    background: #D7D7D708;
+}
+
+.cm-s-inner .CodeMirror-selected {
+    background: #000000;
+}
+
+.cm-s-inner .cm-comment {
+    color: #3C403B;
+}
+
+.cm-s-inner .cm-string {
+    color: #5D90CD;
+}
+
+.cm-s-inner .cm-number {
+    color: #E92E2E;
+}
+
+.cm-s-inner .cm-atom {
+    color: #E92E2E;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #606060;
+}
+
+.cm-s-inner .cm-property {
+    color: #E92E2E;
+}
+
+.cm-s-inner .cm-keyword {
+    color: null;
+}
+
+.cm-s-inner .cm-operator {
+    color: null;
+}
+
+.cm-s-inner .CodeMirror-linenumber {
+    color: #3C403B;
+}

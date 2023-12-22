@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,500;0,700;1,500;1,700&family=IBM+Plex+Sans:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+:root {
+    --bg-color: #f7efd7;
+    --text-color: #1d190b;
+    --header-color: #4f1b07;
+    --accent-color: #b46741;
+    --md-char-color: #01baef;
+    --meta-content-color: #c4ad3b;
+    --primary-color: #6F1A07;
+    --primary-btn-border-color: var(--header-color);
+    --primary-btn-text-color: #333;
+    --window-border: 1px solid #16161a;
+    --active-file-bg-color: #16161a;
+    --active-file-text-color: var(--bg-color);
+    --active-file-border-color: #6F1A07;
+    --active-search-item-bg-color: var(--bg-color);
+    --side-bar-bg-color: #D2B179;
+    --item-hover-bg-color: var(--header-color);
+    --item-hover-text-color: inherit;
+    --search-select-text-color: #333;
+    --search-select-bg-color: #9e1c1c;
+    --rawblock-edit-panel-bd: #d0d0d0;
+    --node-fill: #fbfbfb;
+    --node-border: #0000001a;
+}
+
+.md-blockmeta {
+    color: #07070350;
+}
+
+body {
+    font-family: "IBM Plex Sans", "Prox";
+    line-height: 1.5em;
+    font-size: 18px;
+}
+
+#write {
+    max-width: 60em;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+    color: var(--header-color);
+    font-family: "IBM Plex Mono";
+    font-weight: 500;
+}
+
+h1 {
+    text-align: center;
+    column-span: all;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-weight: 700;
+}
+
+hr + h1 {
+    page-break-before: always;
+}
+
+h2 {
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, var(--accent-color) 0%, transparent 45%, transparent 100%);
+    border-image-slice: 1;
+    column-span: all;
+    padding: 0.2em;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+}
+
+h1 + h4 {
+    color: #5a020250;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-align: center;
+    margin: -1em 0 0 0 !important;
+    border: none !important;
+    padding: 0.2em;
+}
+
+h3,
+h5 {
+    font-style: italic;
+}
+
+blockquote h2 {
+    color: var(--text-color);
+    border: none;
+}
+
+blockquote blockquote {
+    text-align: center;
+    font-size: 1.1em;
+    position: relative;
+    background: #D2B179;
+    border-radius: 1em;
+    padding: 1.5em 2.5em !important;
+    margin: 1.5em;
+    page-break-inside: avoid;
+}
+
+
+/* blockquote::before {
+  color: var(--accent-color);
+  content: "\201C";
+  font-size: 7em;
+  position: absolute;
+  left: 5px;
+  top: 45px;
+}
+
+blockquote::after {
+  color: var(--accent-color);
+  content: "\201D";
+  font-size: 7em;
+  position: absolute;
+  right: 5px;
+  bottom: -10px;
+} */
+
+code {
+    font-size: .9em;
+    border: 1px solid var(--accent-color);
+    border-radius: .25rem;
+    padding: 0 .125rem;
+}
+
+a {
+    color: var(--header-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    height: 80px;
+    width: 100%;
+    background: url("hr-bb.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+    page-break-inside: avoid;
+}
+
+table {
+    padding: 10px;
+    page-break-inside: avoid;
+}
+
+table thead {
+    border-bottom: 2px solid var(--header-color);
+}
+
+table tr {
+    border-bottom: 1px solid var(--accent-color);
+}
+
+th,
+td {
+    padding: 5px;
+}
+
+#write ul {
+    list-style-type: disc;
+}
+
+#write ul li ul {
+    list-style-type: circle;
+}
+
+#write ol {
+    list-style-type: decimal;
+}
+
+#write ol > li,
+#write ul > li {
+    color: var(--accent-color);
+}
+
+#write ol > li > *,
+#write ul > li > * {
+    color: var(--text-color);
+}
+
+#write .md-task-list-item > input {
+    -webkit-appearance: initial;
+    display: block;
+    position: absolute;
+    border: 1px solid #b4b4b4;
+    border-radius: .25rem;
+    margin-top: .1rem;
+    margin-left: -1.8rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    transition: background 0.3s;
+}
+
+#write .md-task-list-item > input[checked]::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 60%;
+    width: 2px;
+    transform: rotate(40deg);
+    background: #333;
+}
+
+#write .md-task-list-item > input[checked]::after {
+    content: '';
+    position: absolute;
+    top: 46%;
+    left: 25%;
+    height: 30%;
+    width: 2px;
+    transform: rotate(-40deg);
+    background: #333;
+}
+
+#write .md-task-list-item.task-list-done > p {
+    opacity: .5;
+    text-decoration: line-through;
+}
+
+@media (min-width: 980px) {
+    h3.md-focus:before,
+    h4.md-focus:before,
+    h5.md-focus:before,
+    h6.md-focus:before {
+        color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        position: absolute;
+        left: -1.642857143rem;
+        top: 0.357142857rem;
+        float: left;
+        font-size: 9px;
+        padding-left: 2px;
+        padding-right: 2px;
+        vertical-align: bottom;
+        font-weight: normal;
+        line-height: normal;
+    }
+    h3.md-focus:before {
+        content: "h3";
+    }
+    h4.md-focus:before {
+        content: "h4";
+    }
+    h5.md-focus:before {
+        content: "h5";
+        top: 0px;
+    }
+    h6.md-focus:before {
+        content: "h6";
+        top: 0px;
+    }
+}
+
+
+/*
+
+    Name:       Bespin
+    Author:     Mozilla / Jan T. Sott
+
+    CodeMirror template by Jan T. Sott (https://github.com/idleberg/base16-codemirror)
+    Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+
+*/
+
+.cm-s-inner.CodeMirror {
+    background: #28211c;
+    color: #9d9b97;
+}
+
+.cm-s-inner div.CodeMirror-selected {
+    background: #36312e !important;
+}
+
+.cm-s-inner .CodeMirror-gutters {
+    background: #28211c;
+    border-right: 0px;
+}
+
+.cm-s-inner .CodeMirror-linenumber {
+    color: #666666;
+}
+
+.cm-s-inner .CodeMirror-cursor {
+    border-left: 1px solid #797977 !important;
+}
+
+.cm-s-inner span.cm-comment {
+    color: #937121;
+}
+
+.cm-s-inner span.cm-atom {
+    color: #9b859d;
+}
+
+.cm-s-inner span.cm-number {
+    color: #9b859d;
+}
+
+.cm-s-inner span.cm-property,
+.cm-s-inner span.cm-attribute {
+    color: #54be0d;
+}
+
+.cm-s-inner span.cm-keyword {
+    color: #cf6a4c;
+}
+
+.cm-s-inner span.cm-string {
+    color: #f9ee98;
+}
+
+.cm-s-inner span.cm-variable {
+    color: #54be0d;
+}
+
+.cm-s-inner span.cm-variable-2 {
+    color: #5ea6ea;
+}
+
+.cm-s-inner span.cm-def {
+    color: #cf7d34;
+}
+
+.cm-s-inner span.cm-error {
+    background: #cf6a4c;
+    color: #797977;
+}
+
+.cm-s-inner span.cm-bracket {
+    color: #9d9b97;
+}
+
+.cm-s-inner span.cm-tag {
+    color: #cf6a4c;
+}
+
+.cm-s-inner span.cm-link {
+    color: #9b859d;
+}

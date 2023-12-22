@@ -1,0 +1,45 @@
+@import url('./Alex/alex-core.css');
+:root {
+    --bg-color: hsla(33, 100%, 97%, 1);
+    --bg-80: hsla(33, 100%, 97%, 0.8);
+    --quote-color: hsla(213, 14%, 85%, 1);
+    --quote-80: hsla(213, 14%, 85%, 0.8);
+    --accent-color: hsla(33, 81%, 52%, 1);
+    --text-color: hsla(254, 17%, 15%, 1);
+    --text-80: hsla(254, 17%, 15%, 0.8);
+    --header-color: hsla(115, 47%, 23%, 1);
+    --subheader-color: hsla(0, 50%, 33%, 1);
+    --md-char-color: var(--header-color);
+    --meta-content-color: var(--header-color);
+    --primary-color: var(--header-color);
+    --primary-btn-border-color: var(--header-color);
+    --primary-btn-text-color: hsla(0, 0%, 20%, 1);
+    --window-border: 1px solid hsla(240, 8%, 9%, 1);
+    --active-file-bg-color: hsla(240, 8%, 9%, 1);
+    --active-file-text-color: var(--bg-color);
+    --active-file-border-color: hsla(45, 83%, 16%, 0.2);
+    --active-search-item-bg-color: var(--bg-color);
+    --side-bar-bg-color: var(--quote-color);
+    --item-hover-bg-color: var(--subheader-color);
+    --item-hover-text-color: inherit;
+    --search-select-text-color: hsla(0, 0%, 20%, 1);
+    --search-select-bg-color: hsla(0, 69%, 36%, 0.7);
+    --select-text-bg-color: hsla(60, 33%, 1%, 0.5);
+    --rawblock-edit-panel-bd: hsla(0, 0%, 81%, 1);
+    --node-fill: hsla(0, 0%, 98%, 1);
+    --node-border: #0000001a;
+    --filter: invert(16%) sepia(11%) saturate(2732%) hue-rotate(246deg) brightness(99%) contrast(86%);
+}
+
+
+/* background image -- comment after this to reactivate
+
+content {
+    background: url(./Alex/snow.gif);
+    background-size: cover;
+    background-position: bottom;
+}
+
+#write {
+    backdrop-filter: brightness(200%) blur(10px) saturate(50%);
+}

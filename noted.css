@@ -1,0 +1,190 @@
+:root {
+    --mermaid-theme: forest;
+    --mermaid-font-family: verdana;
+    --ratio: 1;
+    --text-color: hsl(100 10% 15%);
+    --bg-color: hsl(40 14% 90%);
+    --link: hsl(200 70% 40%);
+    --accent-green: hsl(100 25% 35%);
+    --line-green: hsl(100 25% 75%);
+    --mid-bg-color: hsl(40 20% 85%);
+    --active-file-bg-color: var(--link);
+    --active-file-text-color: var(--bg-color);
+    --active-search-item-bg-color: var(--mid-bg-color);
+    --side-bar-bg-color: var(--mid-bg-color);
+    --item-hover-bg-color: var(--link);
+    --item-hover-text-color: var(--bg-color);
+}
+
+/**** RESET */
+
+/* box sizing nonsense */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* fixes font formatting on inputs */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/**** FONT SETTINGS */
+
+html {
+    font-size: calc(110% * var(--ratio));
+    font-family: 'Sono Sans', sans-serif;
+    font-variant-numeric: tabular-nums;
+}
+
+#write {
+    margin: 2em auto;
+    padding-bottom: 30%;
+    max-width: 90ch;
+    min-height: calc (100% - 4em);
+    line-height: 1.75em;
+}
+
+/* headings */
+
+h1,
+h2,
+h3 {
+    font-family: 'Noted';
+    --ratio: 1.25;
+}
+
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-variant: small-caps;
+    --ratio: 1.5;
+}
+
+h1 {
+    padding: 1rem;
+    margin-top: 1.75em;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 1.75em;
+    color: hsl(0, 70%, 50%);
+    will-change: transform;
+    transition: transform 6s cubic-bezier(1,0,.8,1.5) 2s;
+}
+
+h2:nth-of-type(4n+1) {
+    transform: translateX(-0.5rem) translateY(-0.7rem) rotateZ(-4deg);
+}
+
+h2:nth-of-type(4n+2) {
+    transform: translateX(-2rem) translateY(-1rem) rotateZ(-6deg);
+}
+
+h2:nth-of-type(4n+3) {
+    transform: translateX(1rem) translateY(-0.6rem) rotateZ(-2deg);
+}
+
+h2:nth-of-type(4n) {
+    transform: translateX(0rem) translateY(-0.2rem) rotateZ(2deg);
+}
+
+h2:hover {
+    transform: translateX(0) translateY(0) rotateZ(0);
+    transition: transform 0.6s;
+}
+
+h3 {
+    font-variant: small-caps;
+}
+
+h4 {
+    font-variant: italic;
+}
+
+/* subtitle */
+
+:is(h1,
+    h4)+h4 {
+    text-align: center;
+    font-family: "Noted";
+    font-size: 1.5rem;
+    margin: -1rem 0 1.5rem;
+    padding: 0;
+    font-style: italic;
+}
+
+/* hyperlinks */
+
+a {
+    color: var(--link);
+}
+
+/* lists */
+
+li::marker {
+    color: var(--accent-green);
+}
+
+/**** BLOCKQUOTES ****/
+
+blockquote {
+    padding-left: 1.5rem;
+    color: var(--accent-green);
+    border-left: 2px solid var(--line-green);
+}
+
+blockquote blockquote {
+    border: 0;
+    padding-left: 0;
+}
+
+/**** HR ****/
+
+hr {
+    border: 0;
+    width: 80%;
+    margin: 4rem auto;
+    border-bottom: 2px solid var(--line-green);
+}
+
+/**** TABLES ****/
+
+th,
+td {
+    padding: 0.5rem;
+}
+
+tr {
+    border-bottom: 1px solid var(--line-green);
+}
+
+thead,
+tr:nth-of-type(2n) {
+    background-color: var(--mid-bg-color);
+}
+
+/**** CHECKBOXES ****/
+
+#write .md-task-list-item>input {
+    width: 0.8rem;
+    height: 0.8rem;
+    accent-color: var(--accent-green);
+}
+
+#write .md-task-list-item.task-list-done>p {
+    opacity: .5;
+    text-decoration: line-through;
+}

@@ -1,0 +1,482 @@
+@import (less) '5e/assets.less';
+@font-face {
+    font-family: ScalySansSmallCaps;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Scaly Sans Caps'), url("/5e/Scaly Sans Caps/Scaly Sans Caps.otf") format("otf");
+}
+
+@font-face {
+    font-family: ScalySansSmallCaps;
+    font-style: italic;
+    font-weight: normal;
+    src: local('Scaly Sans Caps Italic'), url("/5e/Scaly Sans Caps/Scaly Sans Caps Italic.otf") format("otf");
+}
+
+@font-face {
+    font-family: ScalySansSmallCaps;
+    font-style: normal;
+    font-weight: bold src: local('Scaly Sans Caps Bold'), url("/5e/Scaly Sans Caps/Scaly Sans Caps Bold.otf") format("otf");
+}
+
+@font-face {
+    font-family: ScalySansSmallCaps;
+    font-style: italic;
+    font-weight: bold;
+    src: local('Scaly Sans Caps Bold Italic'), url("/5e/Scaly Sans Caps/Scaly Sans Caps Bold Italic.otf") format("otf");
+}
+
+@font-face {
+    font-family: ScalySans;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Scaly Sans'), url("/5e/Scaly Sans/Scaly Sans.otf") format("otf");
+}
+
+@font-face {
+    font-family: ScalySans;
+    font-style: italic;
+    font-weight: normal;
+    src: local('Scaly Sans Italic'), url("/5e/Scaly Sans/Scaly Sans Italic.otf") format("otf");
+}
+
+@font-face {
+    font-family: ScalySans;
+    font-style: normal;
+    font-weight: bold;
+    src: local('Scaly Sans Bold'), url("/5e/Scaly Sans/Scaly Sans Bold.otf") format("otf");
+}
+
+@font-face {
+    font-family: ScalySans;
+    font-style: italic;
+    font-weight: bold;
+    src: local('Scaly Sans Bold Italic'), url("/5e/Scaly Sans/Scaly Sans Bold Italic.otf") format("otf");
+}
+
+@font-face {
+    font-family: Bookinsanity;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Bookinsanity'), url("/5e/Bookinsanity/Bookinsanity.otf") format("otf");
+}
+
+@font-face {
+    font-family: Bookinsanity;
+    font-style: italic;
+    font-weight: normal;
+    src: local('Bookinsanity Italic'), url("/5e/Bookinsanity/Bookinsanity italic.otf") format("otf");
+}
+
+@font-face {
+    font-family: Bookinsanity;
+    font-style: normal;
+    font-weight: bold;
+    src: local('Bookinsanity Bold'), url("/5e/Bookinsanity/Bookinsanity Bold.otf") format("otf");
+}
+
+@font-face {
+    font-family: Bookinsanity;
+    font-style: italic;
+    font-weight: bold;
+    src: local('Bookinsanity Bold Italic'), url("/5e/Bookinsanity/Bookinsanity Bold Italic.otf") format("otf");
+}
+
+@font-face {
+    font-family: MrEaves;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mr. Eaves Small Caps'), url("/5e/Mr Eaves/Mr Eaves Small Caps.otf") format("otf");
+}
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    text-align: left;
+    line-height: 1.2em;
+    display: inline-block;
+    vertical-align: top;
+    background: #FDF1DC;
+    padding: 10px 10px 20px;
+    box-sizing: border-box;
+    font-family: 'Scaly Sans', 'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+}
+
+#write {
+    width: 100%;
+    max-width: 500px;
+    background-image: url(5e/statblockparch.jpg);
+    background-size: auto;
+    background-repeat: repeat-y;
+    margin: 0 auto;
+    padding: 30px;
+    padding-bottom: 100px;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+a {
+    color: #755b1b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+
+h1 {
+    font-family: "Mr. Eaves Small Caps", serif;
+    color: #58170D;
+    font-size: 2em;
+    line-height: 1.2em;
+    margin: 10px 0 0;
+    letter-spacing: 1px;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+h2 {
+    border-bottom: 2px solid #58180D;
+    color: #58170D;
+    font-variant: small-caps;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin: 20px 0 10px;
+    padding: 0 0 0px;
+    text-indent: 5px;
+}
+
+h3 {
+    font-family: "Mr. Eaves Small Caps", serif;
+    color: #58170D;
+    line-height: 1em;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 0.9em;
+    line-height: 1.2em;
+    margin: 0;
+}
+
+h5 {
+    font-size: 1em;
+    font-weight: 100;
+    margin: 0;
+    color: #58180D;
+}
+
+h6 {
+    font-size: 1em;
+    color: #777;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+{
+    margin: 0.8em 0;
+}
+
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+
+hr {
+    background-image: url(5e/statblock-horizontal-rule.png);
+    background-size: 100% 100%;
+    border: none;
+    margin: 0.5em 0em;
+    height: 6px;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+blockquote {
+    font-family: "Scaly Sans";
+    box-sizing: border-box;
+    margin-bottom: 2em;
+    padding: 5px 10px;
+    background-color: #e0e5c1;
+    border-style: solid;
+    border-width: 11px;
+    border-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAMAAADG+c2+AAAANlBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABHL6OuAAAAEXRSTlMABAwYJDRIXHSLo7fL2+fz+6go4VUAAAB6SURBVHgB7dg5DsJQAANRZ9+Xuf9lQUKKEHT5LlL4HWB6W5d61m1zrT/dhm5j6/RjPCkJco761ixQFoSl0aXfKQ+y9/qoJnAEYar01q64gqytNBz4ghyDMPMHnyYiIiIiIgIzYeYfj/Z56x3g7ovAf2L4bxb/EWS/ql7LZCDx/Ry3RwAAAABJRU5ErkJggg==) 20%;
+    border-image-outset: 9px 0;
+    box-shadow: 1px 4px 14px #888
+}
+
+blockquote h1 {
+    margin-bottom: .2em;
+    font-family: "Scaly Sans Caps";
+    color: #000000;
+    font-size: 1em;
+    font-weight: 900
+}
+
+blockquote em {
+    font-family: "Scaly Sans";
+    font-style: italic
+}
+
+blockquote strong {
+    font-family: "Scaly Sans";
+    font-weight: 800;
+    letter-spacing: -0.02em
+}
+
+blockquote p,
+blockquote ul {
+    font-size: .352cm;
+    line-height: 1.1em
+}
+
+
+}
+table {
+    font-size: 0.9em;
+    color: #58170D;
+    padding: 0px;
+    margin: 0px;
+    word-break: initial;
+}
+table thead {
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+table tr {
+    text-align: center;
+    color: #58170D;
+    vertical-align: middle;
+}
+table tr th {
+    font-weight: bold;
+}
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0, 28, 36, .3);
+    border-top: 1px solid #eef2f2;
+}
+.md-fences,
+code,
+tt {
+    /*    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;*/
+    
+    background-image: (5e/table-border.png);
+}
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+@media print {
+    html {
+        font-size: 13px;
+    }
+    
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    
+    pre {
+        word-wrap: break-word;
+    }
+}
+.md-fences {
+    background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+.mathjax-block>.code-tooltip {
+    bottom: .375rem;
+}
+.md-mathjax-midline {
+    background: #fafafa;
+}
+#write>h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+#write>h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+#write>h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+#write>h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+.sidebar-tabs {
+    border-bottom: none;
+}
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+.md-lang {
+    color: #b4654d;
+}
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+#md-notification .btn {
+    border: 0;
+}
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}

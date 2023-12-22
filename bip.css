@@ -1,0 +1,424 @@
+:root {
+    --mermaid-theme: dark;
+    --bg-color: hsla(0, 0%, 100%, 1);
+    --quote-color: hsla(333, 80%, 95%, 1);
+    --accent-color: hsla(333, 80%, 40%, 1);
+    --text-color: hsla(30, 100%, 5%, 1);
+    --text-80: hsla(30, 100%, 5%, 0.8);
+    --header-color: hsla(196, 80%, 35%, 1);
+    --subheader-color: hsla(196, 50%, 40%, 1);
+    --md-char-color: hsla(0, 95%, 20%, 1);
+    --meta-content-color: hsla(0, 95%, 20%, 1);
+    --primary-color: hsla(10, 88%, 23%, 1);
+    --primary-btn-border-color: var(--header-color);
+    --primary-btn-text-color: hsla(0, 0%, 20%, 1);
+    --window-border: 1px solid hsla(240, 8%, 9%, 1);
+    --active-file-bg-color: hsla(240, 8%, 9%, 1);
+    --active-file-text-color: var(--bg-color);
+    --active-file-border-color: hsla(45, 83%, 16%, 0.2);
+    --active-search-item-bg-color: var(--bg-color);
+    --side-bar-bg-color: var(--quote-color);
+    --item-hover-bg-color: var(--subheader-color);
+    --item-hover-text-color: inherit;
+    --search-select-text-color: hsla(0, 0%, 20%, 1);
+    --search-select-bg-color: hsla(0, 69%, 36%, 0.7);
+    --select-text-bg-color: hsla(60, 33%, 1%, 0.5);
+    --rawblock-edit-panel-bd: hsla(0, 0%, 81%, 1);
+    --node-fill: hsla(0, 0%, 98%, 1);
+    --node-border: #0000001a;
+}
+
+
+/* Images and Layout */
+
+img {
+    page-break-inside: avoid;
+    max-width: 60%;
+    margin: auto;
+}
+
+blockquote img {
+    max-width: 100%;
+    margin: 0;
+}
+
+h6 img {
+    max-width: 100%;
+    min-width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* blockquotes */
+
+blockquote {
+    width: 20em;
+    float: left;
+    border: none;
+    page-break-inside: avoid;
+    padding-left: 0.5em;
+    margin: 0em 1em 3em 0em;
+}
+
+/* horizontal breaks */
+
+hr {
+    page-break-after: always;
+    clear: both;
+    background: none;
+    border: none;
+}
+
+
+/* workspace */
+
+#write {
+    background: none;
+    max-width: 70em;
+    background-color: var(--bg-80, var(--bg-color));
+}
+
+html {
+    font-variant-numeric: lining-nums tabular-nums slashed-zero;
+}
+
+html,
+body {
+    font-size: 12px;
+    font-family: "Roboto";
+    line-height: 1.8em;
+    --monospace: "Tabular Variable";
+}
+
+::selection {
+    background: var(--header-color);
+    color: var(--bg-color);
+}
+
+pre.md-meta-block,
+sup.md-footnote {
+    background: var(--quote-color);
+    color: var(--header-color);
+}
+
+/* bold */
+
+p strong {
+    font-weight: 700;
+}
+
+mark {
+    background: var(--text-color);
+    color: var(--bg-color);
+    border-radius: .25rem;
+    padding: 0 .25rem;
+}
+
+
+/* strikethrough */
+
+del {
+    color: var(--text-80);
+    text-decoration: line-through;
+    text-decoration-color: var(--text-80);
+}
+
+
+/* headers and subheaders */
+
+#write h1 {
+    text-align: center;
+    color: var(--bg-color);
+    background-color: var(--header-color);
+    font-weight: 700 !important;
+    padding: 4px;
+    font-stretch: semi-expanded;
+}
+
+h1:first-of-type {
+    page-break-before: avoid;
+}
+
+#write h1 + h4 {
+    text-align: center;
+    color: var(--text-color);
+    margin: -1.75em 0 1.5em;
+    padding: 0;
+    font-style: italic;
+}
+
+#write h2 {
+    font-weight: 600;
+    color: var(--subheader-color);
+    page-break-inside: avoid;
+    font-stretch: semi-expanded;
+}
+
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+    font-weight: 400;
+    color: var(--subheader-color);
+}
+
+#write h3,
+#write h5 {
+    font-style: italic;
+}
+
+#write h4 {
+    font-variant: small-caps;
+    margin: -8px 1em 0px;
+    padding: 0em;
+    font-size: 1.2em;
+}
+
+h6 {
+    text-align: center;
+    color: var(--header-color);
+    font-weight: 700 !important;
+    padding: 4px;
+    font-stretch: semi-expanded;
+    font-size: 1.5em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+}
+
+
+/* Code */
+
+code {
+    font-size: .9em;
+    border: 1px solid var(--accent-color);
+    border-radius: .25rem;
+    padding: 0 .25rem;
+}
+
+
+/* hyperlinks */
+
+#write a {
+    color: var(--accent-color);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+/* tables */
+
+table thead {
+    border-bottom: 2px solid var(--header-color);
+}
+
+table tr {
+    border-bottom: 1px solid var(--accent-color);
+}
+
+th,
+td {
+    padding: 5px;
+}
+
+
+/* lists and checklists */
+
+#write ul {
+    list-style-type: disc;
+    color: var(--accent-color);
+    line-height: 1.5em;
+}
+
+#write ul > li > ul {
+    list-style-type: circle;
+    margin-left: -1em;
+}
+
+#write ol {
+    list-style-type: decimal;
+    color: var(--accent-color);
+    line-height: 1.5em;
+}
+
+#write ol > li > ol {
+    list-style-type: lower-alpha;
+    margin-left: -1em;
+}
+
+#write ol > li > ol > li > ol {
+    list-style-type: lower-roman;
+}
+
+#write ol > li > ol > li > ol > li > ol {
+    list-style-type: lower-greek;
+}
+
+#write ol > li,
+#write ul > li {
+    color: var(--accent-color);
+}
+
+#write ol > li > *,
+#write ul > li > * {
+    color: var(--text-color);
+}
+
+#write .md-task-list-item > input {
+    -webkit-appearance: initial;
+    display: block;
+    position: absolute;
+    border: 1px solid #b4b4b4;
+    border-radius: .25rem;
+    margin-top: .1rem;
+    margin-left: -1.8rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    transition: background 0.3s;
+}
+
+#write .md-task-list-item > input[checked]::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 60%;
+    width: 2px;
+    transform: rotate(40deg);
+    background: #333;
+}
+
+#write .md-task-list-item > input[checked]::after {
+    content: '';
+    position: absolute;
+    top: 46%;
+    left: 25%;
+    height: 30%;
+    width: 2px;
+    transform: rotate(-40deg);
+    background: #333;
+}
+
+#write .md-task-list-item.task-list-done > p {
+    opacity: .5;
+    text-decoration: line-through;
+}
+
+
+/* table of contents */
+
+.md-toc-h4,
+.md-toc-h5,
+.md-toc-h6 {
+    display: none;
+}
+
+
+/* Pandoc export settings */
+
+hr + h1,
+p + h1 {
+    break-before: always;
+}
+
+table {
+    padding: 10px;
+    break-inside: avoid;
+}
+
+tr {
+    break-inside: avoid;
+}
+
+
+/* source-code mode */
+
+.cm-s-typora-default .cm-header {
+    color: var(--header-color);
+}
+
+
+/*
+
+    Name:       Bespin
+    Author:     Mozilla / Jan T. Sott
+
+    CodeMirror template by Jan T. Sott (https://github.com/idleberg/base16-codemirror)
+    Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+
+*/
+
+.cm-s-inner {
+    font-size: 1em;
+    line-height: 1.5em;
+    font-family: inconsolata, monospace;
+    letter-spacing: 0.3px;
+    word-spacing: 1px;
+    background: #191919;
+    color: #929292;
+}
+
+.cm-s-inner .CodeMirror-lines {
+    padding: 8px 0;
+}
+
+.cm-s-inner .CodeMirror-gutters {
+    box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.5);
+    background-color: #191919;
+    padding-right: 10px;
+    z-index: 3;
+    border: none;
+}
+
+.cm-s-inner div.CodeMirror-cursor {
+    border-left: 3px solid #929292;
+}
+
+.cm-s-inner .CodeMirror-activeline-background {
+    background: #D7D7D708;
+}
+
+.cm-s-inner .CodeMirror-selected {
+    background: #000000;
+}
+
+.cm-s-inner .cm-comment {
+    color: #3C403B;
+}
+
+.cm-s-inner .cm-string {
+    color: #5D90CD;
+}
+
+.cm-s-inner .cm-number {
+    color: #E92E2E;
+}
+
+.cm-s-inner .cm-atom {
+    color: #E92E2E;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #606060;
+}
+
+.cm-s-inner .cm-property {
+    color: #E92E2E;
+}
+
+.cm-s-inner .cm-keyword {
+    color: null;
+}
+
+.cm-s-inner .cm-operator {
+    color: null;
+}
+
+.cm-s-inner .CodeMirror-linenumber {
+    color: #3C403B;
+}

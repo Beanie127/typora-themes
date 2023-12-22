@@ -1,0 +1,46 @@
+@font-face {
+	font-family: "Libertinus Sans";
+	src: url("./LibertinusSans-Regular.otf");
+	font-style: normal;
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Libertinus Sans";
+	src: url("./LibertinusSans-Bold.otf");
+	font-style: normal;
+	font-weight: bold;
+}
+@font-face {
+	font-family: "Libertinus Sans";
+	src: url("./LibertinusSans-Italic.otf");
+	font-style: italic;
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Libertinus Serif";
+	src: url("./LibertinusSerif-Regular.otf");
+	font-style: normal;
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Libertinus Serif";
+	src: url("./LibertinusSerif-Bold.otf");
+	font-style: normal;
+	font-weight: bold;
+}
+@font-face {
+	font-family: "Libertinus Serif";
+	src: url("./LibertinusSerif-Italic.otf");
+	font-style: italic;
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Libertinus Serif";
+	src: url("./LibertinusSerif-BoldItalic.otf");
+	font-style: italic;
+	font-weight: bold;
+}
+@font-face {
+	font-family: "Libertinus Serif Display";
+	src: url("./LibertinusSerifDisplay-Regular.otf");
+}

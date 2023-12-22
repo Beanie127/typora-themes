@@ -1,0 +1,55 @@
+@media print {
+	#write {
+		all: unset;
+		width: 100%;
+		margin: 0;
+		font-size: 16px;
+	}
+
+	@page {
+		margin: 2cm;
+	}
+
+	html,
+	body,
+	#write {
+		color: black !important;
+		background: white !important;
+	}
+
+	/* Defining all page breaks */
+	a {
+		page-break-inside: avoid;
+	}
+	blockquote {
+		page-break-inside: avoid;
+	}
+
+	h1:not(:first-child) {
+		page-break-before: always;
+		margin-block-start: 0;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		page-break-after: avoid;
+		page-break-inside: avoid;
+	}
+	img {
+		page-break-inside: avoid;
+		page-break-after: avoid;
+	}
+	table,
+	pre {
+		page-break-inside: avoid;
+	}
+	ul,
+	ol,
+	dl {
+		page-break-before: avoid;
+	}
+}

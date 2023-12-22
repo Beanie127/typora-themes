@@ -1,0 +1,119 @@
+/**** HOW TO USE THIS THEME ****/
+
+/*
+
+h1 = Scene Heading
+h2 = Intercut/subheader
+h3 = character (next paragraph auto formatted as dialogue)
+h4 = parenthetical
+h5 = fade in/cut to
+
+*/
+
+html {
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+  font-size: 16px;
+  font-family: 'Tabular', 'Tabular Variable', monospace;
+  font-variant-ligatures: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 1em 0em;
+}
+
+#write {
+  max-width: 80em;
+  padding: 3em;
+  counter-reset: scene;
+}
+
+/**** H1 = Scene Heading ****/
+
+h1 {
+  margin-top: 3em;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+}
+
+/**** Scene Number ****/
+
+h1::before{
+  counter-increment: scene;
+  content: counter(scene);
+  position: absolute;
+  left: -3em;
+}
+
+h1::after{
+  content: counter(scene);
+  position: absolute;
+  right: -3em;
+}
+
+
+/**** H2 = intercut/subheader ****/
+
+h2 {
+  font-weight: bold;
+}
+
+/**** H3 = character ****/
+
+h3 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/**** h4 = parenthetical ****/
+
+h4 {
+  text-align: center;
+  text-transform: none;
+  font-style: italic;
+  padding-left: 8em;
+  padding-right: 8em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h4::before {
+  content: '(';
+}
+
+h4::after {
+  content: ')';
+}
+
+/**** H3 + p, h4 + p = dialogue ****/
+
+h3 + p, h4 + p {
+  margin-top: 0;
+  padding-left: 5em;
+  padding-right: 5em;
+  margin-bottom: 0;
+}
+
+h3 + ul, h4 + ul {
+  margin-top: 0;
+  padding-left: 5em;
+  padding-right: 5em;
+  margin-bottom: 0;
+}
+
+/**** h5 = cut to ****/
+
+h5 {
+  text-align: right;
+}
+
+/**** export settings ****/
+
+h1 {
+  break-before:avoid;
+}
