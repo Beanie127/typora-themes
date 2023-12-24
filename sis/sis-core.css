@@ -15,7 +15,7 @@ html {
   font-size: 1em;
   /* font-family: "InterSIS", sans-serif; */
   font-family: "Albert Sans";
-  font-variant-numeric: tabular-nums;
+  /* font-variant-numeric: tabular-nums; */
 }
 
 #write {
@@ -23,8 +23,8 @@ html {
   max-inline-size: 90ch;
   padding-block-end: 25vh;
   color: var(--text-color);
-  font-feature-settings: "ss02", "ss01";
-  font-variant-ligatures: none;
+  /* font-feature-settings: "ss02", "ss01"; */
+  /* font-variant-ligatures: none; */
 
   & :is(p, h1, h2, h3, h4, h5, h6) {
     margin-block-start: 1em;
