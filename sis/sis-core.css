@@ -4,67 +4,67 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * {
-	margin: 0;
+  margin: 0;
 }
 
 html {
-	font-size: 1em;
-	/* font-family: "InterSIS", sans-serif; */
-	font-family: "Space Mono", monospace;
-	font-variant-numeric: tabular-nums;
+  font-size: 1em;
+  /* font-family: "InterSIS", sans-serif; */
+  font-family: "Albert Sans";
+  font-variant-numeric: tabular-nums;
 }
 
 #write {
-	margin-inline: auto;
-	max-inline-size: 90ch;
-	padding-block-end: 25vh;
-	color: var(--text-color);
-	font-feature-settings: "ss02", "ss01";
-	font-variant-ligatures: none;
+  margin-inline: auto;
+  max-inline-size: 90ch;
+  padding-block-end: 25vh;
+  color: var(--text-color);
+  font-feature-settings: "ss02", "ss01";
+  font-variant-ligatures: none;
 
-	& :is(p, h1, h2, h3, h4, h5, h6) {
-		margin-block-start: 1em;
-	}
+  & :is(p, h1, h2, h3, h4, h5, h6) {
+    margin-block-start: 1em;
+  }
 
-	& :is(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6) {
-		margin-block-start: 0;
-	}
+  & :is(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6) {
+    margin-block-start: 0;
+  }
 
-	& :is(li, li p) {
-		margin-block-end: 5px;
-		margin-block-start: 0;
-	}
+  & :is(li, li p) {
+    margin-block-end: 5px;
+    margin-block-start: 0;
+  }
 
-	& :is(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, table) {
-		line-height: calc(1em + 0.6rem);
-	}
+  & :is(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, table) {
+    line-height: calc(1em + 0.6rem);
+  }
 }
 
 ::selection {
-	background: var(--accent-1);
-	color: var(--text-color);
+  background: var(--accent-1);
+  color: var(--text-color);
 }
 
 pre.md-meta-block,
 sup.md-footnote {
-	background: var(--bg-2);
-	color: var(--accent-1);
+  background: var(--bg-2);
+  color: var(--accent-1);
 }
 
 /* logo */
 
 html::after {
-	content: url("hr-logo.svg");
-	position: fixed;
-	right: 5ch;
-	bottom: 5ch;
-	inline-size: 5ch;
-	aspect-ratio: 1;
-	opacity: 0.1;
+  content: url("hr-logo.svg");
+  position: fixed;
+  right: 5ch;
+  bottom: 5ch;
+  inline-size: 5ch;
+  aspect-ratio: 1;
+  opacity: 0.1;
 }
 
 /* headers and subheaders */
@@ -75,201 +75,194 @@ h3,
 h4,
 h5,
 h6 {
-	color: hsl(0 0% 20%);
-}
-
-h1,
-h2,
-h3 {
-	/* font-family: "Rajdhani"; */
-	font-family: "InterSIS";
-	font-feature-settings: normal;
-	/* text-transform: uppercase; */
-	letter-spacing: -2px;
+  color: hsl(0 0% 20%);
+  font-family: "Chillax Variable";
+  text-transform: uppercase;
+  letter-spacing: -2px;
 }
 
 h1 {
-	text-align: center;
-	font-weight: 600;
-	font-size: 2.5rem;
-	margin-block: 3rem;
-	text-align: center;
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-block: 3rem;
+  text-align: center;
 }
 
 h2 {
-	font-weight: 600;
-	font-size: 1.8rem;
+  font-weight: 600;
+  font-size: 1.8rem;
 }
 
 h3 {
-	font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 h4,
 h5,
 h6 {
-	/* font-family: "InterSIS"; */
-	font-weight: 500;
+  /* font-family: "InterSIS"; */
+  font-weight: 500;
 }
 
 mark {
-	background-color: var(--accent-1);
-	font-weight: bold;
-	color: var(--bg, white);
+  background-color: var(--accent-1);
+  font-weight: bold;
+  color: var(--bg, white);
 }
 
 /* bold */
 
 p strong {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 /* strikethrough */
 
 del {
-	color: inherit;
-	text-decoration: line-through;
+  color: inherit;
+  text-decoration: line-through;
 }
 
 /* blockquotes */
 
 blockquote {
-	border-inline-start: 5px solid var(--accent-1);
-	padding-inline: 1rem;
+  border-inline-start: 5px solid var(--accent-1);
+  padding-inline: 1rem;
 }
 
 /* Images */
 
 img {
-	margin: 2rem auto;
-	padding: 2rem;
-	max-inline-size: 80%;
-	max-block-size: 60ch;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-inline-size: 80%;
+  max-block-size: 60ch;
 }
 
 /* Code */
 
 code {
-	font-size: 0.9em;
-	border: 1px solid var(--accent-1);
-	border-radius: 0.25rem;
-	padding: 0 0.125rem;
+  font-size: 0.9em;
+  border: 1px solid var(--accent-1);
+  border-radius: 0.25rem;
+  padding: 0 0.125rem;
 }
 
 /* hyperlinks */
 
 #write a {
-	color: var(--accent-1);
-	text-decoration: thin solid var(--accent-1);
-	font-weight: bolder;
-	transition: color 250ms, border 250ms;
+  color: var(--accent-1);
+  text-decoration: thin solid var(--accent-1);
+  font-weight: bolder;
+  transition: color 250ms, border 250ms;
 }
 
 #write a:hover {
-	color: var(--accent-2);
+  color: var(--accent-2);
 }
 
 /* horizontal breaks */
 
 hr {
-	margin-block: 2rem;
-	margin-inline: auto;
-	border-block-end: 1px dashed var(--text-color);
-	width: 80%;
-	background: none;
-	opacity: 0.2;
+  margin-block: 2rem;
+  margin-inline: auto;
+  border-block-end: 1px dashed var(--text-color);
+  width: 80%;
+  background: none;
+  opacity: 0.2;
 }
 
 /* tables */
 
 table {
-	border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 table thead {
-	border-bottom: 2px solid var(--accent-1);
+  border-bottom: 2px solid var(--accent-1);
 }
 
 table tr {
-	border-bottom: 1px solid var(--accent-2);
+  border-bottom: 1px solid var(--accent-2);
 }
 
 th,
 td {
-	padding: 5px;
+  padding: 5px;
 }
 
 /* lists and checklists */
 
 #write ul {
-	list-style-type: disc;
-	line-height: 1.5rem;
+  list-style-type: disc;
+  line-height: 1.5rem;
 
-	& ul {
-		list-style-type: circle;
-	}
+  & ul {
+    list-style-type: circle;
+  }
 }
 
 #write ol {
-	list-style-type: decimal;
-	line-height: 1.5rem;
+  list-style-type: decimal;
+  line-height: 1.5rem;
 
-	& ol {
-		list-style-type: lower-roman;
+  & ol {
+    list-style-type: lower-roman;
 
-		& ol {
-			list-style-type: lower-alpha;
+    & ol {
+      list-style-type: lower-alpha;
 
-			& ol {
-				list-style-type: lower-greek;
-			}
-		}
-	}
+      & ol {
+        list-style-type: lower-greek;
+      }
+    }
+  }
 }
 
 write :is(ul, ol)::marker {
-	color: var(--accent-2);
-	font-weight: 900;
+  color: var(--accent-2);
+  font-weight: 900;
 }
 
 #write .md-task-list-item > input {
-	-webkit-appearance: initial;
-	appearance: initial;
-	display: block;
-	position: absolute;
-	border: 1px solid #b4b4b4;
-	border-radius: 0.25rem;
-	margin-top: 0.1rem;
-	margin-left: -1.8rem;
-	height: 1.2rem;
-	width: 1.2rem;
+  -webkit-appearance: initial;
+  appearance: initial;
+  display: block;
+  position: absolute;
+  border: 1px solid #b4b4b4;
+  border-radius: 0.25rem;
+  margin-top: 0.1rem;
+  margin-left: -1.8rem;
+  height: 1.2rem;
+  width: 1.2rem;
 }
 
 #write .md-task-list-item > input[checked]::before {
-	content: "";
-	position: absolute;
-	top: 20%;
-	left: 50%;
-	height: 60%;
-	width: 2px;
-	transform: rotate(40deg);
-	background: #333;
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  height: 60%;
+  width: 2px;
+  transform: rotate(40deg);
+  background: #333;
 }
 
 #write .md-task-list-item > input[checked]::after {
-	content: "";
-	position: absolute;
-	top: 46%;
-	left: 25%;
-	height: 30%;
-	width: 2px;
-	transform: rotate(-40deg);
-	background: #333;
+  content: "";
+  position: absolute;
+  top: 46%;
+  left: 25%;
+  height: 30%;
+  width: 2px;
+  transform: rotate(-40deg);
+  background: #333;
 }
 
 #write .md-task-list-item.task-list-done > p {
-	opacity: 0.5;
-	text-decoration: line-through;
+  opacity: 0.5;
+  text-decoration: line-through;
 }
 
 /* table of contents */
@@ -277,20 +270,20 @@ write :is(ul, ol)::marker {
 .md-toc-h4,
 .md-toc-h5,
 .md-toc-h6 {
-	display: none;
+  display: none;
 }
 
 /* Pandoc export settings */
 
 hr + h1 {
-	page-break-before: always;
+  page-break-before: always;
 }
 
 table {
-	padding: 10px;
-	page-break-inside: avoid;
+  padding: 10px;
+  page-break-inside: avoid;
 }
 
 tr {
-	page-break-inside: avoid;
+  page-break-inside: avoid;
 }
