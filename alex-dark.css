@@ -30,7 +30,8 @@
 }
 
 html {
-  font-family: "Bespoke Serif";
+  font-family: "Bespoke Serif", "Bespoke Serif Variable", Cambria, Cochin,
+    Georgia, serif;
   font-size: 120%;
   font-weight: 200;
 }
