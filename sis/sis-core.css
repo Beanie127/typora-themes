@@ -1,5 +1,6 @@
 @import url("../plugins/subtitles.css");
 @import url("../plugins/codeblock.dark.css");
+@import url("../plugins/print.css");
 
 *,
 *::before,
@@ -76,7 +77,7 @@ h4,
 h5,
 h6 {
   color: hsl(0 0% 20%);
-  font-family: "Chillax Variable";
+  font-family: "Chillax Variable", "Chillax";
   text-transform: uppercase;
   letter-spacing: -2px;
 }

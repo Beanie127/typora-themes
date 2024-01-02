@@ -1,7 +1,7 @@
 @import url("../plugins/subtitles.css");
 @import url("../plugins/blockquote-aside-hack.css");
 @import url("../plugins/codeblock.dark.css");
-@import url("../plugins/export-settings.css");
+@import url("../plugins/print.css");
 
 :root {
   --mermaid-theme: default;
