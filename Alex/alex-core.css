@@ -234,7 +234,7 @@ tbody tr:has(td:first-of-type span.md-plain) {
 table,
 thead,
 tr:last-of-type {
-  border-block: 1px solid var(--hl, lightgray);
+  border-block-end: 1px solid var(--hl, lightgray);
 }
 
 /**** lists and checklists ****/
@@ -340,54 +340,6 @@ tr:last-of-type {
 .md-toc-h6 {
   display: none;
 }
-
-/* Pandoc export settings 
-
-@media print {
-	#write {
-		all: unset;
-		width: 100%;
-		margin: 0;
-		font-size: 16px;
-	}
-
-	@page {
-		margin: 2cm;
-	}
-
-	h1:not(:first-child) {
-		break-before: always;
-		margin-block-start: 0;
-	}
-
-	table {
-		break-inside: avoid;
-	}
-
-	tr {
-		break-inside: avoid;
-	}
-
-	html,
-	body,
-	#write {
-		color: black !important;
-		background: white !important;
-	}
-}
-/*** workspace 
-
-.export-detail {
-	background: var(--bg-color) !important;
-	color: var(--text-color) !important;
-}
-
-/* source-code mode
-
-.cm-s-typora-default .cm-header {
-    color: var(--hl);
-}
-
 
 /** ported from https://codemirror.net/theme/material.css **/
 /*
