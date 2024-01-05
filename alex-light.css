@@ -36,26 +36,6 @@ html {
 
 /**** headers ****/
 
-h2 {
-  opacity: 0.9;
-}
-
-h3 {
-  opacity: 0.8;
-}
-
-h4 {
-  opacity: 0.7;
-}
-
-h5 {
-  opacity: 0.6;
-}
-
-h6 {
-  opacity: 0.5;
-}
-
 #write h1 {
   margin: 2rem auto;
   text-align: center;
