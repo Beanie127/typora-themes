@@ -35,6 +35,21 @@ html {
   font-size: 1.1em;
 }
 
+/* TEXTURED BACKDROP */
+
+content {
+  isolation: isolate;
+  background: url("./Alex/nnnoise.svg");
+  &::after {
+    z-index: -1;
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(2px);
+  }
+}
+
 /* spacing */
 
 #write {

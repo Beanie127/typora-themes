@@ -1,34 +1,82 @@
 @import url("./Alex/alex-core.css");
 
 :root {
-	--bg-color: hsl(38 45% 95%);
-	--quote-color: hsl(38 45% 85%);
-	--quote-80: hsl(38 85% 90%);
-	--accent-color: var(--fg);
-	--text-color: hsl(286 4% 16%);
-	--text-80: hsl(286 4% 16% / 0.8);
-	--hl: hsl(286 42% 28%);
-	--hl-op5: hsl(286 42% 28% / 0.5);
-	--fg: hsl(349 52% 44% 1);
-	--mg: var(--fg);
-	--md-char-color: hsl(0 95% 20% 1);
-	--meta-content-color: hsl(0 95% 20% 1);
-	--primary-color: hsl(10, 88% 23% 1);
-	--primary-btn-border-color: var(--hl);
-	--primary-btn-text-color: hsl(0 0% 20%);
-	--window-border: 1px solid hsl(240 8% 9%);
-	--active-file-border-color: hsl(45 83% 16% / 0.2);
-	--search-select-text-color: hsl(0 0% 20%);
-	--search-select-bg-color: hsl(0 69% 36% / 0.7);
-	--select-text-bg-color: hsl(60 33% 1% / 0.5);
-	--rawblock-edit-panel-bd: hsl(0 0% 81%);
-	--node-fill: hsl(0, 0% 98% 1);
-	--node-border: #0000001a;
-	--filter: invert(11%) sepia(66%) saturate(5190%) hue-rotate(4deg)
-		brightness(92%) contrast(122%);
+  --bg-color: hsl(38 45% 95%);
+  --quote-color: hsl(38 45% 85%);
+  --quote-80: hsl(38 85% 90%);
+  --accent-color: var(--fg);
+  --text-color: hsl(286 4% 16%);
+  --text-80: hsl(286 4% 16% / 0.8);
+  --hl: hsl(286 42% 28%);
+  --hl-op5: hsl(286 42% 28% / 0.5);
+  --fg: hsl(349 52% 44% 1);
+  --mg: var(--fg);
+  --md-char-color: hsl(0 95% 20% 1);
+  --meta-content-color: hsl(0 95% 20% 1);
+  --primary-color: hsl(10, 88% 23% 1);
+  --primary-btn-border-color: var(--hl);
+  --primary-btn-text-color: hsl(0 0% 20%);
+  --window-border: 1px solid hsl(240 8% 9%);
+  --active-file-border-color: hsl(45 83% 16% / 0.2);
+  --search-select-text-color: hsl(0 0% 20%);
+  --search-select-bg-color: hsl(0 69% 36% / 0.7);
+  --select-text-bg-color: hsl(60 33% 1% / 0.5);
+  --rawblock-edit-panel-bd: hsl(0 0% 81%);
+  --node-fill: hsl(0, 0% 98% 1);
+  --node-border: #0000001a;
+  --filter: invert(11%) sepia(66%) saturate(5190%) hue-rotate(4deg)
+    brightness(92%) contrast(122%);
 }
 
-/* Floating h2 */
+/* TEXTURED BACKDROP */
+
+content {
+  isolation: isolate;
+  background: url("./Alex/nnnoise.svg");
+  &::after {
+    z-index: -1;
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(2px);
+  }
+}
+
+/* FLOATING H2 */
+
+#write {
+  display: grid;
+  grid-template-columns: 12rem 1fr;
+  gap: 0 1rem;
+  margin-inline-start: 2rem;
+  max-inline-size: 95ch;
+
+  & * {
+    grid-column: 2 / 3;
+  } /* everything that's not a h2 goes in the second column */
+
+  & h2 {
+    grid-column: 1 / 2; /* h2s go in the first column */
+
+    &::before {
+      /* adds a column rule over the top of the H2 to connect it to its contents */
+      content: "";
+      display: block;
+      margin-block-start: -1rem;
+      padding-block-end: 1rem;
+      inline-size: 31rem;
+      block-size: 1px;
+      border-block-start: 1px solid var(--hl);
+      opacity: 0.25;
+    }
+    + * {
+      margin-block-start: 2rem; /* otherwise the row rule collides with the H2 */
+    }
+  }
+}
+
+/* FLOATING H2 -- DEPRECATED HACKY VERSION */
 
 /* #write:has(h2) {
 	transform: translateX(6rem);
@@ -37,54 +85,21 @@
 	}
 } */
 
-#write h2 {
-	position: relative;
-	float: left;
-	margin-block-end: 0;
-	transform: translate(calc(-100% - 1rem), -1em);
-	margin-inline-end: -15rem;
-	inline-size: 15rem;
-	/* text-align: right; */
-	line-height: 1;
-	clear: both;
-	text-wrap: balance;
-	&::before {
-		content: "";
-		display: block;
-		margin-block-start: -1rem;
-		padding-block-end: 1rem;
-		inline-size: 31rem;
-		block-size: 1px;
-		border-block-start: 1px solid var(--hl);
-		opacity: 0.25;
-	}
-}
-
-#write *:not(h1):has(+ h2) {
-	margin-block-end: 3rem;
-	/* &::after {
-		content: "";
-		display: block;
-		padding-block-start: 2rem;
-		margin-inline-start: -16rem;
-		inline-size: 31rem;
-		block-size: 1px;
-		border-block-end: 1px solid var(--hl);
-		opacity: 0.25;
-	} */
+/* #write *:not(h1):has(+ h2) {
+  margin-block-end: 3rem;
 }
 
 #write :is(ul, ol):has(+ h2)::after {
-	margin-inline-start: -17.75rem;
+  margin-inline-start: -17.75rem;
 }
 
 #write h1 + h2 {
-	transform: translate(calc(-100% - 1rem), 0);
-}
+  transform: translate(calc(-100% - 1rem), 0);
+} */
 
 #write h1 {
-	padding: 1rem 1rem 2rem;
-	margin: 2em 0;
+  padding: 1rem 1rem 2rem;
+  margin: 2em 0;
 }
 
 /**** header gradient fill *
@@ -112,28 +127,28 @@ h6 {
 /**** rainbow markers ****/
 
 #write li::marker {
-	font-weight: bold;
+  font-weight: bold;
 }
 #write li:nth-of-type(7n + 1)::marker {
-	color: hsl(0 40% 50%);
+  color: hsl(0 40% 50%);
 }
 #write li:nth-of-type(7n + 2)::marker {
-	color: hsl(30 50% 50%);
+  color: hsl(30 50% 50%);
 }
 #write li:nth-of-type(7n + 3)::marker {
-	color: hsl(60 50% 50%);
+  color: hsl(60 50% 50%);
 }
 #write li:nth-of-type(7n + 4)::marker {
-	color: hsl(120 30% 50%);
+  color: hsl(120 30% 50%);
 }
 #write li:nth-of-type(7n + 5)::marker {
-	color: hsl(180 40% 40%);
+  color: hsl(180 40% 40%);
 }
 #write li:nth-of-type(7n + 6)::marker {
-	color: hsl(240 30% 50%);
+  color: hsl(240 30% 50%);
 }
 #write li:nth-of-type(7n)::marker {
-	color: hsl(300 30% 50%);
+  color: hsl(300 30% 50%);
 }
 
 /**** bubble-y tables ****
