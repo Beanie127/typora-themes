@@ -39,7 +39,7 @@ html {
 
 content {
   isolation: isolate;
-  background: url("./Alex/nnnoise.svg");
+  background: url("./nnnoise.svg");
   &::after {
     z-index: -1;
     content: "";
