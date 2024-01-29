@@ -34,6 +34,15 @@ html {
   font-weight: 300;
 }
 
+/* vignette */
+
+content {
+  background: radial-gradient(
+    hsl(0 100% 100% / 0.4) 80%,
+    hsl(38 100% 85% / 0.4) 100%
+  );
+}
+
 /**** headers ****/
 
 #write h1 {

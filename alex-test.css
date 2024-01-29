@@ -32,7 +32,9 @@
 
 content {
   isolation: isolate;
-  background: url("./Alex/nnnoise.svg");
+  background: url("./nnnoise.svg");
+  background-size: contain;
+  background-repeat: repeat;
   &::after {
     z-index: -1;
     content: "";
@@ -42,7 +44,6 @@ content {
     backdrop-filter: blur(2px);
   }
 }
-
 /* FLOATING H2 */
 
 #write {
