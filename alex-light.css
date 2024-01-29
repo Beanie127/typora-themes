@@ -38,8 +38,9 @@ html {
 
 content {
   background: radial-gradient(
-    hsl(0 100% 100% / 0.4) 80%,
-    hsl(38 100% 85% / 0.4) 100%
+    ellipse at 50% 55%,
+    transparent 70%,
+    hsl(38 100% 50% / 0.2) 100%
   );
 }
 
