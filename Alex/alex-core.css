@@ -40,6 +40,8 @@ html {
 content {
   isolation: isolate;
   background: url("./nnnoise.svg");
+  background-size: contain;
+  background-repeat: repeat;
   &::after {
     z-index: -1;
     content: "";
