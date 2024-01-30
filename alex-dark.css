@@ -40,9 +40,9 @@ html {
 
 content {
   background: radial-gradient(
-    ellipse at 50% 55%,
-    transparent 70%,
-    hsl(38 100% 50% / 0.1) 100%
+    circle at 50% 55%,
+    var(--bg-color) 75%,
+    var(--quote-color) 95%
   );
 }
 

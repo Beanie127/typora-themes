@@ -38,9 +38,9 @@ html {
 
 content {
   background: radial-gradient(
-    ellipse at 50% 55%,
-    transparent 70%,
-    hsl(38 100% 50% / 0.2) 100%
+    circle at 50% 55%,
+    var(--bg-color) 85%,
+    var(--quote-color) 100%
   );
 }
 
