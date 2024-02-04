@@ -1,7 +1,7 @@
 @import url("./Alex/alex-core.css");
 :root {
   --bg-color: hsla(38, 45%, 95%, 1);
-  --quote-color: hsla(38, 45%, 85%, 1);
+  --quote-color: hsl(38 45% 85%);
   --quote-80: hsla(38, 85%, 90%, 1);
   --accent-color: var(--fg);
   --text-color: hsla(286, 4%, 16%, 1);
@@ -31,17 +31,7 @@ html {
   font-family: "Bespoke Serif", "Bespoke Serif Variable", Cambria, Cochin,
     Georgia, serif;
   font-size: 120%;
-  font-weight: 300;
-}
-
-/* vignette */
-
-content {
-  background: radial-gradient(
-    circle at 50% 55%,
-    var(--bg-color) 85%,
-    var(--quote-color) 100%
-  );
+  font-weight: 200;
 }
 
 /**** headers ****/

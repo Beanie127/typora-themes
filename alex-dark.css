@@ -36,16 +36,6 @@ html {
   font-weight: 200;
 }
 
-/* vignette */
-
-content {
-  background: radial-gradient(
-    circle at 50% 55%,
-    var(--bg-color) 75%,
-    var(--quote-color) 95%
-  );
-}
-
 /**** headers ****/
 
 #write h1 {
