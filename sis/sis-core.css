@@ -88,9 +88,9 @@ html::after {
   position: fixed;
   right: 5ch;
   bottom: 5ch;
-  inline-size: 5ch;
+  inline-size: 7ch;
   aspect-ratio: 1;
-  opacity: 0.1;
+  opacity: 0.4;
 }
 
 /* headers and subheaders */
@@ -158,8 +158,8 @@ blockquote {
 /* Images */
 
 img {
-  margin: 2rem auto;
-  padding: 2rem;
+  margin: 3rem auto;
+  padding: 0;
   max-inline-size: 80%;
   max-block-size: 60ch;
 }
