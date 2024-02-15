@@ -18,8 +18,8 @@
   --primary-btn-text-color: hsl(0, 0%, 20%);
   --window-border: 1px solid hsl(240, 8%, 9%);
   --active-file-bg-color: var(--bg-color);
-  --active-file-text-color: var(--accent-2);
-  --active-file-border-color: var(--accent-2);
+  --active-file-text-color: var(--accent-1);
+  --active-file-border-color: var(--accent-1);
   --active-search-item-bg-color: var(--bg-2);
   --side-bar-bg-color: var(--bg-2);
   --item-hover-bg-color: var(--bg-color);
