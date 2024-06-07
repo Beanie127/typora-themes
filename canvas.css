@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:slnt,wght,FLAR,VOLM@-12..0,100..900,0..100,0..100&display=swap");
+
+:root {
+    --bg-color: hsl(17 85% 95%);
+    --side-bar-bg-color: hsl(17 45% 85%);
+    --text-color: hsl(217 95% 16%);
+
+    --select-text-bg-color: hsl(217 40% 85%);
+
+    --item-hover-bg-color: #b7b7b7;
+    --control-text-color: #0a0d16;
+    --control-text-hover-color: black;
+    --window-border: 1px solid hsl(17 45% 70%);
+    /* 
+    --active-file-bg-color: rgb(34, 34, 34);
+    --active-file-border-color: #8d8df0;
+
+    --primary-color: #a3d5fe;
+
+    --active-file-text-color: white;
+    --item-hover-bg-color: #70717d;
+    --item-hover-text-color: white;
+    --primary-color: #6dc1e7;
+
+    --rawblock-edit-panel-bd: #333;
+
+    --search-select-bg-color: #428bca; */
+}
+
+html {
+    font-family: "Commissioner";
+    font-optical-sizing: auto;
+    font-variation-settings: "FLAR" 40;
+    font-size: 112.5%;
+}
+
+content {
+    background: url("./canvas/watercolour.png");
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: contain;
+}
+
+#write {
+    max-inline-size: 100ch;
+    margin-inline: auto;
+    padding-inline: 1rem 5rem;
+}
