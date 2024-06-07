@@ -16,7 +16,8 @@
     --bg-color: white;
   }
 
-  #write::after {
+  #write::after,
+  html::after {
     display: none !important;
   }
 
