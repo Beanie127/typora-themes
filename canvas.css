@@ -4,6 +4,7 @@
     --bg-color: hsl(17 85% 95%);
     --side-bar-bg-color: hsl(17 45% 85%);
     --text-color: hsl(217 95% 16%);
+    --text-color-light: hsl(217 35% 46%);
 
     --select-text-bg-color: hsl(217 40% 85%);
 
@@ -35,7 +36,7 @@ html {
 }
 
 content {
-    background: url("./canvas/watercolour.png");
+    background: url("./canvas/background.png");
     background-repeat: no-repeat;
     background-position: 100%;
     background-size: contain;
@@ -45,4 +46,43 @@ content {
     max-inline-size: 100ch;
     margin-inline: auto;
     padding-inline: 1rem 5rem;
+}
+
+a {
+    color: var(--text-color-light);
+    text-decoration-thickness: 3px;
+    text-decoration-color: var(--side-bar-bg-color);
+}
+
+em {
+    font-style: normal;
+    font-variation-settings: "slnt" -12;
+}
+
+#write :is(h1, h2, h3) u {
+    display: block;
+    font-size: 60%;
+    opacity: 0.75;
+    font-weight: 400;
+    line-height: 1;
+    text-decoration: none;
+    font-variation-settings: "slnt" -6;
+}
+
+blockquote {
+    margin-inline: auto;
+    max-inline-size: 50ch;
+    background-image: url("./canvas/blockquote.png");
+    background-size: 100% 100%;
+    padding: 1.5rem 3rem;
+    color: var(--text-color-light);
+    overflow: visible;
+    & cite {
+        padding-inline: 1rem;
+        font-variation-settings: "slnt" -6;
+        font-style: normal;
+        &::before {
+            content: "— ";
+        }
+    }
 }
