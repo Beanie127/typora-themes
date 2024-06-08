@@ -4,7 +4,7 @@
     --bg-color: hsl(17 85% 95%);
     --side-bar-bg-color: hsl(17 45% 85%);
     --text-color: hsl(217 95% 16%);
-    --text-color-light: hsl(217 35% 46%);
+    --text-color-light: hsl(217 75% 36%);
 
     --select-text-bg-color: hsl(217 40% 85%);
 
@@ -28,6 +28,14 @@
     --search-select-bg-color: #428bca; */
 }
 
+/* Reset */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html {
     font-family: "Commissioner";
     font-optical-sizing: auto;
@@ -48,10 +56,12 @@ content {
     padding-inline: 1rem 5rem;
 }
 
-a {
+#write a {
     color: var(--text-color-light);
-    text-decoration-thickness: 3px;
-    text-decoration-color: var(--side-bar-bg-color);
+    transition: all 250ms;
+    &:hover {
+        filter: hue-rotate(-40deg);
+    }
 }
 
 em {
@@ -76,7 +86,6 @@ blockquote {
     background-size: 100% 100%;
     padding: 1.5rem 3rem;
     color: var(--text-color-light);
-    overflow: visible;
     & cite {
         padding-inline: 1rem;
         font-variation-settings: "slnt" -6;
@@ -85,4 +94,34 @@ blockquote {
             content: "— ";
         }
     }
+}
+
+table {
+    border-collapse: collapse;
+    inline-size: calc(100% - 3rem);
+}
+
+td {
+    padding-inline: 1ch;
+}
+
+thead {
+    position: relative;
+    &::before {
+        position: absolute;
+        inset-block: 0;
+        inset-inline: 0 -1rem;
+        content: "";
+        background-image: url("./canvas/blockquote.png");
+        background-size: 100% 100%;
+        filter: hue-rotate(100deg) contrast(80%);
+    }
+}
+
+th {
+    padding: 1ch;
+}
+
+tr:not(:first-of-type, :last-of-type) {
+    border-block: thin solid var(--select-text-bg-color);
 }
