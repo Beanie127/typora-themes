@@ -226,20 +226,32 @@ hr {
 
 /* header finials */
 
-#write h1::before {
-    font-weight: normal;
-    content: "☙";
-    margin-right: 0.4em;
-    color: var(--hl);
-    opacity: 0.5;
-}
+#write h1 {
+    position: relative;
+    inline-size: max-content;
+    max-inline-size: calc(100% - 3rem);
+    margin-inline: auto;
 
-#write h1::after {
-    font-weight: normal;
-    content: "❧";
-    margin-left: 0.4em;
-    color: var(--hl);
-    opacity: 0.5;
+    &::before,
+    &::after {
+        font-weight: normal;
+        color: var(--hl);
+        opacity: 0.5;
+        padding-inline: 1ch;
+        position: absolute;
+        inset-block-start: 0.5cap;
+    }
+
+    &::before {
+        content: "☙";
+        inset-inline-start: -2em;
+    }
+
+    &::after {
+        content: "❧";
+        inset-inline-end: -2em;
+        inset-block-end: calc(100% - 0.5cap);
+    }
 }
 
 /* tables */
@@ -259,14 +271,12 @@ td {
 
 tr {
     border-bottom: 1px solid var(--fg);
-}
-
-tr:nth-child(even) {
-    background: var(--quote-color);
-}
-
-tr:nth-child(odd) {
-    background: var(--bg-color);
+    &:nth-child(even) {
+        background: var(--quote-color);
+    }
+    &:nth-child(odd) {
+        background: var(--bg-color);
+    }
 }
 
 thead,
@@ -283,7 +293,7 @@ th {
 }
 
 #write ul,
-#write ul > li > ul {
+#write ul ul {
     list-style-type: "∴  ";
     line-height: 1.5em;
 }
@@ -291,19 +301,19 @@ th {
 #write ol {
     list-style-type: decimal;
     line-height: 1.5em;
-}
-
-#write ol > li > ol {
-    list-style-type: lower-alpha;
-    margin-left: -1em;
-}
-
-#write ol > li > ol > li > ol {
-    list-style-type: lower-roman;
-}
-
-#write ol > li > ol > li > ol > li > ol {
-    list-style-type: lower-greek;
+    & ol {
+        list-style-type: lower-alpha;
+        margin-left: -1em;
+        & ol {
+            list-style-type: lower-roman;
+            & ol {
+                list-style-type: lower-greek;
+                & ol {
+                    list-style-type: decimal;
+                }
+            }
+        }
+    }
 }
 
 #write .md-task-list-item > input {
