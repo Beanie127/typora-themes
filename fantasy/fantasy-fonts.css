@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "Avona Serif";
+    src: url("./AvonaSerifPersonal-Light.otf");
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Avona Serif";
+    src: url("./AvonaSerifPersonal-Regular.otf");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Avona Serif";
+    src: url("./AvonaSerifPersonal-Medium.otf");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Avona Serif";
+    src: url("./AvonaSerifPersonal-Semibold.otf");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Avona Serif";
+    src: url("./AvonaSerifPersonal-Bold.otf");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Avona Serif";
+    src: url("./AvonaSerifPersonal-Black.otf");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Avona";
+    src: url("./AvonaPersonal-Light.otf");
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Avona";
+    src: url("./AvonaPersonal-Regular.otf");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Avona";
+    src: url("./AvonaPersonal-Semibold.otf");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Avona";
+    src: url("./AvonaPersonal-Bold.otf");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Avona";
+    src: url("./AvonaPersonal-Black.otf");
+    font-weight: 900;
+    font-style: normal;
+}
