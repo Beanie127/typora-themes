@@ -17,16 +17,6 @@
     --control-text-hover-color: black;
     --window-border: 1px solid hsl(17 45% 70%);
     --active-file-text-color: var(--bg-color);
-    /* 
-    --primary-color: #a3d5fe;
-
-    --item-hover-bg-color: #70717d;
-    --item-hover-text-color: white;
-    --primary-color: #6dc1e7;
-
-    --rawblock-edit-panel-bd: #333;
-
-    --search-select-bg-color: #428bca; */
 }
 
 /* Reset */
@@ -168,6 +158,18 @@ td {
 
 tr:not(:first-of-type, :last-of-type) {
     border-block: thin solid var(--select-text-bg-color);
+}
+
+pre.md-meta-block,
+sup.md-footnote {
+    background: var(--side-bar-bg-color);
+    color: var(--text-color);
+}
+
+pre.md-meta-block {
+    border-radius: 8px;
+    padding: 10px;
+    line-height: 1;
 }
 
 /* UI */

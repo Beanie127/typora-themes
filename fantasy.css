@@ -51,8 +51,11 @@
 
 pre.md-meta-block,
 sup.md-footnote {
-    background: var(--quote-color);
+    border-radius: 8px;
+    background: var(--side-bar-bg-color);
+    padding: 10px;
     color: var(--hl);
+    line-height: 1;
 }
 
 /* fonts */
@@ -239,7 +242,7 @@ hr {
         opacity: 0.5;
         padding-inline: 1ch;
         position: absolute;
-        inset-block-start: 0.5cap;
+        inset-block-start: 0.7ex;
     }
 
     &::before {
@@ -250,7 +253,6 @@ hr {
     &::after {
         content: "❧";
         inset-inline-end: -2em;
-        inset-block-end: calc(100% - 0.5cap);
     }
 }
 
