@@ -166,6 +166,10 @@ tr:not(:first-of-type, :last-of-type) {
     border-block: thin solid var(--select-text-bg-color);
 }
 
+del {
+    filter: contrast(50%) brightness(150%);
+}
+
 pre.md-meta-block,
 sup.md-footnote {
     background: var(--side-bar-bg-color);
