@@ -82,8 +82,10 @@ content {
 }
 
 #write {
-    max-inline-size: 85ch;
     margin-inline: auto;
+    margin-block-end: 30dvb;
+    min-block-size: 100dvb;
+    max-inline-size: 85ch;
     padding-inline: 1rem 5rem;
 }
 
@@ -119,7 +121,7 @@ content {
 
 blockquote {
     margin-inline: auto;
-    max-inline-size: 50ch;
+    max-inline-size: 60ch;
     background-image: url("./canvas/rect.png");
     background-size: 100% 100%;
     padding: 1.5rem 3rem;
@@ -160,6 +162,7 @@ th {
 
 td {
     padding-inline: 1ch;
+    text-wrap: balance;
 }
 
 tr:not(:first-of-type, :last-of-type) {
