@@ -138,7 +138,8 @@ blockquote {
 
 table {
     border-collapse: collapse;
-    inline-size: calc(100% - 3rem);
+    margin-inline: auto;
+    inline-size: calc(100% - 2rem);
 }
 
 thead {
