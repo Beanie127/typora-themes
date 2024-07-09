@@ -1,31 +1,7 @@
 @import url("../plugins/subtitles.css");
 @import url("../plugins/codeblock.dark.css");
 @import url("../plugins/print.css");
-
-@font-face {
-    font-family: "Space Grotesk";
-    src: url("./fonts/SpaceGrotesk-Regular.otf");
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Space Grotesk";
-    src: url("./fonts/SpaceGrotesk-Medium.otf");
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Space Grotesk";
-    src: url("./fonts/SpaceGrotesk-Bold.otf");
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Space Grotesk";
-    src: url("./fonts/SpaceGrotesk-Light.otf");
-    font-weight: 200;
-    font-style: normal;
-}
+@import url("./fonts/fonts.css");
 
 *,
 *::before,
