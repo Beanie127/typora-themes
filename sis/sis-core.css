@@ -143,10 +143,9 @@ img {
 /* Code */
 
 code {
-    font-size: 0.9em;
-    border: 1px solid var(--accent-1);
-    border-radius: 0.25rem;
-    padding: 0 0.125rem;
+    /* font-size: 0.9em; */
+    padding-inline: 0.5ch;
+    color: var(--accent-1);
 }
 
 /* hyperlinks */

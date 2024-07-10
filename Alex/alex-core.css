@@ -152,10 +152,12 @@ blockquote {
 /* Code */
 
 code {
-    font-size: 0.9em;
-    border: 1px solid var(--mg, lightgray);
-    border-radius: 0.25rem;
-    padding: 0 0.25rem;
+    color: var(--fg);
+    padding-inline: 0.5ch;
+    /* font-size: 0.9em; */
+    /* border: 1px solid var(--mg, lightgray); */
+    /* border-radius: 0.25rem; */
+    /* padding: 0 0.25rem; */
 }
 
 /* hyperlinks */
