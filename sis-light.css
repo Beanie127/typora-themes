@@ -1,6 +1,6 @@
 @import url("sis/sis-core.css");
 :root {
-    --bg-color: hsla(43, 37%, 90%, 1);
+    --bg-color: hsla(43, 37%, 95%, 1);
     --bg-2: var(--bg-color);
     --text-color: hsla(210, 20%, 10%, 1);
     --accent-1: hsla(216, 70%, 30%, 1);
@@ -17,9 +17,9 @@
     --primary-btn-border-color: var(--header-color);
     --primary-btn-text-color: hsl(0, 0%, 20%);
     --window-border: 1px solid hsl(240, 8%, 9%);
-    --active-file-bg-color: var(--bg-color);
-    --active-file-text-color: var(--accent-1);
-    --active-file-border-color: var(--accent-1);
+    --active-file-bg-color: var(--accent-1);
+    --active-file-text-color: var(--bg-color);
+    --active-file-border-color: var(--accent-2);
     --active-search-item-bg-color: var(--bg-2);
     --side-bar-bg-color: var(--bg-2);
     --item-hover-bg-color: var(--bg-color);

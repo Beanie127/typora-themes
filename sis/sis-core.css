@@ -1,7 +1,7 @@
 @import url("../plugins/subtitles.css");
 @import url("../plugins/codeblock.dark.css");
 @import url("../plugins/print.css");
-@import url("./fonts/fonts.css");
+@import url("fonts/fonts.css");
 
 *,
 *::before,
@@ -16,9 +16,8 @@
 html {
     font-size: 112.5%;
     /* font-family: "InterSIS", sans-serif; */
-    font-family: "Space Grotesk";
+    font-family: "Space Grotesk Freeze";
     /* font-stretch: condensed; */
-    font-feature-settings: "ss02", "ss03", "ss04";
     /* font-variant-numeric: tabular-nums; */
 }
 
@@ -79,6 +78,7 @@ h5,
 h6 {
     /* font-family: "Hubot Sans"; */
     /* font-family: "Rajdhani"; */
+    /* font-family: "OCR-B"; */
     font-stretch: condensed;
     font-weight: 900;
     /* text-transform: uppercase; */
