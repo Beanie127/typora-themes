@@ -1,11 +1,10 @@
-@import url("./sis/sis-core.css");
-
+@import url("sis/sis-core.css");
 :root {
-    --bg-color: hsla(43, 37%, 96%, 1);
+    --bg-color: hsla(43, 37%, 95%, 1);
     --bg-2: var(--bg-color);
-    --text-color: hsla(210, 20%, 5%, 1);
-    --accent-1: hsla(200, 80%, 45%, 1);
-    --accent-2: hsla(216, 30%, 30%, 1);
+    --text-color: hsla(210, 20%, 10%, 1);
+    --accent-1: hsla(216, 70%, 30%, 1);
+    --accent-2: hsla(200, 80%, 45%, 1);
     --grad: linear-gradient(120deg, var(--accent-2), var(--accent-1));
     --quote: linear-gradient(
         135deg,
@@ -18,10 +17,10 @@
     --primary-btn-border-color: var(--header-color);
     --primary-btn-text-color: hsl(0, 0%, 20%);
     --window-border: 1px solid hsl(240, 8%, 9%);
-    --active-file-bg-color: var(--bg-2);
-    --active-file-text-color: var(--text-color);
+    --active-file-bg-color: var(--accent-1);
+    --active-file-text-color: var(--bg-color);
     --active-file-border-color: var(--accent-2);
-    --active-search-item-bg-color: var(--bg-grad);
+    --active-search-item-bg-color: var(--bg-2);
     --side-bar-bg-color: var(--bg-2);
     --item-hover-bg-color: var(--bg-color);
     --item-hover-text-color: (--text-color);
@@ -32,22 +31,33 @@
     --node-fill: hsl(0, 0%, 98%);
     --node-border: #0000001a;
     --mermaid-theme: forest;
-    --mermaid-font-family: sans-serif;
+    --mermaid-font-family: "Inter";
 }
 
-code {
-    font-family: "Space Mono";
+h1 {
+    -webkit-background-clip: text;
+    background: var(--grad);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-/* EARTH BACKGROUND
-content {
-    background: url('./sis/background-min.png');
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-} 
 
 #write {
-    backdrop-filter: brightness(30%) blur(4px);
+    background: transparent;
 }
 
-*/
+content {
+    background-image: linear-gradient(115deg, transparent, var(--bg-color) 50%),
+        repeating-radial-gradient(
+            circle at top left,
+            transparent 10px,
+            hsl(213 30% 93%) 11px 12px,
+            transparent 13px 50px
+        );
+}
+
+content {
+    background-image: radial-gradient(var(--bg-color) 25%, transparent 80%),
+        radial-gradient(circle, hsl(213 30% 85%) 1px, transparent 2px);
+    background-size: contain, 25px 25px;
+    /* background-repeat: no-repeat, repeat; */
+}

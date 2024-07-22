@@ -40,3 +40,10 @@ h1 {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+content {
+    background-image: radial-gradient(var(--bg-color) 25%, transparent 80%),
+        radial-gradient(circle, hsl(213 30% 85%) 1px, transparent 2px);
+    background-size: contain, 25px 25px;
+    /* background-repeat: no-repeat, repeat; */
+}

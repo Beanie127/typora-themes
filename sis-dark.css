@@ -34,16 +34,22 @@
     --mermaid-font-family: sans-serif;
 }
 
-/* content {
-  background: url("./sis/background-min.png");
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-} */
-/* 
+content {
+    background-image: radial-gradient(
+            circle at top left,
+            transparent,
+            var(--bg-color) 33%
+        ),
+        repeating-radial-gradient(
+            circle at top left,
+            transparent 10px,
+            var(--accent-2) 11px 12px,
+            transparent 13px 50px
+        );
+}
 #write {
-  backdrop-filter: brightness(30%) blur(4px);
-} */
+    background: none;
+}
 
 h1,
 h2,
