@@ -47,3 +47,7 @@ content {
     background-size: contain, 25px 25px;
     /* background-repeat: no-repeat, repeat; */
 }
+
+#write {
+    background: none;
+}
