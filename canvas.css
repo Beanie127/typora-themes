@@ -170,6 +170,10 @@ tr:not(:first-of-type, :last-of-type) {
     border-block: thin solid var(--select-text-bg-color);
 }
 
+li {
+    padding-inline-start: 0.5ch;
+}
+
 del {
     filter: contrast(50%) brightness(150%);
 }
