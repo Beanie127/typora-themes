@@ -76,12 +76,8 @@ h3,
 h4,
 h5,
 h6 {
-    /* font-family: "Hubot Sans"; */
-    /* font-family: "Rajdhani"; */
-    /* font-family: "OCR-B"; */
     font-stretch: condensed;
     font-weight: 900;
-    /* text-transform: uppercase; */
 }
 
 h1 {
@@ -96,14 +92,29 @@ h2 {
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 h4,
 h5,
 h6 {
-    /* font-family: "InterSIS"; */
     font-weight: 600;
+    font-stretch: expanded;
+}
+
+h4,
+h6 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: color-mix(in oklch, var(--text-color) 70%, var(--bg-color) 30%);
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 0.8rem;
 }
 
 mark {

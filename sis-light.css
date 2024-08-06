@@ -42,10 +42,13 @@ h1 {
 }
 
 content {
-    background-image: radial-gradient(var(--bg-color) 25%, transparent 80%),
+    background-image: radial-gradient(
+            at bottom,
+            var(--bg-color) 50%,
+            transparent 90%
+        ),
         radial-gradient(circle, hsl(213 30% 85%) 1px, transparent 2px);
     background-size: contain, 25px 25px;
-    /* background-repeat: no-repeat, repeat; */
 }
 
 #write {

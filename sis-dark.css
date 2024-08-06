@@ -38,26 +38,30 @@ content {
     background-image: radial-gradient(
             circle at top left,
             transparent,
-            var(--bg-color) 33%
+            var(--bg-color) 50vmin
         ),
         repeating-radial-gradient(
             circle at top left,
-            transparent 10px,
+            var(--bg-color) 10px,
             var(--accent-2) 11px 12px,
-            transparent 13px 50px
+            var(--bg-color) 13px 50px
+        ),
+        radial-gradient(
+            circle at bottom right,
+            transparent,
+            var(--bg-color) 50vmin
+        ),
+        repeating-radial-gradient(
+            circle at bottom right,
+            var(--bg-color) 10px,
+            var(--accent-2) 11px 12px,
+            var(--bg-color) 13px 50px
         );
+    background-size: 50% 50%, 50% 50%, 100% 100%, 100% 100%;
+    background-repeat: no-repeat;
 }
 #write {
     background: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: hsl(0, 0%, 85%);
 }
 
 body {
