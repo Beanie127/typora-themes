@@ -13,7 +13,7 @@ html {
 
 #write {
     margin: auto;
-    max-inline-size: 75ch;
+    max-inline-size: 80ch;
     padding: 3em 1em;
     line-height: 1.75;
 }
@@ -29,19 +29,25 @@ h6 {
 }
 
 :is(h1, h2, h3, h4, h5, h6)::before {
-    color: hsl(180 25% 30%);
+    color: hsl(180 50% 30%);
 }
 
 h1::before {
     content: "· ";
 }
 
-h2::before {
-    content: ": ";
+h2 {
+    filter: hue-rotate(60deg);
+    &::before {
+        content: ": ";
+    }
 }
 
-h3::before {
-    content: "⁝ ";
+h3 {
+    filter: hue-rotate(120deg);
+    &::before {
+        content: "⁝ ";
+    }
 }
 
 p,
@@ -55,11 +61,30 @@ blockquote {
 }
 
 hr {
-    margin-block: 2rem;
+    display: grid;
+    place-items: center;
+    margin-block: 1.5em;
     width: 80%;
+    font-size: 2rem;
+    height: calc(2ch + 1lh);
     margin-inline: auto;
     border: none;
-    border-block-end: 2px solid darkslategray;
+    opacity: 0.2;
+    &::before {
+        display: block;
+        grid-area: 1/1;
+        inline-size: 100%;
+        border-block-end: 2px solid darkslategray;
+        content: "";
+    }
+    &::after {
+        display: block;
+        grid-area: 1/1;
+        background: var(--bg-color);
+        color: darkslategray;
+        content: "⁕ ⁕ ⁕";
+        padding: 1ch;
+    }
 }
 
 a {
@@ -68,7 +93,7 @@ a {
 
 th,
 td {
-    padding: 0px 3px;
+    padding: 3px 8px;
 }
 
 th {
