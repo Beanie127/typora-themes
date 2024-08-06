@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 :root {
     --mermaid-theme: dark;
     --bg-color: hsla(0, 0%, 100%, 1);
@@ -28,6 +30,60 @@
     --node-border: #0000001a;
 }
 
+/* horizontal breaks */
+
+hr {
+    page-break-after: always;
+    clear: both;
+    background: none;
+    border: none;
+}
+
+/* workspace */
+
+html {
+    font-variant-numeric: lining-nums tabular-nums slashed-zero;
+}
+
+html,
+body {
+    font-size: 100%;
+    font-family: "Roboto";
+    line-height: 1.8em;
+    --monospace: "Tabular Variable";
+}
+
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
+
+@media print {
+    html {
+        font-size: 12px;
+    }
+    #write {
+        max-inline-size: 100%;
+        background: none;
+    }
+}
+
+::selection {
+    background: var(--header-color);
+    color: var(--bg-color);
+}
+
+#write {
+    background: none;
+    max-inline-size: 70em;
+    background-color: var(--bg-80, var(--bg-color));
+}
+
+pre.md-meta-block,
+sup.md-footnote {
+    background: var(--quote-color);
+    color: var(--header-color);
+}
 
 /* Images and Layout */
 
@@ -61,47 +117,6 @@ blockquote {
     margin: 0em 1em 3em 0em;
 }
 
-/* horizontal breaks */
-
-hr {
-    page-break-after: always;
-    clear: both;
-    background: none;
-    border: none;
-}
-
-
-/* workspace */
-
-#write {
-    background: none;
-    max-width: 70em;
-    background-color: var(--bg-80, var(--bg-color));
-}
-
-html {
-    font-variant-numeric: lining-nums tabular-nums slashed-zero;
-}
-
-html,
-body {
-    font-size: 12px;
-    font-family: "Roboto";
-    line-height: 1.8em;
-    --monospace: "Tabular Variable";
-}
-
-::selection {
-    background: var(--header-color);
-    color: var(--bg-color);
-}
-
-pre.md-meta-block,
-sup.md-footnote {
-    background: var(--quote-color);
-    color: var(--header-color);
-}
-
 /* bold */
 
 p strong {
@@ -111,10 +126,9 @@ p strong {
 mark {
     background: var(--text-color);
     color: var(--bg-color);
-    border-radius: .25rem;
-    padding: 0 .25rem;
+    border-radius: 0.25rem;
+    padding: 0 0.25rem;
 }
-
 
 /* strikethrough */
 
@@ -123,7 +137,6 @@ del {
     text-decoration: line-through;
     text-decoration-color: var(--text-80);
 }
-
 
 /* headers and subheaders */
 
@@ -186,20 +199,23 @@ h6 {
     margin-bottom: 0.2em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     clear: both;
 }
-
 
 /* Code */
 
 code {
-    font-size: .9em;
+    font-size: 0.9em;
     border: 1px solid var(--accent-color);
-    border-radius: .25rem;
-    padding: 0 .25rem;
+    border-radius: 0.25rem;
+    padding: 0 0.25rem;
 }
-
 
 /* hyperlinks */
 
@@ -208,7 +224,6 @@ code {
     text-decoration: underline;
     font-weight: bold;
 }
-
 
 /* tables */
 
@@ -224,7 +239,6 @@ th,
 td {
     padding: 5px;
 }
-
 
 /* lists and checklists */
 
@@ -273,8 +287,8 @@ td {
     display: block;
     position: absolute;
     border: 1px solid #b4b4b4;
-    border-radius: .25rem;
-    margin-top: .1rem;
+    border-radius: 0.25rem;
+    margin-top: 0.1rem;
     margin-left: -1.8rem;
     height: 1.2rem;
     width: 1.2rem;
@@ -282,7 +296,7 @@ td {
 }
 
 #write .md-task-list-item > input[checked]::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 20%;
     left: 50%;
@@ -293,7 +307,7 @@ td {
 }
 
 #write .md-task-list-item > input[checked]::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 46%;
     left: 25%;
@@ -304,10 +318,9 @@ td {
 }
 
 #write .md-task-list-item.task-list-done > p {
-    opacity: .5;
+    opacity: 0.5;
     text-decoration: line-through;
 }
-
 
 /* table of contents */
 
@@ -316,7 +329,6 @@ td {
 .md-toc-h6 {
     display: none;
 }
-
 
 /* Pandoc export settings */
 
@@ -334,13 +346,11 @@ tr {
     break-inside: avoid;
 }
 
-
 /* source-code mode */
 
 .cm-s-typora-default .cm-header {
     color: var(--header-color);
 }
-
 
 /*
 
@@ -380,7 +390,7 @@ tr {
 }
 
 .cm-s-inner .CodeMirror-activeline-background {
-    background: #D7D7D708;
+    background: #d7d7d708;
 }
 
 .cm-s-inner .CodeMirror-selected {
@@ -388,19 +398,19 @@ tr {
 }
 
 .cm-s-inner .cm-comment {
-    color: #3C403B;
+    color: #3c403b;
 }
 
 .cm-s-inner .cm-string {
-    color: #5D90CD;
+    color: #5d90cd;
 }
 
 .cm-s-inner .cm-number {
-    color: #E92E2E;
+    color: #e92e2e;
 }
 
 .cm-s-inner .cm-atom {
-    color: #E92E2E;
+    color: #e92e2e;
 }
 
 .cm-s-inner .cm-variable-2 {
@@ -408,7 +418,7 @@ tr {
 }
 
 .cm-s-inner .cm-property {
-    color: #E92E2E;
+    color: #e92e2e;
 }
 
 .cm-s-inner .cm-keyword {
@@ -420,5 +430,5 @@ tr {
 }
 
 .cm-s-inner .CodeMirror-linenumber {
-    color: #3C403B;
+    color: #3c403b;
 }
