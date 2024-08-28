@@ -41,6 +41,12 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
+::selection {
+    background-clip: unset;
+    color: var(--bg-color);
+    -webkit-text-fill-color: unset;
+}
+
 content {
     background-image: radial-gradient(
             at bottom,

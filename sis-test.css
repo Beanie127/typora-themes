@@ -1,26 +1,26 @@
 @import url("./sis/sis-core.css");
 :root {
-    --bg-color: hsl(210 10% 8% / 1);
-    --bg-2: hsl(210 30% 12%/ 1);
-    --text-color: hsla(43, 37%, 90%, 1);
-    --accent-1: hsla(200, 45%, 45%, 1);
-    --accent-2: hsla(216, 30%, 30%, 1);
-    --grad: linear-gradient(120deg, var(--accent-1), var(--accent-2));
+    --bg-color: hsla(43, 37%, 95%, 1);
+    --bg-2: var(--bg-color);
+    --text-color: hsla(210, 20%, 10%, 1);
+    --accent-1: hsla(216, 70%, 30%, 1);
+    --accent-2: hsla(200, 80%, 45%, 1);
+    --grad: linear-gradient(120deg, var(--accent-2), var(--accent-1));
     --quote: linear-gradient(
         135deg,
-        hsla(195, 57%, 45%, 0.3) 0%,
-        hsla(216, 55%, 29%, 0.3) 100%
+        hsla(216, 55%, 29%, 0.3) 0%,
+        hsla(195, 57%, 45%, 0.3) 100%
     );
-    --md-char-color: hsl(0, 100%, 60%);
-    --meta-content-color: var(--md-char-color);
+    --md-char-color: hsl(0, 100%, 35%);
+    --meta-content-color: hsl(0, 100%, 60%);
     --primary-color: hsl(10, 90%, 25%);
     --primary-btn-border-color: var(--header-color);
     --primary-btn-text-color: hsl(0, 0%, 20%);
     --window-border: 1px solid hsl(240, 8%, 9%);
-    --active-file-bg-color: var(--bg-2);
-    --active-file-text-color: var(--accent-1);
-    --active-file-border-color: var(--accent-1);
-    --active-search-item-bg-color: var(--bg-grad);
+    --active-file-bg-color: var(--accent-1);
+    --active-file-text-color: var(--bg-color);
+    --active-file-border-color: var(--accent-2);
+    --active-search-item-bg-color: var(--bg-2);
     --side-bar-bg-color: var(--bg-2);
     --item-hover-bg-color: var(--bg-color);
     --item-hover-text-color: (--text-color);
@@ -31,7 +31,7 @@
     --node-fill: hsl(0, 0%, 98%);
     --node-border: #0000001a;
     --mermaid-theme: forest;
-    --mermaid-font-family: sans-serif;
+    --mermaid-font-family: "Inter";
 }
 
 h1 {
