@@ -17,7 +17,7 @@ html {
 
 #write {
     margin-inline: auto;
-    max-inline-size: 100ch;
+    max-inline-size: min(calc(100% - 3em), 100ch);
     padding: 3em 1em;
     line-height: 1.75;
     font-size: 1.125em;
