@@ -2,13 +2,17 @@
 @import url("./plugins/print.css");
 
 :root {
-    --side-bar-bg-color: whitesmoke;
+    --side-bar-bg-color: hsl(100 20% 85%);
+    --bg-color: hsl(100 10% 95%);
+    --text-color: hsl(100 80% 15%);
+    --accent-color: hsl(100 90% 25%);
 }
 
 html {
     font-family: "Departure Mono", ui-sans-serif, sans-serif;
-    background: hsl(0 0 95%);
-    color: hsl(0 0% 5%);
+    -webkit-font-smoothing: none;
+    --moz-osx-font-smoothing: disabled;
+    font-smooth: never;
 }
 
 #write {
@@ -28,6 +32,24 @@ h6 {
     margin: 2em 0 0.5em;
 }
 
+:is(h1, h2, h3, h4)::before {
+    content: "# ";
+    opacity: 0.5;
+    margin-inline-start: -2ch;
+}
+
+h2::before {
+    content: "$ ";
+}
+
+h3::before {
+    content: "\\ ";
+}
+
+h4::before {
+    content: "~ ";
+}
+
 p,
 ul,
 ol {
@@ -36,25 +58,26 @@ ol {
 
 blockquote {
     padding-left: 1em;
-    border-left: 2px solid lightslategray;
+    border-left: 2px solid var(--accent-color);
 }
 
 th,
 td {
-    border: 1px solid lightslategray;
+    border: 1px solid var(--accent-color);
     padding: 0px 3px;
 }
 
 hr {
-    height: 0;
-    width: calc(100% -4rem);
-    margin-inline: auto;
+    block-size: 0;
+    inline-size: 200vw;
+    margin-inline-start: -50vw;
     margin-block: 6rem;
-    border-block-end: thin dashed lightslategray;
+    border-block-end: thin dashed var(--accent-color);
 }
 
 code {
     background-color: #eee;
+    font-family: inherit;
     border-radius: 3px;
     border: 1px solid #b4b4b4;
     box-shadow: 0 1px 1px hsl(0 100% 100% / 0.4),
