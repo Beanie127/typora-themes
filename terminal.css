@@ -3,7 +3,7 @@
 
 :root {
     --side-bar-bg-color: hsl(100 20% 85%);
-    --bg-color: hsl(100 10% 95%);
+    --bg-color: hsl(48, 20%, 95%);
     --text-color: hsl(100 80% 15%);
     --accent-color: hsl(100 90% 25%);
 }
