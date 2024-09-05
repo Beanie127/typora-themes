@@ -324,6 +324,7 @@ th {
 
 #write .md-task-list-item > input {
     -webkit-appearance: initial;
+    appearance: initial;
     display: block;
     position: absolute;
     border: 1px solid #b4b4b4;

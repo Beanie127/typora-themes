@@ -1,3 +1,32 @@
+@font-face {
+    font-family: "Noted";
+    font-style: normal;
+    font-weight: normal;
+    src: url("./noted/Noted-Regular.woff");
+}
+@font-face {
+    font-family: "Noted";
+    font-style: italic;
+    font-weight: normal;
+    src: url("./noted/Noted-Italic.woff");
+}
+@font-face {
+    font-family: "Noted";
+    font-style: normal;
+    font-weight: bold;
+    src: url("./noted/Noted-Bold.woff");
+}
+@font-face {
+    font-family: "Noted";
+    font-style: italic;
+    font-weight: bold;
+    src: url("./noted/Noted-BoldItalic.woff");
+}
+@font-face {
+    font-family: "Sono Sans";
+    src: url("./noted/SonoSans-Regular.woff2");
+}
+
 :root {
     --mermaid-theme: forest;
     --mermaid-font-family: verdana;
@@ -43,7 +72,7 @@ select {
 
 html {
     font-size: calc(110% * var(--ratio));
-    font-family: 'Sono Sans', sans-serif;
+    font-family: "Sono Sans", sans-serif;
     font-variant-numeric: tabular-nums;
 }
 
@@ -60,7 +89,7 @@ html {
 h1,
 h2,
 h3 {
-    font-family: 'Noted';
+    font-family: "Noted";
     --ratio: 1.25;
 }
 
@@ -82,18 +111,18 @@ h2 {
     margin-top: 1.75em;
     color: hsl(0, 70%, 50%);
     will-change: transform;
-    transition: transform 6s cubic-bezier(1,0,.8,1.5) 2s;
+    transition: transform 6s cubic-bezier(1, 0, 0.8, 1.5) 2s;
 }
 
-h2:nth-of-type(4n+1) {
+h2:nth-of-type(4n + 1) {
     transform: translateX(-0.5rem) translateY(-0.7rem) rotateZ(-4deg);
 }
 
-h2:nth-of-type(4n+2) {
+h2:nth-of-type(4n + 2) {
     transform: translateX(-2rem) translateY(-1rem) rotateZ(-6deg);
 }
 
-h2:nth-of-type(4n+3) {
+h2:nth-of-type(4n + 3) {
     transform: translateX(1rem) translateY(-0.6rem) rotateZ(-2deg);
 }
 
@@ -116,8 +145,7 @@ h4 {
 
 /* subtitle */
 
-:is(h1,
-    h4)+h4 {
+:is(h1, h4) + h4 {
     text-align: center;
     font-family: "Noted";
     font-size: 1.5rem;
@@ -178,13 +206,13 @@ tr:nth-of-type(2n) {
 
 /**** CHECKBOXES ****/
 
-#write .md-task-list-item>input {
+#write .md-task-list-item > input {
     width: 0.8rem;
     height: 0.8rem;
     accent-color: var(--accent-green);
 }
 
-#write .md-task-list-item.task-list-done>p {
-    opacity: .5;
+#write .md-task-list-item.task-list-done > p {
+    opacity: 0.5;
     text-decoration: line-through;
 }

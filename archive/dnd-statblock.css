@@ -1,92 +1,104 @@
-@import (less) '5e/assets.less';
 @font-face {
     font-family: ScalySansSmallCaps;
     font-style: normal;
     font-weight: normal;
-    src: local('Scaly Sans Caps'), url("/5e/Scaly Sans Caps/Scaly Sans Caps.otf") format("otf");
+    src: local("Scaly Sans Caps"),
+        url("/5e/Scaly Sans Caps/Scaly Sans Caps.otf") format("otf");
 }
 
 @font-face {
     font-family: ScalySansSmallCaps;
     font-style: italic;
     font-weight: normal;
-    src: local('Scaly Sans Caps Italic'), url("/5e/Scaly Sans Caps/Scaly Sans Caps Italic.otf") format("otf");
+    src: local("Scaly Sans Caps Italic"),
+        url("/5e/Scaly Sans Caps/Scaly Sans Caps Italic.otf") format("otf");
 }
 
 @font-face {
     font-family: ScalySansSmallCaps;
     font-style: normal;
-    font-weight: bold src: local('Scaly Sans Caps Bold'), url("/5e/Scaly Sans Caps/Scaly Sans Caps Bold.otf") format("otf");
+    font-weight: bold;
+    src: local("Scaly Sans Caps Bold"),
+        url("/5e/Scaly Sans Caps/Scaly Sans Caps Bold.otf") format("otf");
 }
 
 @font-face {
     font-family: ScalySansSmallCaps;
     font-style: italic;
     font-weight: bold;
-    src: local('Scaly Sans Caps Bold Italic'), url("/5e/Scaly Sans Caps/Scaly Sans Caps Bold Italic.otf") format("otf");
+    src: local("Scaly Sans Caps Bold Italic"),
+        url("/5e/Scaly Sans Caps/Scaly Sans Caps Bold Italic.otf") format("otf");
 }
 
 @font-face {
     font-family: ScalySans;
     font-style: normal;
     font-weight: normal;
-    src: local('Scaly Sans'), url("/5e/Scaly Sans/Scaly Sans.otf") format("otf");
+    src: local("Scaly Sans"), url("/5e/Scaly Sans/Scaly Sans.otf") format("otf");
 }
 
 @font-face {
     font-family: ScalySans;
     font-style: italic;
     font-weight: normal;
-    src: local('Scaly Sans Italic'), url("/5e/Scaly Sans/Scaly Sans Italic.otf") format("otf");
+    src: local("Scaly Sans Italic"),
+        url("/5e/Scaly Sans/Scaly Sans Italic.otf") format("otf");
 }
 
 @font-face {
     font-family: ScalySans;
     font-style: normal;
     font-weight: bold;
-    src: local('Scaly Sans Bold'), url("/5e/Scaly Sans/Scaly Sans Bold.otf") format("otf");
+    src: local("Scaly Sans Bold"),
+        url("/5e/Scaly Sans/Scaly Sans Bold.otf") format("otf");
 }
 
 @font-face {
     font-family: ScalySans;
     font-style: italic;
     font-weight: bold;
-    src: local('Scaly Sans Bold Italic'), url("/5e/Scaly Sans/Scaly Sans Bold Italic.otf") format("otf");
+    src: local("Scaly Sans Bold Italic"),
+        url("/5e/Scaly Sans/Scaly Sans Bold Italic.otf") format("otf");
 }
 
 @font-face {
     font-family: Bookinsanity;
     font-style: normal;
     font-weight: normal;
-    src: local('Bookinsanity'), url("/5e/Bookinsanity/Bookinsanity.otf") format("otf");
+    src: local("Bookinsanity"),
+        url("/5e/Bookinsanity/Bookinsanity.otf") format("otf");
 }
 
 @font-face {
     font-family: Bookinsanity;
     font-style: italic;
     font-weight: normal;
-    src: local('Bookinsanity Italic'), url("/5e/Bookinsanity/Bookinsanity italic.otf") format("otf");
+    src: local("Bookinsanity Italic"),
+        url("/5e/Bookinsanity/Bookinsanity italic.otf") format("otf");
 }
 
 @font-face {
     font-family: Bookinsanity;
     font-style: normal;
     font-weight: bold;
-    src: local('Bookinsanity Bold'), url("/5e/Bookinsanity/Bookinsanity Bold.otf") format("otf");
+    src: local("Bookinsanity Bold"),
+        url("/5e/Bookinsanity/Bookinsanity Bold.otf") format("otf");
 }
 
 @font-face {
     font-family: Bookinsanity;
     font-style: italic;
     font-weight: bold;
-    src: local('Bookinsanity Bold Italic'), url("/5e/Bookinsanity/Bookinsanity Bold Italic.otf") format("otf");
+    src: local("Bookinsanity Bold Italic"),
+        url("/5e/Bookinsanity/Bookinsanity Bold Italic.otf") format("otf");
 }
 
 @font-face {
     font-family: MrEaves;
     font-style: normal;
     font-weight: normal;
-    src: local('Mr. Eaves Small Caps'), url("/5e/Mr Eaves/Mr Eaves Small Caps.otf") format("otf");
+    src: local("Mr. Eaves Small Caps"),
+        url("/5e/Mr Eaves/Mr Eaves Small Caps.otf") format("otf");
 }
 
 :root {
@@ -103,17 +115,18 @@ body {
     line-height: 1.2em;
     display: inline-block;
     vertical-align: top;
-    background: #FDF1DC;
+    background: #fdf1dc;
     padding: 10px 10px 20px;
     box-sizing: border-box;
-    font-family: 'Scaly Sans', 'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+    font-family: "Scaly Sans", "Noto Sans", "Myriad Pro", Calibri, Helvetica,
+        Arial, sans-serif;
 }
 
 #write {
     width: 100%;
-    max-width: 500px;
+    max-width: 800px;
     background-image: url(5e/statblockparch.jpg);
-    background-size: auto;
+    background-size: contain;
     background-repeat: repeat-y;
     margin: 0 auto;
     padding: 30px;
@@ -136,8 +149,7 @@ h4,
 h5,
 h6 {
     position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-block: 1rem;
     font-weight: bold;
     line-height: 1.4;
     cursor: text;
@@ -184,8 +196,7 @@ h6 code {
 
 h1 {
     font-family: "Mr. Eaves Small Caps", serif;
-    color: #58170D;
-    font-size: 2em;
+    color: #58170d;
     line-height: 1.2em;
     margin: 10px 0 0;
     letter-spacing: 1px;
@@ -194,8 +205,9 @@ h1 {
 }
 
 h2 {
-    border-bottom: 2px solid #58180D;
-    color: #58170D;
+    font-family: "Mr. Eaves Small Caps", serif;
+    border-bottom: 2px solid #58180d;
+    color: #58170d;
     font-variant: small-caps;
     font-weight: normal;
     letter-spacing: 1px;
@@ -206,7 +218,7 @@ h2 {
 
 h3 {
     font-family: "Mr. Eaves Small Caps", serif;
-    color: #58170D;
+    color: #58170d;
     line-height: 1em;
     margin-bottom: 0;
 }
@@ -220,10 +232,11 @@ h4 {
 }
 
 h5 {
+    font-family: "Scaly Sans", ScalySans;
     font-size: 1em;
     font-weight: 100;
     margin: 0;
-    color: #58180D;
+    color: #58180d;
 }
 
 h6 {
@@ -235,13 +248,12 @@ p,
 blockquote,
 ul,
 ol,
-dl,
-{
+dl {
     margin: 0.8em 0;
 }
 
-li>ol,
-li>ul {
+li > ol,
+li > ul {
     margin: 0 0;
 }
 
@@ -280,41 +292,40 @@ blockquote {
     background-color: #e0e5c1;
     border-style: solid;
     border-width: 11px;
-    border-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAMAAADG+c2+AAAANlBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABHL6OuAAAAEXRSTlMABAwYJDRIXHSLo7fL2+fz+6go4VUAAAB6SURBVHgB7dg5DsJQAANRZ9+Xuf9lQUKKEHT5LlL4HWB6W5d61m1zrT/dhm5j6/RjPCkJco761ixQFoSl0aXfKQ+y9/qoJnAEYar01q64gqytNBz4ghyDMPMHnyYiIiIiIgIzYeYfj/Z56x3g7ovAf2L4bxb/EWS/ql7LZCDx/Ry3RwAAAABJRU5ErkJggg==) 20%;
+    border-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAMAAADG+c2+AAAANlBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABHL6OuAAAAEXRSTlMABAwYJDRIXHSLo7fL2+fz+6go4VUAAAB6SURBVHgB7dg5DsJQAANRZ9+Xuf9lQUKKEHT5LlL4HWB6W5d61m1zrT/dhm5j6/RjPCkJco761ixQFoSl0aXfKQ+y9/qoJnAEYar01q64gqytNBz4ghyDMPMHnyYiIiIiIgIzYeYfj/Z56x3g7ovAf2L4bxb/EWS/ql7LZCDx/Ry3RwAAAABJRU5ErkJggg==)
+        20%;
     border-image-outset: 9px 0;
-    box-shadow: 1px 4px 14px #888
+    box-shadow: 1px 4px 14px #888;
 }
 
 blockquote h1 {
-    margin-bottom: .2em;
+    margin-bottom: 0.2em;
     font-family: "Scaly Sans Caps";
     color: #000000;
     font-size: 1em;
-    font-weight: 900
+    font-weight: 900;
 }
 
 blockquote em {
     font-family: "Scaly Sans";
-    font-style: italic
+    font-style: italic;
 }
 
 blockquote strong {
     font-family: "Scaly Sans";
     font-weight: 800;
-    letter-spacing: -0.02em
+    letter-spacing: -0.02em;
 }
 
 blockquote p,
 blockquote ul {
-    font-size: .352cm;
-    line-height: 1.1em
-}
-
-
+    font-size: 0.352cm;
+    line-height: 1.1em;
 }
 table {
+    font-family: "Scaly Sans";
     font-size: 0.9em;
-    color: #58170D;
+    color: #58170d;
     padding: 0px;
     margin: 0px;
     word-break: initial;
@@ -326,7 +337,7 @@ table thead {
 }
 table tr {
     text-align: center;
-    color: #58170D;
+    color: #58170d;
     vertical-align: middle;
 }
 table tr th {
@@ -336,7 +347,7 @@ table tr th {
     padding-left: 4px;
 }
 .code-tooltip {
-    box-shadow: 0 1px 1px 0 rgba(0, 28, 36, .3);
+    box-shadow: 0 1px 1px 0 rgba(0, 28, 36, 0.3);
     border-top: 1px solid #eef2f2;
 }
 .md-fences,
@@ -348,8 +359,8 @@ tt {
     padding: 0;
     padding: 2px 4px 0px 4px;
     font-size: 0.9em;*/
-    
-    background-image: (5e/table-border.png);
+
+    background-image: url("5e/table-border.png");
 }
 code {
     background-color: #f3f4f4;
@@ -368,12 +379,12 @@ code {
     html {
         font-size: 13px;
     }
-    
+
     table,
     pre {
         page-break-inside: avoid;
     }
-    
+
     pre {
         word-wrap: break-word;
     }
@@ -391,31 +402,31 @@ code {
     color: #777777;
     margin-top: 0 !important;
 }
-.mathjax-block>.code-tooltip {
-    bottom: .375rem;
+.mathjax-block > .code-tooltip {
+    bottom: 0.375rem;
 }
 .md-mathjax-midline {
     background: #fafafa;
 }
-#write>h3.md-focus:before {
+#write > h3.md-focus:before {
     left: -1.5625rem;
-    top: .375rem;
+    top: 0.375rem;
 }
-#write>h4.md-focus:before {
+#write > h4.md-focus:before {
     left: -1.5625rem;
-    top: .285714286rem;
+    top: 0.285714286rem;
 }
-#write>h5.md-focus:before {
+#write > h5.md-focus:before {
     left: -1.5625rem;
-    top: .285714286rem;
+    top: 0.285714286rem;
 }
-#write>h6.md-focus:before {
+#write > h6.md-focus:before {
     left: -1.5625rem;
-    top: .285714286rem;
+    top: 0.285714286rem;
 }
-.md-image>.md-meta {
+.md-image > .md-meta {
     /*border: 1px solid #ddd;*/
-    
+
     border-radius: 3px;
     padding: 2px 0px 0px 4px;
     font-size: 0.9em;
@@ -437,8 +448,8 @@ code {
     background-color: #f8f8f8;
 }
 #typora-quick-open-item {
-    background-color: #FAFAFA;
-    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    background-color: #fafafa;
+    border-color: #fefefe #e5e5e5 #e5e5e5 #eee;
     border-style: solid;
     border-width: 1px;
 }
@@ -465,7 +476,7 @@ footer {
     color: #b4654d;
 }
 .html-for-mac .context-menu {
-    --item-hover-bg-color: #E6F0FE;
+    --item-hover-bg-color: #e6f0fe;
 }
 #md-notification .btn {
     border: 0;

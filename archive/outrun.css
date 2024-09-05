@@ -1,60 +1,60 @@
 @font-face {
-    font-family: 'Celesta';
+    font-family: "Celesta";
     font-style: normal;
     font-weight: normal;
-    src: url(./outrun/Celesta/Celesta-Regular.otf) format('otf'), local('Celesta-Regular');
-  }
+    src: url("./outrun/Celesta/Celesta-Regular.otf");
+}
 
 @font-face {
-    font-family: 'Celesta';
+    font-family: "Celesta";
     font-style: italic;
     font-weight: normal;
-    src: url(./outrun/Celesta/Celesta-RegularOblique.otf) format('otf'), local('Celesta-RegularOblique');
-  }
+    src: url("./outrun/Celesta/Celesta-Regular.otf");
+}
 
 @font-face {
-    font-family: 'Celesta';
+    font-family: "Celesta";
     font-style: normal;
     font-weight: bold;
-    src: url(./outrun/Celesta/Celesta-ExtraBold.otf) format('otf'), local('Celesta-ExtraBold');
-  }
+    src: url("./outrun/Celesta/Celesta-ExtraBold.otf");
+}
 
 @font-face {
-    font-family: 'Celesta';
+    font-family: "Celesta";
     font-style: italic;
     font-weight: bold;
-    src: url(./outrun/Celesta/Celesta-ExtraBoldOblique.otf) format('otf'), local('Celesta-ExtraBoldOblique');
-  }
+    src: url("./outrun/Celesta/Celesta-ExtraBoldOblique.otf");
+}
 
 @font-face {
-    font-family: 'Skirmisher Gradient';
+    font-family: "Skirmisher Gradient";
     font-style: normal;
     font-weight: normal;
-    src: url(./outrun/skirmisher/skirmishergrad.ttf) format('ttf'), local('Skirmisher Gradient');
-  }
+    src: url("./outrun/skirmisher/skirmishergrad.ttf");
+}
 
 @font-face {
-    font-family: 'Skirmisher Gradient';
+    font-family: "Skirmisher Gradient";
     font-style: italic;
     font-weight: normal;
-    src: url(./outrun/skirmisher/skirmishergradital.ttf) format('ttf'), local('Skirmisher Gradient Italic');
-  }
+    src: url("./outrun/skirmisher/skirmishergradital.ttf");
+}
 
 @font-face {
-    font-family: 'Skirmisher Condensed';
+    font-family: "Skirmisher Condensed";
     font-style: normal;
     font-weight: normal;
     font-stretch: condensed;
-    src: url(./outrun/skirmisher/skirmishercond.ttf) format('ttf'), local('Skirmisher Condensed');
-  }
+    src: url("./outrun/skirmisher/skirmishercond.ttf");
+}
 
 @font-face {
-    font-family: 'Skirmisher Condensed';
+    font-family: "Skirmisher Condensed";
     font-style: italic;
     font-weight: normal;
     font-stretch: condensed;
-    src: url(./outrun/skirmisher/skirmishercondital.ttf) format('ttf'), local('Skirmisher Condensed Italic');
-  }
+    src: url("./outrun/skirmisher/skirmishercondital.ttf");
+}
 
 :root {
     --bg-color: hsla(265, 20%, 7%, 1);
@@ -85,10 +85,9 @@
     --rawblock-edit-panel-bd: hsla(0, 0%, 81%, 1);
     --node-fill: hsla(0, 0%, 98%, 1);
     --node-border: #0000001a;
-    --filter: invert(90%) sepia(14%) saturate(4300%) hue-rotate(302deg) brightness(110%) contrast(101%);
-    ;
+    --filter: invert(90%) sepia(14%) saturate(4300%) hue-rotate(302deg)
+        brightness(110%) contrast(101%);
 }
-
 
 /* font settings */
 
@@ -98,7 +97,6 @@ html {
     line-height: 1.8em;
     --monospace: "Tabular Variable";
 }
-
 
 /* workspace */
 
@@ -122,7 +120,6 @@ sup.md-footnote {
     color: var(--header-color);
 }
 
-
 /* background image */
 
 content {
@@ -130,7 +127,6 @@ content {
     background-size: cover;
     background-position: top;
 }
-
 
 /* header font settings */
 
@@ -182,7 +178,6 @@ h1 + h4 {
     font-variant: small-caps;
 }
 
-
 /* blockquotes */
 
 blockquote {
@@ -200,7 +195,6 @@ blockquote h6 {
     padding-left: 1rem;
     padding-right: 1rem;
 }
-
 
 /* variant blockquote (>>) */
 
@@ -220,16 +214,14 @@ blockquote ul {
     text-align: left !important;
 }
 
-
 /* highlight text */
 
 mark {
     background: var(--text-color);
     color: var(--bg-color);
-    border-radius: .25rem;
-    padding: .25rem .25rem 0;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.25rem 0;
 }
-
 
 /* strikethrough */
 
@@ -239,16 +231,14 @@ del {
     text-decoration-color: var(--text-80);
 }
 
-
 /* Code */
 
 code {
-    font-size: .9em;
+    font-size: 0.9em;
     border: 1px solid var(--accent-color);
-    border-radius: .25rem;
-    padding: 0 .25rem;
+    border-radius: 0.25rem;
+    padding: 0 0.25rem;
 }
-
 
 /* hyperlinks */
 
@@ -262,7 +252,6 @@ a:hover {
     text-decoration: underline;
 }
 
-
 /* horizontal breaks */
 
 hr {
@@ -275,7 +264,6 @@ hr {
     opacity: 0.5;
     filter: var(--filter);
 }
-
 
 /* tables */
 
@@ -311,7 +299,6 @@ th {
     background: var(--header-color);
     color: var(--bg-color);
 }
-
 
 /* lists and checklists */
 
@@ -360,8 +347,8 @@ th {
     display: block;
     position: absolute;
     border: 1px solid #b4b4b4;
-    border-radius: .25rem;
-    margin-top: .1rem;
+    border-radius: 0.25rem;
+    margin-top: 0.1rem;
     margin-left: -1.8rem;
     height: 1.2rem;
     width: 1.2rem;
@@ -369,7 +356,7 @@ th {
 }
 
 #write .md-task-list-item > input[checked]::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 20%;
     left: 50%;
@@ -380,7 +367,7 @@ th {
 }
 
 #write .md-task-list-item > input[checked]::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 46%;
     left: 25%;
@@ -391,10 +378,9 @@ th {
 }
 
 #write .md-task-list-item.task-list-done > p {
-    opacity: .5;
+    opacity: 0.5;
     text-decoration: line-through;
 }
-
 
 /* table of contents */
 
@@ -404,11 +390,10 @@ th {
     display: none;
 }
 
-
 /* Pandoc export settings */
 
-hr+h1,
-p+h1 {
+hr + h1,
+p + h1 {
     break-before: always;
 }
 
@@ -420,7 +405,6 @@ table {
 tr {
     break-inside: avoid;
 }
-
 
 /* source-code mode */
 

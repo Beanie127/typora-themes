@@ -44,7 +44,7 @@ h2::before {
 }
 
 h3::before {
-    content: "\\ ";
+    content: "_ ";
 }
 
 h4::before {
@@ -55,6 +55,10 @@ p,
 ul,
 ol {
     margin-bottom: 1.5em;
+}
+
+a {
+    color: hsl(345 40% 50%);
 }
 
 blockquote {

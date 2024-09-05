@@ -1,19 +1,19 @@
-@import url('./plugins/subtitles.css');
+@import url("./plugins/subtitles.css");
 
 @font-face {
     font-family: "Bellefair";
-    src: url(/heartbreaker/fonts/Bellefair-Regular.otf);
+    src: url("./heartbreaker/fonts/Bellefair-Regular.otf");
 }
 
 @font-face {
     font-family: "Gilroy";
-    src: url(/heartbreaker/fonts/Gilroy-Light[1].otf);
+    src: url("./heartbreaker/fonts/Gilroy-Light[1].otf");
     font-weight: normal;
 }
 
 @font-face {
     font-family: "Gilroy";
-    src: url(/heartbreaker/fonts/Gilroy-ExtraBold[1].otf);
+    src: url("./heartbreaker/fonts/Gilroy-ExtraBold[1].otf");
     font-weight: bold;
 }
 
@@ -54,12 +54,12 @@ h1 {
 }
 
 h3 {
-    font-weight:normal;
+    font-weight: normal;
     font-style: italic;
 }
 
 h4 {
-    font-weight:normal;
+    font-weight: normal;
     font-variant: small-caps;
 }
 
@@ -69,7 +69,6 @@ h4 {
     font-size: 60%;
     opacity: 0.33;
 }
-
 
 a {
     color: hsl(130 40% 40%);
@@ -86,21 +85,21 @@ blockquote {
     border: thin solid gainsboro;
     padding: 1em;
     background: hsl(0 0% 90% / 0.2);
-    position:relative;
+    position: relative;
 }
 
 blockquote blockquote {
-    border:0;
-    background:0;
-    padding:0;
+    border: 0;
+    background: 0;
+    padding: 0;
 }
 
 blockquote:not(blockquote > blockquote)::before {
     content: "\“";
     font-size: 16rem;
-    position:absolute;
-    left:-1.2rem;
-    top:-6.8rem;
+    position: absolute;
+    left: -1.2rem;
+    top: -6.8rem;
     opacity: 0.05;
 }
 
