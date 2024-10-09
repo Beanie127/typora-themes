@@ -1,0 +1,37 @@
+@import url("./plugins/subtitles.css");
+@import url("./plugins/print.css");
+
+:root {
+    --side-bar-bg-color: hsl(180 25% 10%);
+    --text-color: hsl(160 25% 90%);
+    --bg-color: hsl(180 25% 5%);
+    --active-file-bg-color: hsl(180 25% 25%);
+    --active-file-border-color: hsl(180 25% 25%);
+}
+
+html {
+    font-family: "Jost*", system-ui, sans-serif;
+    font-size: 112.5%;
+}
+
+#write {
+    margin: auto;
+    max-inline-size: 80ch;
+    padding: 3em 1em;
+    line-height: 1.75;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+blockquote {
+    border-inline-start: 2px solid var(--active-file-border-color);
+    padding-inline-start: 1rem;
+    font-size: 1.15rem;
+    font-style: italic;
+}
