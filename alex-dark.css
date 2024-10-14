@@ -32,11 +32,6 @@ html {
     font-weight: 300;
 }
 
-
-#write :is(h1, h2, h3, h4, h5, h6) {
-    /* font-family: "Glacial Indifference"; */
-    font-stretch: condensed;
-}
 #write h1 {
     border-block-end: 1px solid var(--hl);
     padding: 2rem;

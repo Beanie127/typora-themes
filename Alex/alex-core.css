@@ -2,6 +2,7 @@
 @import url("../plugins/blockquote-aside-hack.css");
 @import url("../plugins/codeblock.dark.css");
 @import url("../plugins/print.css");
+@import url("../Alex/fonts/fonts.css");
 
 :root {
     --mermaid-theme: default;
@@ -29,11 +30,9 @@
 /* font settings */
 
 html {
-    font-family: "Albert Sans", sans-serif;
     font-variant-numeric: tabular-nums;
     text-rendering: optimizeLegibility;
     font-size: 1.1em;
-    font-feature-settings: "ss02", "ss04";
 }
 
 /* spacing */
@@ -41,7 +40,7 @@ html {
 #write {
     margin-inline: auto;
     margin-block-end: 50vh;
-    max-inline-size: 80ch;
+    max-inline-size: 90ch;
     padding-block: 3em;
     padding-inline: 1em;
     position: relative;

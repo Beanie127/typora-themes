@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Albert Sans";
+    src: url("./AlbertSans-Roman[wdth\,wght].ttf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Albert Sans";
+    src: url("./AlbertSans-Italic[wdth\,wght].ttf");
+    font-style: italic;
+}
+
+html {
+    font-family: "Albert Sans", sans-serif;
+    font-feature-settings: "ss02", "ss04";
+    font-stretch: 80%;
+}
+
+#write {
+    & :is(h1, h2, h3, h4, h5, h6) {
+        font-stretch: 100%;
+    }
+
+    & :is(h1, h2) {
+        letter-spacing: -2px;
+    }
+
+    & :is(h3, h4) {
+        letter-spacing: -1px;
+    }
+}
