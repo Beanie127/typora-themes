@@ -33,6 +33,7 @@ html {
     font-variant-numeric: tabular-nums;
     text-rendering: optimizeLegibility;
     font-size: 1.1em;
+    font-feature-settings: "ss02", "ss04";
 }
 
 /* spacing */
