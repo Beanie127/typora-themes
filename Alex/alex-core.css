@@ -264,14 +264,13 @@ tr:last-of-type {
 #write ol {
     list-style-type: decimal;
     line-height: 1.5em;
-    & ol {
+    > ol {
         list-style-type: lower-alpha;
-        margin-left: -1em;
-        & ol {
+        > ol {
             list-style-type: lower-roman;
-            & ol {
+            > ol {
                 list-style-type: lower-greek;
-                & ol {
+                > ol {
                     list-style-type: upper-roman;
                 }
             }
