@@ -90,35 +90,36 @@ del {
 
 /* headers and subheaders */
 
-#write h1 {
-    text-wrap: balance;
-    padding: 1rem;
-    font-size: 2.4rem;
-    text-align: center;
-    letter-spacing: -2px;
-}
+#write {
+    h1 {
+        text-wrap: balance;
+        padding: 1rem;
+        font-size: 2.4rem;
+        text-align: center;
+        letter-spacing: -2px;
+    }
+    h2 {
+        font-size: 2rem;
+        letter-spacing: -1px;
+    }
 
-#write h2 {
-    font-size: 2rem;
-    letter-spacing: -1px;
-}
+    h3 {
+        font-size: 1.5rem;
+    }
 
-#write h3 {
-    font-size: 1.5rem;
-}
+    h4 {
+        font-size: 1.2rem;
+    }
 
-#write h4 {
-    font-size: 1.2rem;
-}
+    h5 {
+        font-size: 1rem;
+        font-style: italic;
+    }
 
-#write h5 {
-    font-size: 1rem;
-    font-style: italic;
-}
-
-#write h6 {
-    font-size: 0.8rem;
-    font-variant: small-caps;
+    h6 {
+        font-size: 0.8rem;
+        font-variant: small-caps;
+    }
 }
 
 /* blockquotes */
@@ -197,26 +198,22 @@ hr {
     position: relative;
     background: none;
     margin-block: 2rem;
-    block-size: 3rem;
+    block-size: 2rem;
     inline-size: 100%;
     border: none;
     /* border-block-end: 1px solid var(--hl); */
     /* opacity: 0.25; */
-}
-
-hr::after {
-    position: absolute;
-    inset-inline: 50%;
-    inset-block-start: 0;
-    transform: translateX(-50%);
-    content: "\221e";
-    font-size: 3rem;
-    font-family: sans-serif;
-    text-align: center;
-    cursor: default;
-    color: var(--hl);
-    opacity: 0.5;
-    line-height: 1;
+    &::after {
+        position: absolute;
+        inline-size: 100%;
+        content: "\2744 \2744 \2744";
+        font-size: 2rem;
+        font-family: sans-serif;
+        text-align: center;
+        color: var(--hl);
+        opacity: 0.5;
+        line-height: 1;
+    }
 }
 
 /* tables */
