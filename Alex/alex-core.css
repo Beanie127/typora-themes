@@ -39,10 +39,10 @@ html {
 
 #write {
     margin-inline: auto;
-    margin-block-end: 50vh;
+    margin-block-end: 10rem;
     max-inline-size: 90ch;
-    padding-block: 3em;
-    padding-inline: 1em;
+    padding-block: 3rem;
+    padding-inline: 1rem;
     position: relative;
 
     & :is(p, h1, h2, h3, h4, h5, h6):not(:first-of-type) {
@@ -90,35 +90,36 @@ del {
 
 /* headers and subheaders */
 
-#write h1 {
-    text-wrap: balance;
-    padding: 1rem;
-    font-size: 2.4rem;
-    text-align: center;
-    letter-spacing: -2px;
-}
+#write {
+    h1 {
+        text-wrap: balance;
+        padding: 1rem;
+        font-size: 2.4rem;
+        text-align: center;
+        letter-spacing: -2px;
+    }
+    h2 {
+        font-size: 2rem;
+        letter-spacing: -1px;
+    }
 
-#write h2 {
-    font-size: 2rem;
-    letter-spacing: -1px;
-}
+    h3 {
+        font-size: 1.5rem;
+    }
 
-#write h3 {
-    font-size: 1.5rem;
-}
+    h4 {
+        font-size: 1.2rem;
+    }
 
-#write h4 {
-    font-size: 1.2rem;
-}
+    h5 {
+        font-size: 1rem;
+        font-style: italic;
+    }
 
-#write h5 {
-    font-size: 1rem;
-    font-style: italic;
-}
-
-#write h6 {
-    font-size: 0.8rem;
-    font-variant: small-caps;
+    h6 {
+        font-size: 0.8rem;
+        font-variant: small-caps;
+    }
 }
 
 /* blockquotes */
@@ -154,10 +155,6 @@ blockquote {
 code {
     color: var(--fg);
     padding-inline: 0.5ch;
-    /* font-size: 0.9em; */
-    /* border: 1px solid var(--mg, lightgray); */
-    /* border-radius: 0.25rem; */
-    /* padding: 0 0.25rem; */
 }
 
 /* hyperlinks */
@@ -198,26 +195,25 @@ code {
 /**** text hr ****/
 
 hr {
+    position: relative;
     background: none;
     margin-block: 2rem;
-    block-size: 1px;
+    block-size: 2rem;
     inline-size: 100%;
     border: none;
-    border-block-end: 1px solid var(--hl);
-    opacity: 0.25;
-}
-
-#write::after {
-    position: absolute;
-    inset-inline: 50%;
-    transform: translateX(-50%);
-    inset-block-end: -5rem;
-    content: "\221e";
-    font-size: 3rem;
-    font-family: sans-serif;
-    text-align: center;
-    opacity: 0.1;
-    cursor: default;
+    /* border-block-end: 1px solid var(--hl); */
+    /* opacity: 0.25; */
+    &::after {
+        position: absolute;
+        inline-size: 100%;
+        content: "\2744 \2744 \2744";
+        font-size: 2rem;
+        font-family: sans-serif;
+        text-align: center;
+        color: var(--hl);
+        opacity: 0.5;
+        line-height: 1;
+    }
 }
 
 /* tables */
@@ -264,14 +260,13 @@ tr:last-of-type {
 #write ol {
     list-style-type: decimal;
     line-height: 1.5em;
-    & ol {
+    > ol {
         list-style-type: lower-alpha;
-        margin-left: -1em;
-        & ol {
+        > ol {
             list-style-type: lower-roman;
-            & ol {
+            > ol {
                 list-style-type: lower-greek;
-                & ol {
+                > ol {
                     list-style-type: upper-roman;
                 }
             }
