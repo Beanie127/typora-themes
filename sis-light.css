@@ -34,12 +34,12 @@
     --mermaid-font-family: "Inter";
 }
 
-h1 {
+/* h1 {
     -webkit-background-clip: text;
     background: var(--grad);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+} */
 
 ::selection {
     background-clip: unset;

@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "Alegreya Sans";
+    src: url("AlegreyaSans-Regular.woff");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Alegreya Sans";
+    src: url("AlegreyaSans-Bold.woff");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Alegreya Sans";
+    src: url("AlegreyaSans-Black.woff");
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Alegreya Sans";
+    src: url("AlegreyaSans-Italic.woff");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Alegreya Sans";
+    src: url("AlegreyaSans-BoldItalic.woff");
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Alegreya Sans";
+    src: url("AlegreyaSans-BlackItalic.woff");
+    font-weight: 900;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Spot";
+    src: url("./Spot-Normal.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Spot";
+    src: url("./Spot-Italic.woff");
+    font-weight: normal;
+    font-style: italic;
+}

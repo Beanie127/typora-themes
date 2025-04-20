@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); */
+@import url("./BIP/fonts.css");
 
 :root {
     --mermaid-theme: dark;
@@ -49,6 +50,7 @@ html,
 body {
     font-size: 100%;
     font-family: "Roboto";
+    font-family: "Alegreya Sans";
     line-height: 1.8em;
     --monospace: "Tabular Variable";
 }
@@ -109,12 +111,14 @@ h6 img {
 /* blockquotes */
 
 blockquote {
-    width: 20em;
-    float: left;
-    border: none;
-    page-break-inside: avoid;
-    padding-left: 0.5em;
-    margin: 0em 1em 3em 0em;
+    /* width: 20em; */
+    /* float: left; */
+    /* border: none; */
+    /* page-break-inside: avoid; */
+    /* padding-left: 0.5em; */
+    /* margin: 0em 1em 3em 0em; */
+    border-inline-start: thick solid var(--accent-color);
+    padding-inline-start: 1ch;
 }
 
 /* bold */
@@ -140,13 +144,19 @@ del {
 
 /* headers and subheaders */
 
+#write :is(h1, h2, h3) {
+    font-family: "Spot";
+    font-weight: 400;
+}
+
 #write h1 {
     text-align: center;
-    color: var(--bg-color);
-    background-color: var(--header-color);
-    font-weight: 700 !important;
+    /* color: var(--bg-color); */
+    color: var(--header-color);
+    /* background-color: var(--header-color); */
+    /* font-weight: 700 !important; */
     padding: 4px;
-    font-stretch: semi-expanded;
+    /* font-stretch: semi-expanded; */
 }
 
 h1:first-of-type {
@@ -162,7 +172,7 @@ h1:first-of-type {
 }
 
 #write h2 {
-    font-weight: 600;
+    /* font-weight: 600; */
     color: var(--subheader-color);
     page-break-inside: avoid;
     font-stretch: semi-expanded;
@@ -284,6 +294,7 @@ td {
 
 #write .md-task-list-item > input {
     -webkit-appearance: initial;
+    appearance: initial;
     display: block;
     position: absolute;
     border: 1px solid #b4b4b4;

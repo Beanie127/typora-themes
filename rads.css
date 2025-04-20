@@ -1,208 +1,213 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;0,900;1,600;1,900&family=Barlow:ital,wght@0,200;0,500;0,800;1,200;1,500;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&family=Barlow:ital,wght@0,200;0,500;0,800;1,200;1,500;1,800&display=swap");
+@import url("./plugins/print.css");
 
-:root {
-  --bg-color: #f7efd7;
-  --text-color: #1d190b;
-  --header-color: #4f1b07;
-  --accent-color: #b46741;
-  --quote-color: #D2B179;
-  --md-char-color: #01baef;
-  --meta-content-color: #c4ad3b;
-  --primary-color: #6F1A07;
-  --primary-btn-border-color: var(--header-color);
-  --primary-btn-text-color: #333;
-  --window-border: 1px solid #16161a;
-  --active-file-bg-color: var(--accent-color);
-  --active-file-text-color: var(--bg-color);
-  --active-file-border-color: #6F1A07;
-  --active-search-item-bg-color: var(--quote-color);
-  --side-bar-bg-color: var(--quote-color);
-  --item-hover-bg-color: var(--header-color);
-  --item-hover-text-color: var(--bg-color);
-  --search-select-text-color: #333;
-  --search-select-bg-color: #9e1c1c;
-  --rawblock-edit-panel-bd: #d0d0d0;
-  --node-fill: #fbfbfb;
-  --node-border: #0000001a;
+:root  {
+    --bg-color: #f7efd7;
+    --text-color: #1d190b;
+    --header-color: #4f1b07;
+    --accent-color: #b46741;
+    --quote-color: #d2b179;
+    --md-char-color: #01baef;
+    --meta-content-color: #c4ad3b;
+    --primary-color: #6f1a07;
+    --primary-btn-border-color: var(--header-color);
+    --primary-btn-text-color: #333;
+    --window-border: 1px solid #16161a;
+    --active-file-bg-color: var(--accent-color);
+    --active-file-text-color: var(--bg-color);
+    --active-file-border-color: #6f1a07;
+    --active-search-item-bg-color: var(--quote-color);
+    --side-bar-bg-color: var(--quote-color);
+    --item-hover-bg-color: var(--header-color);
+    --item-hover-text-color: var(--bg-color);
+    --search-select-text-color: #333;
+    --search-select-bg-color: #9e1c1c;
+    --rawblock-edit-panel-bd: #d0d0d0;
+    --node-fill: #fbfbfb;
+    --node-border: #0000001a;
 }
 
 .md-blockmeta {
- color: #07070350;
+    color: #07070350;
 }
 
-pre.md-meta-block, sup.md-footnote {
- background: var(--quote-color);
- color: var(--subheader-color);
+pre.md-meta-block,
+sup.md-footnote {
+    background: var(--quote-color);
+    color: var(--subheader-color);
 }
 
 ::selection {
-  background: var(--quote-color);
-  text-shadow: 1px 1px var(--accent-color);
+    background: var(--quote-color);
+    color: var(--accent-color);
 }
 
 body {
-  font-family: "Barlow";
-  line-height: 1.5em;
-  font-size: 16px;
-  font-weight: 500;
+    font-family: "Barlow";
+    line-height: 1.5em;
+    font-size: 112.5%;
+    /* font-weight: 500; */
 }
 
 #write {
-  max-width: 65em;
+    max-inline-size: 100ch;
 }
 
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6 {
-  color: var(--header-color);
-  font-family: "Barlow Semi Condensed";
-  font-weight: 600;
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+    color: var(--header-color);
+    font-family: "Barlow Semi Condensed";
+    font-weight: 600;
 }
 
-h1 {
-  text-align: center;
-  column-span: all;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-weight: 900;
+#write h1 {
+    text-align: center;
+    column-span: all;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-weight: 900;
 }
 
-h2 {
-  border-bottom: 2px solid var(--accent-color);
-  padding: 0.2em 0.2em 0.3em;
-  margin: 0.8em 0;
-  page-break-inside: avoid;
-  clear: both;
+#write h2 {
+    border-bottom: 2px solid var(--accent-color);
+    padding: 0.3em;
+    margin-block: 0.8em;
 }
 
-h3, h5 {
-  font-style: italic;
+#write h3,
+#write h5 {
+    font-style: italic;
 }
 
 blockquote {
-  text-align: center;
-  font-size: 0.9em;
-  background: var(--quote-color);
-  border-radius: 1em;
-  padding: 1em;
-  margin: 0.5em 1em;
-  page-break-inside: avoid;
+    margin: 0.5em 1em;
+    border-radius: 1em;
+    background: var(--quote-color);
+    padding: 1em;
+    font-size: 0.9em;
 }
 
 blockquote h2 {
-  color: var(--text-color);
-  border: none;
-  font-size: 1.2em;
+    border: none;
+    font-size: 1.2em;
+    color: var(--text-color);
 }
 
-code {
-  font-size: .9em;
-  border: 1px solid var(--accent-color);
-  border-radius: .25rem;
-  padding: 0 .125rem;
-}
+/* code {
+    font-size: 0.9em;
+    border: thin solid var(--accent-color);
+    border-radius: 0.25rem;
+    padding: 0 0.5ch;
+} */
 
 a {
-  color: var(--header-color);
-  font-weight: bold;
-  text-decoration: none;
+    color: var(--header-color);
+    font-weight: bold;
+    text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 hr {
-  height: 60px;
-  width: 100%;
-  background: url("./rads/rads.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  border: 0;
-  page-break-after: always;
-  filter: invert(43%) sepia(61%) saturate(3769%) hue-rotate(352deg) brightness(89%) contrast(98%);
+    height: 60px;
+    width: 100%;
+    background: url("./rads/rads.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+    page-break-after: always;
+    filter: invert(43%) sepia(61%) saturate(3769%) hue-rotate(352deg)
+        brightness(89%) contrast(98%);
 }
 
 table {
-  padding: 5px;
-  page-break-inside: avoid;
-  clear: both;
-  margin: 0 0.5em;
-  font-size: 0.8em;
+    padding: 5px;
+    page-break-inside: avoid;
+    clear: both;
+    margin: 0 0.5em;
+    font-size: 0.8em;
 }
 
 table thead {
-  border-bottom: 2px solid var(--header-color);
+    border-bottom: 2px solid var(--header-color);
 }
 
 table tr {
-  border-bottom: 1px dashed var(--accent-color);
+    border-bottom: 1px dashed var(--accent-color);
 }
 
-th, td {
-  padding: 5px;
+th,
+td {
+    padding: 5px;
 }
 
 #write ul {
-  list-style-type: disc;
+    list-style-type: disc;
 }
 
 #write ul li ul {
-  list-style-type: circle;
+    list-style-type: circle;
 }
 
 #write ol {
-  list-style-type: decimal;
+    list-style-type: decimal;
 }
 
-#write ol > li, #write ul > li {
-  color: var(--accent-color);
-}
-
-#write ol > li > *, #write ul > li > * {
-  color: var(--text-color);
+#write li::marker {
+    color: var(--accent-color);
 }
 
 #write .md-task-list-item > input {
-  -webkit-appearance: initial;
-  display: block;
-  position: absolute;
-  border: 1px solid #b4b4b4;
-  border-radius: .25rem;
-  margin-top: .1rem;
-  margin-left: -1.8rem;
-  height: 1.2rem;
-  width: 1.2rem;
-  transition: background 0.3s;
+    -webkit-appearance: initial;
+    appearance: initial;
+    display: block;
+    position: absolute;
+    border: 1px solid #b4b4b4;
+    border-radius: 0.25rem;
+    margin-top: 0.1rem;
+    margin-left: -1.8rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    transition: background 0.3s;
 }
 
 #write .md-task-list-item > input[checked]::before {
-  content: '';
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  height: 60%;
-  width: 2px;
-  transform: rotate(40deg);
-  background: #333;
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 60%;
+    width: 2px;
+    transform: rotate(40deg);
+    background: #333;
 }
 
 #write .md-task-list-item > input[checked]::after {
-  content: '';
-  position: absolute;
-  top: 46%;
-  left: 25%;
-  height: 30%;
-  width: 2px;
-  transform: rotate(-40deg);
-  background: #333;
+    content: "";
+    position: absolute;
+    top: 46%;
+    left: 25%;
+    height: 30%;
+    width: 2px;
+    transform: rotate(-40deg);
+    background: #333;
 }
 
 #write .md-task-list-item.task-list-done > p {
-  opacity: .5;
-  text-decoration: line-through;
+    opacity: 0.5;
+    text-decoration: line-through;
 }
 
-.md-toc-h4, .md-toc-h5, .md-toc-h6 {
-  display: none;
+.md-toc-h4,
+.md-toc-h5,
+.md-toc-h6 {
+    display: none;
 }
 /*
 
@@ -214,26 +219,69 @@ th, td {
 
 */
 
-.cm-s-inner.CodeMirror {background: #28211c; color: #9d9b97;}
-.cm-s-inner div.CodeMirror-selected {background: #36312e !important;}
-.cm-s-inner .CodeMirror-gutters {background: #28211c; border-right: 0px;}
-.cm-s-inner .CodeMirror-linenumber {color: #666666;}
-.cm-s-inner .CodeMirror-cursor {border-left: 1px solid #797977 !important;}
+.cm-s-inner.CodeMirror {
+    background: #28211c;
+    color: #9d9b97;
+}
+.cm-s-inner div.CodeMirror-selected {
+    background: #36312e !important;
+}
+.cm-s-inner .CodeMirror-gutters {
+    background: #28211c;
+    border-right: 0px;
+}
+.cm-s-inner .CodeMirror-linenumber {
+    color: #666666;
+}
+.cm-s-inner .CodeMirror-cursor {
+    border-left: 1px solid #797977 !important;
+}
 
-.cm-s-inner span.cm-comment {color: #937121;}
-.cm-s-inner span.cm-atom {color: #9b859d;}
-.cm-s-inner span.cm-number {color: #9b859d;}
+.cm-s-inner span.cm-comment {
+    color: #937121;
+}
+.cm-s-inner span.cm-atom {
+    color: #9b859d;
+}
+.cm-s-inner span.cm-number {
+    color: #9b859d;
+}
 
-.cm-s-inner span.cm-property, .cm-s-inner span.cm-attribute {color: #54be0d;}
-.cm-s-inner span.cm-keyword {color: #cf6a4c;}
-.cm-s-inner span.cm-string {color: #f9ee98;}
+.cm-s-inner span.cm-property,
+.cm-s-inner span.cm-attribute {
+    color: #54be0d;
+}
+.cm-s-inner span.cm-keyword {
+    color: #cf6a4c;
+}
+.cm-s-inner span.cm-string {
+    color: #f9ee98;
+}
 
-.cm-s-inner span.cm-variable {color: #54be0d;}
-.cm-s-inner span.cm-variable-2 {color: #5ea6ea;}
-.cm-s-inner span.cm-def {color: #cf7d34;}
-.cm-s-inner span.cm-error {background: #cf6a4c; color: #797977;}
-.cm-s-inner span.cm-bracket {color: #9d9b97;}
-.cm-s-inner span.cm-tag {color: #cf6a4c;}
-.cm-s-inner span.cm-link {color: #9b859d;}
+.cm-s-inner span.cm-variable {
+    color: #54be0d;
+}
+.cm-s-inner span.cm-variable-2 {
+    color: #5ea6ea;
+}
+.cm-s-inner span.cm-def {
+    color: #cf7d34;
+}
+.cm-s-inner span.cm-error {
+    background: #cf6a4c;
+    color: #797977;
+}
+.cm-s-inner span.cm-bracket {
+    color: #9d9b97;
+}
+.cm-s-inner span.cm-tag {
+    color: #cf6a4c;
+}
+.cm-s-inner span.cm-link {
+    color: #9b859d;
+}
 
-.cm-s-inner .CodeMirror-matchingbracket { text-decoration: underline; color: white !important;}
+.cm-s-inner .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: white !important;
+}

@@ -1,0 +1,6 @@
+@font-face {
+    font-family: "Departure Mono";
+    src: local("Departure Mono"),
+        url("./DepartureMono-Regular.otf") format("opentype"),
+        url("./DepartureMono-Regular.woff") format("woff");
+}
