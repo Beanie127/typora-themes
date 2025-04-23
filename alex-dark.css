@@ -32,13 +32,20 @@ html {
     font-weight: 300;
 }
 
-#write h1 {
-    border-block-end: 1px solid var(--hl);
-    padding: 2rem;
-    margin: 1em 0;
+#write {
+    h1 {
+        border-block-end: 1px solid var(--hl);
+        padding: 2rem;
+        margin: 1em 0;
+    }
+    h1,
+    h2,
+    h3 {
+        font-family: "Newake", "Albert Sans";
+        font-weight: normal;
+        letter-spacing: 0;
+    }
 }
-
-
 #write a {
     text-decoration-thickness: 3px;
 }

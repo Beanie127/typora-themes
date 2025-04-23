@@ -46,6 +46,7 @@
 /* font settings */
 
 html {
+    font-family: "Albert Sans";
     font-variant-numeric: tabular-nums;
     text-rendering: optimizeLegibility;
     font-size: 1.1em;
@@ -107,23 +108,17 @@ del {
 /* headers and subheaders */
 
 #write {
-    h1,
-    h2,
-    h3 {
-        font-family: "Newake", "Albert Sans";
-        font-weight: normal;
-    }
     h1 {
         text-wrap: balance;
         padding: 1rem;
         font-size: 2.4rem;
         text-align: center;
-        /* letter-spacing: -2px; */
+        letter-spacing: -2px;
     }
 
     h2 {
         font-size: 2rem;
-        /* letter-spacing: -1px; */
+        letter-spacing: -1px;
     }
 
     h3 {
