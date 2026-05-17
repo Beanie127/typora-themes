@@ -1,32 +1,50 @@
-@import url("./terminal/fonts/fonts.css");
-@import url("./plugins/subtitles.css");
-@import url("./plugins/print.css");
+@import url('./plugins/all.css');
+
+@font-face {
+	font-family: 'Departure Mono';
+	src:
+		local('Departure Mono'),
+		url('./terminal/fonts/DepartureMono-Regular.otf') format('opentype'),
+		url('./terminal/fonts/DepartureMono-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Italipixel';
+	src: url('./terminal/fonts/Italipixel.ttf') format('ttf');
+}
 
 :root {
-    --side-bar-bg-color: hsl(100 20% 85%);
-    --bg-color: hsl(48, 20%, 95%);
-    --text-color: hsl(100 80% 15%);
-    --accent-color: hsl(100 90% 25%);
-    /* Theme-specific variables */
-    --write-max-width: 100ch;
+	--bg-color: hsl(30 13 9);
+	--text-color: hsl(78 80 74);
+	--accent-color: hsl(32 100 60);
+	/* --text-color: var(--accent-color); */
+	--side-bar-bg-color: hsl(78 15 15);
+	--active-file-bg-color: var(--accent-color);
+	--active-file-text-color: var(--bg-color);
+	/* theme-specific variables */
+	--write-max-width: 100ch;
+	--glow-is-active: 1;
+	--glow-radius: 4px;
+	--glow-opacity: 0.2;
+	--gr: calc(var(--glow-is-active) * var(--glow-radius));
+	--go: calc(var(--glow-is-active) * var(--glow-opacity));
 }
 
 html {
-    font-family: "Maple Mono", "Departure Mono", "Courier New", Courier,
-        monospace;
-    -webkit-font-smoothing: none;
-    --moz-osx-font-smoothing: disabled;
-    font-smooth: never;
-    /* filter: invert(100%) hue-rotate(160deg) contrast(80%) brightness(90%); */
+	font-family: 'Departure Mono', 'Courier New', Courier, monospace;
+	text-shadow: 0px 0px var(--gr) hsl(from var(--text-color) h s l / var(--go));
+	caret-color: var(--text-color);
+	caret-shape: block;
+	/* font-size: 0.9em; */
+	font-weight: normal;
 }
 
 #write {
-    margin-inline: auto;
-    inline-size: min(calc(100% - 3em), var(--write-max-width, 100ch));
-    padding-block: 3em 10em;
-    padding-inline: 1.5em;
-    line-height: 1.75;
-    font-size: 1.125em;
+	margin-inline: auto;
+	inline-size: min(calc(100% - 3em), var(--write-max-width, 100ch));
+	padding-block: 3em 10em;
+	padding-inline: 1.5em;
+	line-height: 1.75;
 }
 
 h1,
@@ -35,72 +53,190 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 2em 0 0.5em;
+	margin: 2em 0 0.5em;
+	font-weight: normal;
+	text-transform: uppercase;
 }
 
-:is(h1, h2, h3, h4)::before {
-    content: "# ";
-    opacity: 0.3;
-    margin-inline-start: -2ch;
+:is(h3, h4, h5, h6).md-focus:before {
+	content: none;
+	position: initial;
+	float: none;
+	font: inherit;
+	color: inherit;
+	border: 0;
+	padding: 0;
+	vertical-align: inherit;
 }
 
-h2::before {
-    content: "$ ";
-}
+#write {
+	:is(h1, h2, h3, h4)::before {
+		opacity: 0.3;
+		margin-inline-start: -2ch;
+	}
+	h1:before {
+		content: '# ';
+	}
+	h2::before {
+		content: '$ ';
+	}
 
-h3::before {
-    content: "_ ";
-}
+	h3::before {
+		content: '_ ';
+	}
 
-h4::before {
-    content: "~ ";
+	h4::before {
+		content: '~ ';
+	}
 }
 
 p,
 ul,
 ol {
-    margin-bottom: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+strong {
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 0.9;
+}
+
+em,
+cite,
+i {
+	font-style: normal;
+	font-family: 'Italipixel';
 }
 
 a {
-    color: hsl(345 40% 50%);
+	display: inline block;
+	background-image:
+		linear-gradient(
+			to left,
+			var(--bg-color) 0 1px,
+			transparent 0 2px,
+			var(--bg-color) 0 3px
+		),
+		linear-gradient(
+			to bottom,
+			var(--bg-color) 0 1px,
+			hsl(from var(--text-color) h s l / 0.5) 0 2px,
+			var(--bg-color) 0 3px
+		);
+	background-size: 3px 3px;
+	color: var(--text-color);
+	padding: 0.25ch 0.5ch;
+	text-decoration: none;
+	text-transform: uppercase;
+	&::after {
+		content: ' >';
+	}
 }
 
 blockquote {
-    padding-inline-start: 1em;
-    border-inline-start: 2px solid var(--accent-color);
+	background: 0;
+	padding: 1em;
+	border: 2px dashed var(--text-color);
+	box-shadow:
+		inset 0px 0px calc(var(--gr) * 2)
+			hsl(from var(--text-color) h s l / var(--go)),
+		0px 0px calc(var(--gr) * 2)
+			hsl(from var(--text-color) h s l / var(--go));
 }
 
 th,
 td {
-    border: 1px solid var(--accent-color);
-    padding: 0px 3px;
+	border: 1px dashed var(--text-color);
+	padding: 0px 3px;
+	box-shadow:
+		0px 0px calc(var(--gr) / 2)
+			hsl(from var(--text-color) h s l / var(--go)),
+		inset 0px 0px calc(var(--gr) / 2)
+			hsl(from var(--text-color) h s l / var(--go));
 }
 
 hr {
-    block-size: 0;
-    inline-size: 200vw;
-    margin-inline-start: -50vw;
-    margin-block: 6rem;
-    border: 0;
-    border-block-end: thin dashed var(--accent-color);
+	block-size: 0;
+	inline-size: 200vw;
+	margin-inline-start: -50vw;
+	margin-block: 6rem;
+	border: 0;
+	border-block-end: thin dashed var(--text-color);
+	box-shadow: 0px 0px var(--gr) hsl(from var(--text-color) h s l / var(--go));
 }
 
 code,
 .CodeMirror {
-    background-color: #eee;
-    font-family: inherit;
-    border-radius: 3px;
-    border: 1px solid #b4b4b4;
-    box-shadow: 0 1px 1px hsl(0 100% 100% / 0.4),
-        0 2px 0 0 hsl(0 0% 100% / 0.7) inset;
-    font-size: 0.9rem;
-    font-weight: 700;
-    line-height: 1;
-    padding: 4px;
-    white-space: nowrap;
+	background-color: #eee;
+	font-family: inherit;
+	color: var(--bg-color);
+	border-radius: 3px;
+	border: 1px solid #b4b4b4;
+	box-shadow:
+		0 1px 1px hsl(0 100% 100% / 0.4),
+		0 2px 0 0 hsl(0 0% 100% / 0.7) inset;
+	font-size: 0.9rem;
+	font-weight: 700;
+	line-height: 1;
+	padding: 4px;
+	white-space: nowrap;
 }
 
 code {
-    display: inline-block;
+	display: inline-block;
+}
+
+pre.md-meta-block {
+	background: none;
+	border: thin dashed var(--text-color);
+	padding: 1rem;
+}
+
+/* Monitorize */
+
+@media (prefers-reduced-transparency: no-preference) {
+	body::before {
+		content: '';
+		position: fixed;
+		inset: 0;
+		user-select: none;
+		pointer-events: none;
+		background:
+			radial-gradient(
+				hsl(from var(--bg-color) h s calc(l + 10) / 0.2) 10%,
+				var(--bg-color) 100%
+			),
+			repeating-linear-gradient(
+				transparent 0px,
+				hsl(from var(--bg-color) h s calc(l + 20) / 0.2) 5px,
+				transparent 10px
+			);
+		background-position:
+			center,
+			0px 0px;
+		background-size: cover;
+		mix-blend-mode: luminosity;
+		z-index: 10;
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	body::before {
+		animation: scan 1500ms linear infinite;
+	}
+
+	@keyframes scan {
+		from {
+			background-position:
+				center,
+				0px 0px;
+		}
+
+		to {
+			background-position:
+				center,
+				10px 10px;
+		}
+	}
 }

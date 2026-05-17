@@ -1,126 +1,143 @@
+@page {
+	size: A4 portrait;
+	margin: 0;
+	padding: 5rem 2rem 8rem !important;
+}
+
 @media print {
-    html,
-    body,
-    #write {
-        color: black !important;
-        background: none !important;
-        line-height: 1.2 !important;
-    }
+	html,
+	body,
+	#write {
+		color: black !important;
+		background: none !important;
+		background-color: white !important;
+		line-height: 1.2 !important;
+		inline-size: 100% !important;
+		max-inline-size: 100% !important;
+	}
 
-    #write {
-        padding-block-end: 0 !important;
-        margin-block-end: 1rem !important;
-        max-inline-size: 100% !important;
-        min-height: 1em !important;
-        --text-color: black;
-        --bg-color: white;
-    }
+	#write {
+		min-height: 1em !important;
+		margin: 0 !important;
+	}
 
-    #write::after,
-    html::after {
-        display: none !important;
-    }
+	header,
+	footer {
+		background: none !important;
+	}
 
-    p,
-    ul,
-    ol,
-    table,
-    blockquote {
-        font-size: 12px !important;
-    }
+	#write::after,
+	html::after {
+		display: none !important;
+	}
 
-    :is(p, h1, h2, h3, h4, h5, h6):not(:first-of-type) {
-        margin-block-start: 0.5em !important;
-    }
+	p,
+	ul,
+	ol,
+	table,
+	blockquote {
+		font-size: 12px !important;
+	}
 
-    :is(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, table) {
-        line-height: calc(0.5em + 0.6rem) !important;
-    }
+	* + :is(p, h2, h3, h4, h5, h6) {
+		margin-block-start: 0.5em !important;
+	}
 
-    h1 {
-        margin-block: 0 0.5em !important;
-        border-block-end: 1px solid var(--hl);
-        padding: 1rem !important;
-        font-size: 26px !important;
-    }
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	ul,
+	ol,
+	blockquote,
+	table {
+		line-height: calc(0.5em + 0.6rem) !important;
+	}
 
-    h1::after {
-        display: none !important;
-        content: none !important;
-    }
+	h1 {
+		margin-block: 0 0.5em !important;
+		font-size: 26px !important;
+		&::before,
+		&::after {
+			display: none !important;
+		}
+	}
 
-    h2 {
-        font-size: 20px !important;
-    }
+	h2 {
+		font-size: 20px !important;
+	}
 
-    h3 {
-        font-size: 16px !important;
-    }
+	h3 {
+		font-size: 16px !important;
+	}
 
-    h4 {
-        font-size: 14px !important;
-    }
+	h4 {
+		font-size: 14px !important;
+	}
 
-    h5 {
-        font-size: 11px !important;
-    }
+	h5 {
+		font-size: 11px !important;
+	}
 
-    h6 {
-        font-size: 9px !important;
-    }
+	h6 {
+		font-size: 9px !important;
+	}
 
-    a {
-        text-decoration: underline !important;
-        text-decoration-color: var(--text-color) !important;
-    }
+	a {
+		text-decoration: underline !important;
+		text-decoration-color: var(--text-color) !important;
 
-    a::after,
-    a::before {
-        content: none !important;
-    }
+		&::before,
+		&::after {
+			display: none !important;
+		}
+	}
 
-    /* bullet adjustment */
+	/* bullet adjustment */
 
-    ul li ul::before {
-        display: none !important;
-    }
+	ul li ul::before {
+		display: none !important;
+	}
 
-    /* Defining all page breaks */
-    a {
-        page-break-inside: avoid;
-    }
-    blockquote {
-        page-break-inside: avoid;
-    }
+	/* Defining all page breaks */
+	a {
+		page-break-inside: avoid;
+	}
+	blockquote {
+		page-break-inside: avoid;
+	}
 
-    h1:not(:first-child) {
-        page-break-before: always;
-    }
+	h1:not(:first-child) {
+		page-break-before: always;
+	}
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        page-break-after: avoid;
-        page-break-inside: avoid;
-    }
-    img {
-        page-break-inside: avoid;
-        page-break-after: avoid;
-    }
-    table,
-    pre {
-        page-break-inside: avoid;
-    }
-    ul,
-    ol,
-    dl {
-        page-break-before: avoid;
-    }
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		page-break-after: avoid;
+		page-break-inside: avoid;
+	}
+	img {
+		page-break-inside: avoid;
+		page-break-after: avoid;
+	}
+	table,
+	pre {
+		page-break-inside: avoid;
+	}
+	ul,
+	ol,
+	dl {
+		page-break-before: avoid;
+	}
 
-    hr {
-        page-break-after: always;
-    }
+	hr {
+		page-break-after: always;
+	}
 }

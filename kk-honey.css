@@ -1,0 +1,101 @@
+@import url('./plugins/subtitles.css');
+
+:root {
+	--bg-color: hsl(40 65 90); /*change background*/
+	--text-color: hsl(40 65 10); /*change text color*/
+	--md-char-color: hsl(0 65 75);
+	/*change color of meta characters like `*` in markdown */
+	--meta-content-color: hsl(0 75 45);
+	/*change color of meta contents like image text or link address in markdown */
+	--primary-color: #428bca; /* color of primary buttons */
+	--primary-btn-border-color: #285e8e;
+	--primary-btn-text-color: #fff;
+
+	--window-border: 1px solid #eee; /*border for sidebar, etc*/
+
+	--active-file-bg-color: var(
+		--meta-content-color
+	); /*background color if list item in file tree or file list*/
+	--active-file-text-color: white;
+	--active-file-border-color: var(--active-file-bg-color);
+
+	--side-bar-bg-color: hsl(40 55 77); /*change background of sidebar*/
+	--item-hover-bg-color: var(
+		--side-bar-bg-color
+	); /*background of control items when hover, like menu in sidebar*/
+	--item-hover-text-color: inherit;
+	--monospace: monospace; /*monospace font for codes, fences*/
+}
+
+html {
+	font-family: 'Karla';
+	font-size: 112.5%;
+}
+
+h1,
+h2 {
+	font-family: 'Karma';
+}
+
+h2 {
+	font-size: 1.2rem;
+}
+h3 {
+	font-size: 1.1rem;
+	font-style: italic;
+}
+
+h4 {
+	font-size: 1rem;
+}
+h5,
+h6 {
+	font-size: 0.9rem;
+	font-variant: small-caps;
+}
+
+#write {
+	max-inline-size: 90ch;
+	margin-inline: auto;
+}
+
+*::marker,
+a {
+	color: var(--meta-content-color);
+}
+
+blockquote {
+	padding-inline-start: 1rem;
+	color: var(--meta-content-color);
+	font-style: italic;
+	cite {
+		font-style: normal;
+		font-variant: small-caps;
+	}
+}
+
+td,
+th {
+	border: thin solid hsl(from var(--bg-color) h s calc(l - 20));
+	padding: 5px;
+}
+
+hr {
+	border: 0;
+	padding: 0;
+	margin: 2rem;
+	border-block-end: thin solid var(--md-char-color);
+}
+
+:where(p, li, h1, h2, h3, h4, h5, h6, tr, td, th):hover,
+.md-focus {
+	background: hsl(from var(--bg-color) h s calc(l - 2));
+}
+.md-focus {
+	background: hsl(from var(--bg-color) h s calc(l - 5));
+	outline: thin solid hsl(from var(--bg-color) h s calc(l - 10));
+}
+
+pre.md-meta-block {
+	background-color: hsl(from var(--bg-color) h s calc(l - 5));
+}

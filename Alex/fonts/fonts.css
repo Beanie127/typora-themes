@@ -1,31 +1,42 @@
 @font-face {
-    font-family: "Albert Sans";
-    src: url("./AlbertSans-Roman[wdth\,wght].ttf");
-    font-style: normal;
+	font-family: 'Miranda Sans';
+	src: url('./MirandaSans-VariableFont_wght.ttf');
+	font-style: normal;
 }
 
 @font-face {
-    font-family: "Albert Sans";
-    src: url("./AlbertSans-Italic[wdth\,wght].ttf");
-    font-style: italic;
+	font-family: 'Miranda Sans';
+	src: url('./MirandaSans-Italic-VariableFont_wght.ttf');
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Crimson Pro';
+	src: url('./CrimsonPro-VariableFont_wght.ttf');
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Crimson Pro';
+	src: url('./CrimsonPro-Italic-VariableFont_wght.ttf');
+	font-style: italic;
 }
 
 html {
-    font-family: "Albert Sans", sans-serif;
-    font-feature-settings: "ss02", "ss04";
-    font-stretch: 95%;
+	font-family: 'Miranda Sans', sans-serif;
 }
 
-#write {
-    & :is(h1, h2, h3, h4, h5, h6) {
-        font-stretch: 100%;
-    }
+:where(#write) {
+	/* font-feature-settings: 'ss02', 'ss04'; */
+	& :where(h1) {
+		color: var(--foreground-3);
+		letter-spacing: -2px;
+	}
 
-    & :is(h1, h2) {
-        letter-spacing: -2px;
-    }
+	& :where(h2, h3, h4) {
+		color: var(--foreground-2);
+	}
 
-    & :is(h3, h4) {
-        letter-spacing: -1px;
-    }
+	& :where(h2, h3) {
+		letter-spacing: -1px;
+	}
 }

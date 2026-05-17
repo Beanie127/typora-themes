@@ -1,21 +1,33 @@
+@import url('./plugins/all.css');
+
 @font-face {
-    font-family: "Commissioner";
-    src: url("./canvas/Commissioner-VariableFont_FLAR\,VOLM\,slnt\,wght.ttf");
+	font-family: 'Commissioner';
+	src: url('/canvas/fonts/Commissioner-VariableFont_FLAR\,VOLM\,slnt\,wght.ttf')
+		format('ttf') local('Commissioner');
+	font-style: normal;
+}
+
+@property --slant {
+	syntax: '<integer>';
+	inherits: true;
+	initial-value: 0;
 }
 
 :root {
-    --bg-color: hsl(17 85% 95%);
-    --side-bar-bg-color: hsl(17 45% 85%);
-    --text-color: hsl(217 95% 16%);
-    --text-color-light: hsl(217 75% 36%);
+	--bg-color: hsl(17 85% 95%);
+	--side-bar-bg-color: hsl(17 45% 85%);
+	--text-color: hsl(217 95% 16%);
+	--text-color-light: hsl(217 75% 36%);
+	--quote-color: transparent;
+	--select-text-bg-color: hsl(217 40% 85%);
 
-    --select-text-bg-color: hsl(217 40% 85%);
-
-    --item-hover-bg-color: #b7b7b7;
-    --control-text-color: #0a0d16;
-    --control-text-hover-color: black;
-    --window-border: 1px solid hsl(17 45% 70%);
-    --active-file-text-color: var(--bg-color);
+	--item-hover-bg-color: #b7b7b7;
+	--control-text-color: #0a0d16;
+	--control-text-hover-color: black;
+	--window-border: 1px solid hsl(17 45% 70%);
+	--active-file-bg-color: var(--text-color-light);
+	--active-file-text-color: var(--bg-color);
+	--slant: 0;
 }
 
 /* Reset */
@@ -23,202 +35,207 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-/* typography */
-
-html {
-    font-family: "Commissioner";
-    font-optical-sizing: auto;
-    font-variation-settings: "FLAR" 40;
-    font-size: clamp(1rem, 0.45vi + 0.89rem, 1.25rem);
-}
+/* Layout */
 
 #write {
-    line-height: 1.8;
-    & h1 {
-        font-size: 2rem;
-        color: hsl(from var(--text-color) h s calc(l * 1.8));
-    }
-    & h2 {
-        font-size: 1.5rem;
-        color: hsl(from var(--text-color) calc(h + 40) s calc(l * 1.8));
-    }
-    & h3 {
-        font-size: 1.2rem;
-        color: hsl(from var(--text-color) calc(h + 80) s calc(l * 1.8));
-    }
-    & h4 {
-        font-size: 1rem;
-        color: hsl(from var(--text-color) calc(h + 120) s calc(l * 1.8));
-    }
-    & h5 {
-        font-size: 0.8rem;
-        color: hsl(from var(--text-color) calc(h + 160) s calc(l * 1.8));
-    }
-    & h6 {
-        font-size: 0.8rem;
-        color: hsl(from var(--text-color) calc(h + 200) s calc(l * 1.8));
-    }
-
-    & :is(h1, h2, h3, h4, h5, h6) {
-        margin-block: calc(0.5em + 0.5rem);
-    }
+	margin-inline: auto;
+	margin-block-end: 30dvb;
+	min-block-size: 100dvb;
+	max-inline-size: 85ch;
+	padding-inline: 1rem 5rem;
+	background: none;
+	z-index: 2;
 }
-
-em {
-    font-style: normal;
-    font-variation-settings: "slnt" -12;
-}
-
-/* layout */
 
 content {
-    background-image: url("./canvas/background.png");
-    background-repeat: no-repeat;
-    background-position: 100%;
-    background-size: contain;
-    &::after {
-        content: "";
-        background-image: url("./canvas/paper.jpg");
-        background-position: 100%;
-        background-size: cover;
-        position: fixed;
-        block-size: 100svh;
-        inset: 0;
-        opacity: 0.3;
-        mix-blend-mode: luminosity;
-    }
+	background-image: url('./canvas/assets/background.png');
+	background-repeat: no-repeat;
+	background-position: 100%;
+	background-size: contain;
+	&::after {
+		content: '';
+		background-image: url('./canvas/assets/Texturelabs_Paper_234M.jpg');
+		background-position: 100%;
+		background-size: cover;
+		position: fixed;
+		block-size: 100svh;
+		inset: 0;
+		opacity: 0.3;
+		mix-blend-mode: luminosity;
+	}
 }
+
+/* Typography */
+html {
+	/* font-family: 'Karla'; */
+	font-family: 'Commissioner';
+	font-optical-sizing: auto;
+	font-variation-settings:
+		'FLAR' 40,
+		'slnt' var(--slant);
+	font-size: clamp(0.9rem, 0.45vi + 0.8rem, 1.1rem);
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Karma';
+} */
 
 #write {
-    margin-inline: auto;
-    margin-block-end: 30dvb;
-    min-block-size: 100dvb;
-    max-inline-size: 85ch;
-    padding-inline: 1rem 5rem;
-    background: none;
-    z-index: 2;
+	line-height: 1.5;
+	h1 {
+		font-size: 2rem;
+		color: hsl(from var(--text-color) h s calc(l * 1.8));
+	}
+	h2 {
+		font-size: 1.5rem;
+		color: hsl(from var(--text-color) calc(h + 40) s calc(l * 1.8));
+	}
+	h3 {
+		font-size: 1.2rem;
+		color: hsl(from var(--text-color) calc(h + 80) s calc(l * 1.8));
+	}
+	h4 {
+		font-size: 1rem;
+		color: hsl(from var(--text-color) calc(h + 120) s calc(l * 1.8));
+	}
+	h5 {
+		font-size: 0.8rem;
+		color: hsl(from var(--text-color) calc(h + 160) s calc(l * 1.8));
+	}
+	h6 {
+		font-size: 0.8rem;
+		color: hsl(from var(--text-color) calc(h + 200) s calc(l * 1.8));
+	}
+
+	:is(h1, h2, h3, h4, h5, h6) {
+		margin-block: calc(0.5em + 0.5rem);
+	}
+	em {
+		font-style: normal;
+		--slant: -12;
+	}
 }
 
-/* elements */
-
+/* Elements */
 hr {
-    border: 0;
-    background-image: url("./canvas/wave.png");
-    opacity: 0.5;
-    block-size: 2rem;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-block: 3rem;
-}
-
-@property --slant {
-    syntax: "<number>";
-    inherits: true;
-    initial-value: 0;
+	border: 0;
+	background-image: url('./canvas/assets/wave.png');
+	opacity: 0.5;
+	block-size: 2rem;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-block: 3rem;
 }
 
 #write a {
-    --slant: 0;
-    color: hsl(from var(--text-color-light) calc(h - 50) s calc(l - 0.15));
-    font-variation-settings: "slnt" var(--slant);
-    transition: all 250ms;
-    &:hover {
-        --slant: -6;
-    }
+	color: hsl(from var(--text-color-light) calc(h - 50) s calc(l - 10));
+	--slant: 0;
+	font-variation-settings: 'slnt' var(--slant);
+	transition: all 250ms;
+	will-change: contents;
+	&:hover {
+		--slant: -6;
+	}
 }
 
 #write :is(h1, h2, h3) u {
-    display: block;
-    font-size: 60%;
-    opacity: 0.75;
-    font-weight: 400;
-    line-height: 1;
-    text-decoration: none;
-    font-variation-settings: "slnt" -6;
+	display: block;
+	font-size: 60%;
+	opacity: 0.75;
+	font-weight: 400;
+	line-height: 1;
+	text-decoration: none;
+	--slant: -6;
+	/* font-style: italic; */
 }
 
 blockquote {
-    margin-inline: auto;
-    max-inline-size: 60ch;
-    background-image: url("./canvas/rect.png");
-    background-size: 100% 100%;
-    padding: 1.5rem 3rem;
-    font-variation-settings: "slnt" -4;
-    & cite {
-        padding-inline: 1rem;
-        font-variation-settings: "slnt" 0;
-        font-style: normal;
-        &::before {
-            content: "— ";
-        }
-    }
+	margin-inline: auto;
+	max-inline-size: 60ch;
+	background-image: url('./canvas/assets/rect.png');
+	background-size: 100% 100%;
+	padding: 1.5rem 3rem;
+	--slant: -4;
+	& cite {
+		padding-inline: 1rem;
+		--slant: 0;
+		font-style: normal;
+		&::before {
+			content: '— ';
+		}
+	}
 }
 
 table {
-    border-collapse: collapse;
-    margin-inline: auto;
-    inline-size: calc(100% - 2rem);
+	border-collapse: collapse;
+	margin-inline: auto;
+	inline-size: calc(100% - 2rem);
 }
 
 thead {
-    position: relative;
-    &::before {
-        position: absolute;
-        inset-block: 0;
-        inset-inline: 0 -1rem;
-        content: "";
-        background-image: url("./canvas/stripe.png");
-        background-size: 100% 100%;
-        transform: rotate(180deg);
-        filter: hue-rotate(100deg) contrast(60%) brightness(150%);
-        z-index: -1;
-    }
+	position: relative;
+	&::before {
+		position: absolute;
+		inset-block: 0;
+		inset-inline: 0 -1rem;
+		content: '';
+		background-image: url('./canvas/assets/stripe.png');
+		background-size: 100% 100%;
+		transform: rotate(180deg);
+		filter: hue-rotate(100deg) contrast(60%) brightness(150%);
+		z-index: -1;
+	}
 }
 
 th {
-    padding: 1ch;
+	padding: 1ch;
 }
 
 td {
-    padding-inline: 1ch;
-    text-wrap: balance;
+	padding-inline: 1ch;
+	text-wrap: balance;
 }
 
 tr:not(:first-of-type, :last-of-type) {
-    border-block: thin solid var(--select-text-bg-color);
+	border-block: thin solid var(--select-text-bg-color);
 }
 
 li {
-    padding-inline-start: 0.5ch;
+	padding-inline-start: 0.5ch;
 }
 
 del {
-    filter: contrast(50%) brightness(150%);
+	filter: contrast(50%) brightness(150%);
 }
 
 pre.md-meta-block,
 sup.md-footnote {
-    background: var(--side-bar-bg-color);
-    color: var(--text-color);
+	background: var(--side-bar-bg-color);
+	color: var(--text-color);
 }
 
 pre.md-meta-block {
-    border-radius: 8px;
-    padding: 10px;
-    line-height: 1;
+	border-radius: 8px;
+	padding: 10px;
+	line-height: 1;
 }
 
 /* UI */
 
 .file-tree-node.active > .file-node-background {
-    border: none;
-    background-color: transparent;
-    background-image: url("./canvas/stripe.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: 0 0;
+	border: none;
+	background-color: transparent;
+	background-image: url('./canvas/assets/stripe.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
 }

@@ -1,0 +1,18 @@
+@import url('./ferrio.css');
+
+:root {
+	color-scheme: dark;
+	--coal: hsl(200 15% 8%);
+}
+
+hr {
+	background-image: url('./ferrio/Logo-bw-dark.svg');
+}
+
+html {
+	font-weight: 300;
+}
+
+content::after {
+	filter: brightness(70%) contrast(50%);
+}

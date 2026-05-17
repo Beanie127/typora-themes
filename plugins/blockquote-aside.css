@@ -1,0 +1,20 @@
+/* if a blockquote has a header or multiple paragraphs it's an aside */
+
+:where(blockquote) {
+	&:has(:where(p, h1, h2, h3, h4, h5, h6) + :where(p, cite)) {
+		margin: 1em 0;
+		/* border: 2px solid var(--mg, var(--fg, darkgray)); */
+		background: var(--canvas-2, lightgray);
+		padding: 1rem;
+		font-style: normal;
+
+		& :where(h1, h2, h3) {
+			margin-block-start: 0;
+			font-size: 1.5rem;
+		}
+
+		& em {
+			font-style: italic;
+		}
+	}
+}

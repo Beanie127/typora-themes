@@ -1,0 +1,21 @@
+:root {
+	/* color tokens */
+	--coulis: hsl(0 100 6);
+	--raspberry: hsl(0 98 17);
+	--sauce: hsl(353 56 34);
+	--raspberry-sauce: color-mix(in hsl, var(--raspberry), var(--sauce));
+	--cream: hsl(39 100 97);
+	--ice-cream: hsl(50 60 92);
+	--vanilla: hsl(35 46 88);
+	--caramel: hsl(35 28 60);
+	--syrup: hsl(52 97 54);
+	--peach: hsl(36 80 63);
+	/* applied */
+	--foreground-1: light-dark(var(--coulis), var(--ice-cream));
+	--foreground-2: light-dark(var(--raspberry), var(--vanilla));
+	--foreground-3: light-dark(var(--sauce), var(--caramel));
+	--canvas-1: light-dark(var(--cream), var(--coulis));
+	--canvas-2: light-dark(var(--ice-cream), var(--raspberry));
+	--canvas-3: light-dark(var(--vanilla), var(--raspberry-sauce));
+	--accent-color: light-dark(var(--peach), var(--syrup));
+}

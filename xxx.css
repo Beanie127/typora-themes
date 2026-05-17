@@ -1,0 +1,51 @@
+@import url('./alex-serif.css');
+
+:root {
+	color-scheme: light;
+	/* Theme colors */
+	--light-yellow: hsl(60 100 95);
+	--cream: hsl(70 80 90);
+	--tea-green: hsl(80 60 80);
+	--charcoal: hsl(60 14 10);
+	--olive-leaf: hsl(70 25 25);
+	--forest-moss: hsl(80 100 23);
+	--tomato: hsl(10 82 61);
+	--ivory-mist: hsl(49 49 93);
+	--bone: hsl(37 28 85);
+	--grey-olive: hsl(70 12 55);
+	--stone-brown: hsl(80 6 34);
+	--carbon-black: hsl(65 12 15);
+	/* Color variables */
+	--foreground-1: var(--carbon-black);
+	--foreground-2: var(--stone-brown);
+	--foreground-3: color-mix(in oklch, var(--olive-leaf), var(--grey-olive));
+	--canvas-1: var(--ivory-mist);
+	--canvas-2: var(--bone);
+	--canvas-3: var(--tea-green);
+	--accent-color: var(--tomato);
+	/* Typora props */
+	--ratio: 1;
+	--bg-color: var(--canvas-1);
+	--text-color: var(--foreground-1);
+	--quote-color: var(--canvas-2);
+	--side-bar-bg-color: var(--canvas-2);
+	--active-file-bg-color: var(--canvas-3);
+	--active-file-text-color: var(--foreground-1);
+	--active-search-item-bg-color: var(--accent-color);
+	--item-hover-bg-color: var(--canvas-3);
+	--item-hover-text-color: var(--foreground-1);
+	--heading-char-color: var(---foreground-3);
+	--primary-btn-border-color: var(--foreground-3);
+	--primary-btn-text-color: hsla(0, 0%, 20%, 1);
+	--window-border: 1px solid var(--foreground-1);
+	--active-file-border-color: hsl(from var(--foreground-3) h s l / 0.3);
+	--search-select-text-color: var(--foreground-3);
+	--search-select-bg-color: var(--canvas-3);
+	--select-text-bg-color: var(--foreground-3);
+}
+
+:where(#write) {
+	:where(h1, h2, h3) {
+		color: var(--accent-color);
+	}
+}

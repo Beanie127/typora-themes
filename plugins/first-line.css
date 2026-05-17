@@ -1,0 +1,13 @@
+h1 + p {
+	&::first-line {
+		font-size: 1.2em;
+	}
+	&::first-letter {
+		font-weight: bold;
+		font-size: 2em;
+		line-height: 1;
+		margin-block-start: -0.5ex;
+		float: left;
+		color: var(--foreground-2, darkred);
+	}
+}

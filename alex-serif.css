@@ -1,0 +1,42 @@
+@import url('./Alex/alex-core.css');
+
+:root {
+	--canvas-1: hsl(38 45 95);
+	--canvas-2: hsl(38 45 85);
+	--canvas-3: hsl(38 45 75);
+	--foreground-1: hsl(349 4 16);
+	--foreground-2: hsl(349 12 28);
+	--foreground-3: hsl(349 22 35);
+	--accent-color: hsl(349 52 44);
+	--node-fill: hsla(0, 0%, 98%, 1);
+	--node-border: #0000001a;
+}
+
+html {
+	font-family: 'Crimson Pro', Garamond, Cambria, Georgia, serif;
+	font-size: 125%;
+}
+
+/**** headers **** */
+
+#write h1 {
+	font-family: inherit;
+	font-weight: revert;
+	margin: 2rem auto;
+	text-align: center;
+}
+
+/* header fleurons */
+
+#write h1::after {
+	display: block;
+	content: '';
+	margin: 0 auto;
+	height: 2rem;
+	background-color: var(--accent-color);
+	mask-image: url('./alex/divider.svg');
+	mask-size: contain;
+	mask-position: center;
+	mask-repeat: no-repeat;
+	opacity: 0.2;
+}

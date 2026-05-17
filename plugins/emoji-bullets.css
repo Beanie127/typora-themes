@@ -1,0 +1,12 @@
+#write li:has(> p > .md-emoji:first-child) {
+    list-style-type: none;
+    margin-inline-start: -1.5rem;
+    > ul {
+        margin-inline-start: 1.5rem;
+    }
+}
+
+#write li > p > .md-emoji:first-child {
+    font-size: 1em;
+    line-height: 1;
+}

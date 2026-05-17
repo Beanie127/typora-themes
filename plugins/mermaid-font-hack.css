@@ -1,0 +1,5 @@
+/* Mermaid */
+
+[id*='mermaid'] * {
+	font-family: var(--mermaid-font-family, 'system-ui') !important;
+}
