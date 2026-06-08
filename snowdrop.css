@@ -1,39 +1,33 @@
-/* plugins */
-@import url('../plugins/all.css');
+@import url('./snowdrop/miranda-sans.css');
 
-/* custom properties */
 :root {
-	/* theme-colors */
-	--surface: hsl(38 45 95);
-	--surface-secondary: hsl(38 35 85);
-	--surface-tertiary: hsl(68 45 80);
-	--foreground: hsl(349 4 16);
-	--foreground-secondary: hsl(349 22 28);
-	--foreground-tertiary: hsl(349 42 35);
-	--accent: hsl(349 52 44);
+	--background: hsl(140 5 96);
+	--background-secondary: hsl(140 5 90);
+	--foreground: hsl(100 100 5);
+	--foreground-secondary: hsl(100 25 25);
+	--accent: hsl(80 40 30);
 	/* Typora variables */
-	--bg-color: var(--surface);
+	--bg-color: var(--background);
 	--text-color: var(--foreground);
-	--active-file-bg-color: var(--foreground-tertiary);
-	--active-file-text-color: var(--surface-secondary);
-	--active-search-item-bg-color: var(--surface-secondary);
-	--side-bar-bg-color: var(--surface-tertiary);
+	--active-file-bg-color: var(--accent);
+	--active-file-text-color: var(--background);
+	--active-search-item-bg-color: var(--background);
+	--side-bar-bg-color: var(--background-secondary);
 	--item-hover-bg-color: var(--accent);
-	--item-hover-text-color: var(--surface);
+	--item-hover-text-color: var(--background);
 	--heading-char-color: var(--accent);
 	--md-char-color: var(--accent);
 	--meta-content-color: var(--accent);
 	--primary-color: var(--accent);
-	--primary-btn-border-color: var(--foreground-tertiary);
-	--primary-btn-text-color: hsla(0, 0%, 20%, 1);
+	--primary-btn-border-color: var(--foreground-secondary);
+	--primary-btn-text-color: hsl(0 0 20);
 	--window-border: 1px solid var(--foreground);
-	--active-file-border-color: hsl(
-		from var(--foreground-tertiary) h s l / 0.3
-	);
-	--search-select-text-color: var(--foreground-tertiary);
-	--search-select-bg-color: var(--surface-tertiary);
-	--select-text-bg-color: var(--foreground-tertiary);
+	--active-file-border-color: transparent;
+	--search-select-text-color: var(--foreground-secondary);
+	--search-select-bg-color: var(--background);
+	--select-text-bg-color: var(--foreground-secondary);
 	--mermaid-theme: forest;
+	--monospace: 'Iosevka Term';
 	--ratio: 1;
 	color-scheme: light;
 }
@@ -45,98 +39,93 @@
 }
 
 html {
-	font-family: system-ui;
 	font-variant-numeric: tabular-nums;
 	font-size: 1.1em;
 }
 
-/* spacing */
-
 #write {
 	margin-inline: auto;
 	margin-block-end: 10rem;
-	max-inline-size: 80ch;
-	padding-block: 3rem;
-	padding-inline: 1rem;
+	max-inline-size: 90ch;
+	padding: 3rem 1rem;
 	position: relative;
 	line-height: calc(1.1cap + 1em);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: calc(1.1cap + 0.25em);
+	margin-block-start: 1em;
+}
 
-	& :where(h1, h2, h3, h4, h5, h6) {
-		line-height: calc(1.1cap + 0.25em);
-		margin-block-start: 1em;
-		letter-spacing: -1px;
-	}
+h1 {
+	font-size: 2.4rem;
+	color: var(--foreground-secondary);
+	text-wrap: pretty;
+	letter-spacing: -2px;
+}
 
-	> :where(p, ul, ol) {
-		margin-block: 0.5em;
-	}
+h2,
+h3,
+h4 {
+	color: var(--foreground-secondary);
+	letter-spacing: -1px;
+}
 
-	& :where(li, li p) {
-		margin-block: 0;
+h2 {
+	font-size: 1.75rem;
+}
+
+h3 {
+	font-size: 1.33rem;
+	font-style: italic;
+	font-weight: normal;
+}
+
+h4 {
+	font-size: 1.1rem;
+}
+h5 {
+	font-size: 1rem;
+}
+h6 {
+	font-size: 0.8rem;
+}
+
+h1,
+h2,
+h3 {
+	[md-inline='underline'] {
+		display: block;
+		line-height: 1;
+		font-size: max(0.8rem, 0.6em);
 	}
+	u {
+		opacity: 0.75;
+		font-weight: 400;
+		text-decoration: none;
+		font-style: italic;
+		letter-spacing: -2px;
+	}
+}
+
+p,
+ul,
+ol {
+	margin-block: 0.5em;
+}
+
+li,
+li p {
+	margin-block: 0;
 }
 
 ::selection {
 	background: var(--accent);
-	color: var(--surface);
-}
-
-/* meta content & footnotes */
-
-pre.md-meta-block,
-sup.md-footnote {
-	background: var(--surface-secondary);
-	color: var(--accent);
-}
-
-/* bold */
-
-strong {
-	font-weight: 700;
-}
-
-/* strikethrough */
-
-del {
-	text-decoration: underline wavy 1px currentColor;
-	/* font-family: 'Caveat'; */
-	color: var(--foreground-secondary);
-}
-
-/* headers and subheaders */
-
-#write {
-	h1 {
-		text-wrap: balance;
-		font-size: 2.4rem;
-		letter-spacing: -2px;
-		color: var(--foreground-tertiary);
-	}
-
-	h2,
-	h3,
-	h4 {
-		color: var(--foreground-secondary);
-	}
-	h2 {
-		font-size: 1.75rem;
-	}
-
-	h3 {
-		font-size: 1.33rem;
-		font-style: italic;
-		font-weight: normal;
-	}
-
-	h4 {
-		font-size: 1.1rem;
-	}
-	h5 {
-		font-size: 1rem;
-	}
-	h6 {
-		font-size: 0.8rem;
-	}
+	color: var(--background);
 }
 
 /* blockquotes */
@@ -144,7 +133,7 @@ del {
 blockquote {
 	page-break-inside: avoid;
 	margin-inline-start: 1em;
-	border-inline-start: 2px solid var(--foreground-tertiary);
+	border-inline-start: 2px solid var(--foreground-secondary);
 	padding-inline-start: 1em;
 	font-style: italic;
 	color: var(--foreground-secondary);
@@ -167,66 +156,42 @@ blockquote {
 	}
 }
 
-/* Code */
+a {
+	color: var(--accent);
+	font-weight: 500;
+	text-decoration-color: color-mix(in hsl, var(--accent) 33%, transparent);
+	text-decoration-thickness: 2px;
+}
 
-#write code {
+mark {
+	padding: 0.25ch 0.5ch;
+	border-radius: 5px;
+	background-color: color-mix(in hsl, var(--accent) 20%, transparent);
+}
+
+code {
 	color: var(--accent);
 	padding-inline: 0.5ch;
 }
 
-/* hyperlinks */
-
-#write a {
-	color: var(--foreground-secondary);
-	font-weight: 500;
-	transition: all 150ms;
-	text-decoration: none;
-
-	&:hover {
-		color: var(--accent);
-		filter: contrast(120%) saturate(150%);
-	}
-
-	&::before,
-	&::after {
-		color: var(--text-color);
-		display: inline;
-		opacity: 0.5;
-	}
-
-	&::before {
-		content: '[';
-	}
-
-	&::after {
-		content: ']';
-	}
-}
-#write .md-link.md-expand a {
-	&::before,
-	&::after {
-		content: '';
-	}
-}
-
-/**** text hr ****/
-
-#write hr {
+hr {
 	block-size: 4rem;
 	inline-size: 100%;
 	border: none;
-	background-color: var(--accent);
-	mask-image: url('./hr-floral.svg');
-	mask-repeat: no-repeat;
-	mask-position: center;
-	mask-size: 4rem;
-	opacity: 0.4;
+	position: relative;
 	&::after {
-		content: none;
+		content: '***';
+		font-size: 2rem;
+		line-height: 0;
+		color: var(--accent);
+		display: block;
+		position: absolute;
+		inset: 0;
+		text-align: center;
+		place-self: center;
+		opacity: 0.4;
 	}
 }
-
-/* tables */
 
 th,
 td {
@@ -237,16 +202,14 @@ td {
 
 tbody tr:has(td:first-of-type span.md-plain) {
 	border-block-start: 1px solid
-		hsl(from var(--foreground-tertiary) h s l / 0.3);
+		color-mix(in hsl, var(--foreground-secondary) 30%, transparent);
 }
 
 table,
 thead,
 tr:last-of-type {
-	border-block-end: 1px solid var(--foreground-tertiary);
+	border-block-end: 1px solid var(--foreground-secondary);
 }
-
-/**** lists and checklists ****/
 
 #write ol,
 #write ul {
@@ -255,15 +218,8 @@ tr:last-of-type {
 }
 
 #write li::marker {
-	color: var(--foreground-tertiary);
-	transition: color 150ms;
-}
-
-#write :is(li:hover, li:has(.md-focus))::marker {
 	color: var(--accent);
 }
-
-/* unordered list bullets */
 
 #write ul {
 	list-style-type: disc;
@@ -274,7 +230,6 @@ tr:last-of-type {
 		}
 	}
 }
-/* ordered list numbering */
 
 #write ol {
 	list-style-type: decimal;
@@ -292,32 +247,11 @@ tr:last-of-type {
 	}
 }
 
-/* Monogram at end */
-
-html::after {
-	display: block;
-	position: absolute;
-	top: 2rem;
-	right: 2rem;
-	content: '';
-	block-size: 4rem;
-	inline-size: 4rem;
-	background-image:
-		url('./monogram.svg'), linear-gradient(var(--bg-color), var(--bg-color));
-	background-size: 3rem, 4rem;
-	background-position: center;
-	background-repeat: no-repeat;
-	border-radius: 100%;
-	pointer-events: none;
-}
-
-/* left border group indicator */
-
 #write li ul::before {
 	content: '';
 	display: inline-block;
 	width: 1px;
-	background: var(--foreground-tertiary);
+	background: var(--foreground-secondary);
 	position: absolute;
 	left: 0;
 	height: 100%;
@@ -331,7 +265,7 @@ html::after {
 	appearance: initial;
 	display: block;
 	position: absolute;
-	border: 1px solid var(--foreground-tertiary);
+	border: 1px solid var(--foreground-secondary);
 	border-radius: 5px;
 	margin-top: 0.2lh;
 	margin-left: -2lh;
@@ -367,14 +301,18 @@ html::after {
 	text-decoration: line-through;
 }
 
-/* table of contents */
-
 .md-toc-h4,
 .md-toc-h5,
 .md-toc-h6 {
 	display: none;
 }
 
+pre.md-meta-block,
+sup.md-footnote {
+	background: var(--background-secondary);
+	color: var(--accent);
+	padding: 0.5ch 1ch;
+}
 /** ported from https://codemirror.net/theme/material.css **/
 /*
 
@@ -514,4 +452,14 @@ html::after {
 .cm-s-inner .CodeMirror-matchingbracket {
 	text-decoration: underline;
 	color: white !important;
+}
+
+html::after {
+	content: url('./snowdrop/snowdrop.svg');
+	position: absolute;
+	width: 30px;
+	opacity: 1;
+	right: 20px;
+	bottom: 0px;
+	pointer-events: none;
 }

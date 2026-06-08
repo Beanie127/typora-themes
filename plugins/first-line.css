@@ -8,6 +8,6 @@ h1 + p {
 		line-height: 1;
 		margin-block-start: -0.5ex;
 		float: left;
-		color: var(--foreground-2, darkred);
+		color: var(--foreground-secondary, darkred);
 	}
 }

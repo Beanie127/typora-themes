@@ -1,0 +1,15 @@
+@font-face {
+	font-family: 'Miranda Sans';
+	src: url('./MirandaSans-VariableFont_wght.ttf');
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Miranda Sans';
+	src: url('./MirandaSans-Italic-VariableFont_wght.ttf');
+	font-style: italic;
+}
+
+html {
+	font-family: 'Miranda Sans', sans-serif;
+}

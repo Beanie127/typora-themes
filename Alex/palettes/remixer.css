@@ -1,0 +1,21 @@
+:root {
+	--light: hsl(134 32 96);
+	--dark: hsl(34 7 14);
+	--vibrant: hsl(336 58 56);
+
+	--foreground: var(--dark);
+	--surface: var(--light);
+	--accent: var(--vibrant);
+	--foreground-secondary: color-mix(
+		in hsl,
+		var(--foreground) 80%,
+		var(--surface)
+	);
+	--foreground-tertiary: color-mix(in hsl, var(--foreground), var(--vibrant));
+	--surface-secondary: color-mix(
+		in hsl,
+		var(--surface) 95%,
+		var(--foreground)
+	);
+	--surface-tertiary: color-mix(in hsl, var(--surface) 85%, var(--vibrant));
+}

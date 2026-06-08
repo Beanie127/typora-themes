@@ -10,17 +10,22 @@ As pseudoelements can mess with the display of subtitles,
 they are disabled for headers with a subtitle.
 *****/
 
-#write :is(h1, h2, h3) u {
-    display: block;
-    font-size: 60%;
-    opacity: 0.75;
-    font-weight: 400;
-    line-height: 1;
-    text-decoration: none;
-    font-style: italic;
+#write :is(h1, h2, h3) {
+	[md-inline='underline'] {
+		display: block;
+		line-height: 1;
+		font-size: max(0.8rem, 0.6em);
+	}
+	u {
+		opacity: 0.75;
+		font-weight: 400;
+		text-decoration: none;
+		font-style: italic;
+		letter-spacing: 0px;
+	}
 }
 
 #write :is(h1, h2, h3, h4, h5, h6):has(u)::before,
 #write :is(h1, h2, h3, h4, h5, h6):has(u)::after {
-    display: none;
+	display: none;
 }

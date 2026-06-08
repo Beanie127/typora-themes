@@ -1,0 +1,15 @@
+@font-face {
+	font-family: 'Crimson Pro';
+	src: url('./CrimsonPro-VariableFont_wght.ttf');
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Crimson Pro';
+	src: url('./CrimsonPro-Italic-VariableFont_wght.ttf');
+	font-style: italic;
+}
+
+html {
+	font-family: 'Crimson Pro', Garamond, Cambria, Georgia, serif;
+	font-size: 125%;
+}

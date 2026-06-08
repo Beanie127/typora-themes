@@ -1,10 +1,10 @@
 .md-comment {
-	--color: light-dark(darkred, pink);
 	display: block;
+	border: 2px solid var(--surface-secondary);
 	border-radius: 10px;
-	background: hsl(from var(--mg, darkred) h s l / 0.2);
+	background: color-mix(in hsl, transparent 95%, var(--surface-secondary));
 	padding: 1rem;
 	font-family: var(--monospace), 'Maple Mono', monospace;
 	font-weight: 400;
-	color: var(--color);
+	color: var(--foreground-secondary);
 }

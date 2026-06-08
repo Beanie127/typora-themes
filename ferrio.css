@@ -1,4 +1,6 @@
-@import url('./plugins/all.css');
+@import url('./emoji-bullets.css');
+@import url('./subtitles.css');
+@import url('./mermaid-font-fix.css');
 
 @font-face {
 	font-family: 'Funnel Display';
@@ -30,40 +32,38 @@
 :root {
 	color-scheme: light;
 	/* Brand colors */
-	--coal: hsl(200 25 15);
-	--iron: hsl(200 25 25);
-	--slate: hsl(200 80 35);
+	--ink-black: hsl(200 20 10);
+	--coal: hsl(200 20 15);
+	--iron: hsl(200 20 25);
+	--slate: hsl(200 20 35);
 	--ferrio-pink: hsl(346 82 61);
-	--steel: hsl(200 15 80);
+	--ferrio-blue: hsl(200 45 50);
+	--mist: hsl(200 15 70);
+	--silver: hsl(200 15 75);
+	--steel: hsl(200 15 85);
 	--platinum: hsl(200 15 90);
 	--smoke: hsl(200 15 95);
-	/*  */
-	--ink-black: hsla(199, 49%, 10%, 1);
-	--jet-black: hsla(198, 29%, 15%, 1);
-	--iron-grey: hsla(198, 13%, 31%, 1);
-	--air-force-blue: hsla(200, 30%, 53%, 1);
-	--silver: hsla(200, 7%, 74%, 1);
-	--alabaster-grey: hsla(197, 9%, 85%, 1);
 	/* Color applications */
-	--canvas-1: light-dark(var(--smoke), var(--ink-black));
-	--canvas-2: light-dark(var(--platinum), var(--jet-black));
-	--canvas-3: light-dark(var(--steel), var(--iron-grey));
-	--foreground-1: light-dark(var(--coal), var(--alabaster-grey));
-	--foreground-2: light-dark(var(--iron), var(--silver));
-	--foreground-3: light-dark(var(--slate), var(--air-force-blue));
-	--accent-color: var(--ferrio-pink);
+	--surface: light-dark(var(--smoke), var(--ink-black));
+	--surface-secondary: light-dark(var(--platinum), var(--coal));
+	--surface-tertiary: light-dark(var(--steel), var(--iron));
+	--foreground: light-dark(var(--coal), var(--steel));
+	--foreground-secondary: light-dark(var(--iron), var(--silver));
+	--foreground-tertiary: light-dark(var(--slate), var(--mist));
+	--accent: var(--ferrio-pink);
+	--accent-secondary: var(--ferrio-blue);
 	/* Typora props */
 	--ratio: 1;
-	--bg-color: var(--canvas-1);
-	--text-color: var(--foreground-1);
-	--quote-color: var(--canvas-2);
-	--side-bar-bg-color: var(--canvas-2);
-	--active-file-bg-color: var(--canvas-3);
-	--active-file-text-color: var(--foreground-1);
-	--active-search-item-bg-color: var(--accent-color);
-	--item-hover-bg-color: var(--canvas-2);
-	--item-hover-text-color: var(--foreground-1);
-	--select-text-bg-color: var(--canvas-3);
+	--bg-color: var(--surface);
+	--text-color: var(--foreground);
+	--quote-color: var(--surface-secondary);
+	--side-bar-bg-color: var(--surface-secondary);
+	--active-file-bg-color: var(--surface-tertiary);
+	--active-file-text-color: var(--foreground);
+	--active-search-item-bg-color: var(--accent);
+	--item-hover-bg-color: var(--surface-secondary);
+	--item-hover-text-color: var(--foreground);
+	--select-text-bg-color: var(--surface-tertiary);
 	--monospace: 'Maple Mono';
 }
 
@@ -104,7 +104,7 @@ html {
 	} */
 }
 
-content::after {
+/* content::after {
 	content: '';
 	background-image: url('./Ferrio/Texturelabs_Metal_278M.jpg');
 	filter: brightness(130%) contrast(50%);
@@ -116,7 +116,7 @@ content::after {
 	opacity: 0.15;
 	mix-blend-mode: luminosity;
 	pointer-events: none;
-}
+} */
 
 /* headers and subheaders */
 
@@ -133,12 +133,12 @@ content::after {
 		font-weight: 600;
 		text-wrap: pretty;
 		letter-spacing: -1px;
-		border-block-end: thin solid var(--canvas-3);
+		border-block-end: thin solid var(--accent);
 		& u {
 			display: block;
 			font-size: 60%;
 			letter-spacing: initial;
-			color: var(--foreground-3);
+			color: var(--foreground-tertiary);
 			font-weight: 400;
 			line-height: 1;
 			text-decoration: none;
@@ -146,17 +146,17 @@ content::after {
 		}
 		/* > :last-child::after {
 			content: '.';
-			color: var(--accent-color);
+			color: var(--accent);
 		} */
 	}
 
-	h2 {
+	/* h2 {
 		margin-block: 2rem 1rem;
 		font-size: 1.3em;
 		font-weight: 400;
 		text-transform: uppercase;
 		width: 100%;
-		color: var(--foreground-2);
+		color: var(--foreground-secondary);
 		&:not(:has(u)) {
 			display: flex;
 			flex-wrap: nowrap;
@@ -175,14 +175,17 @@ content::after {
 				height: 0;
 				width: 100%;
 				flex: 1 1 100%;
-				border-block-end: thin dashed var(--canvas-3);
+				border-block-end: thin dashed var(--surface-tertiary);
 			}
 		}
-	}
+	} */
 
 	h3 {
 		margin-block-start: 1.5em;
 		font-size: 1.15em;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: var(--foreground-secondary);
 	}
 
 	h4 {
@@ -200,7 +203,7 @@ content::after {
 		text-transform: uppercase;
 	}
 
-	caret-color: var(--accent-color);
+	caret-color: var(--accent);
 }
 
 /* mono */
@@ -210,7 +213,7 @@ pre {
 	font-family: 'Maple Mono', monospace;
 	font-variant: character-variant('cv02');
 	font-weight: 500;
-	color: var(--foreground-2);
+	color: var(--foreground-secondary);
 }
 
 /* blockquotes */
@@ -232,7 +235,7 @@ blockquote {
 		left: 1rem;
 		block-size: calc(100% - 1.5lh);
 		inline-size: 1px;
-		background: var(--canvas-3);
+		background: var(--surface-tertiary);
 	}
 
 	&::after {
@@ -243,7 +246,7 @@ blockquote {
 		font-size: 4rem;
 		line-height: 0.5;
 		font-weight: 900;
-		color: var(--accent-color);
+		color: var(--accent);
 	}
 
 	cite {
@@ -288,17 +291,17 @@ td {
 }
 
 tbody tr:has(td:first-of-type span.md-plain) {
-	border-block-start: 1px solid var(--canvas-3);
+	border-block-start: 1px solid var(--surface-tertiary);
 }
 
 table,
 thead,
 tr:last-of-type {
-	border-block-end: 1px solid var(--accent-color);
+	border-block-end: 1px solid var(--accent-secondary);
 }
 
 th {
-	color: var(--foreground-2);
+	color: var(--foreground-secondary);
 	font-weight: 900;
 }
 
@@ -311,7 +314,7 @@ th {
 }
 
 #write li::marker {
-	color: var(--accent-color);
+	color: var(--accent);
 }
 
 /* unordered list bullets */
@@ -349,7 +352,7 @@ th {
 	content: '';
 	display: inline-block;
 	width: 1px;
-	background: var(--foreground-3);
+	background: var(--foreground-tertiary);
 	position: absolute;
 	left: 0;
 	height: 100%;
@@ -363,10 +366,10 @@ th {
 	appearance: initial;
 	display: block;
 	position: absolute;
-	border: 1px solid var(--canvas-3);
+	border: 1px solid var(--surface-tertiary);
 	border-radius: 0.25rem;
 	margin-top: 0.4rem;
-	margin-left: -1.4rem;
+	margin-left: 0.4rem;
 	height: 1rem;
 	width: 1rem;
 	transition: all 0.3s;
@@ -380,7 +383,7 @@ th {
 	height: 60%;
 	width: 2px;
 	transform: rotate(40deg);
-	background: var(--accent-color);
+	background: var(--accent);
 }
 
 #write .md-task-list-item > input[checked]::after {
@@ -391,18 +394,18 @@ th {
 	height: 30%;
 	width: 2px;
 	transform: rotate(-40deg);
-	background: var(--accent-color);
+	background: var(--accent);
 }
 
 #write .md-task-list-item.task-list-done > p {
-	color: var(--foreground-3);
+	color: var(--foreground-tertiary);
 	text-decoration: line-through;
 }
 
 /* frontmatter */
 
 pre.md-meta-block {
-	background: var(--canvas-2);
+	background: var(--surface-secondary);
 }
 
 /* table of contents */
@@ -416,22 +419,25 @@ pre.md-meta-block {
 /* hyperlinks */
 
 #write a {
-	color: var(--foreground-3);
-	text-decoration-color: var(--accent-color);
+	color: var(--accent-secondary);
+	text-decoration-color: var(--accent);
 	font-weight: 500;
 	transition: all 0.4s;
 
 	&:hover {
-		color: var(--accent-color);
+		color: var(--accent);
 	}
 }
 
 /* highlighted text */
 
-mark {
-	color: var(--accent-color);
-	background: none;
+strong {
+	color: var(--accent);
 	font-weight: 900;
+}
+
+em {
+	color: var(--accent-secondary);
 }
 
 /* Mermaid */
@@ -512,11 +518,11 @@ mark {
 	color: #d46c6c;
 }
 
-.cm-s-inner .cm-variable-2 {
+.cm-s-inner .cm-variable-secondary {
 	color: #81c5da;
 }
 
-.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-variable-tertiary,
 .cm-s-inner .cm-type {
 	color: #f07178;
 }
@@ -545,7 +551,7 @@ mark {
 	color: #b2e4ae;
 }
 
-.cm-s-inner .cm-string-2 {
+.cm-s-inner .cm-string-secondary {
 	color: #f07178;
 }
 
@@ -577,7 +583,7 @@ mark {
 	color: #decb6b;
 }
 
-.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-variable-tertiary,
 .cm-s-inner .cm-type {
 	color: #decb6b;
 }
@@ -597,10 +603,10 @@ mark {
 .megamenu-opened,
 .megamenu-content,
 .megamenu-opened header {
-	background: var(--canvas-1);
+	background: var(--surface);
 	background-image: none;
 }
 
-#recent-file-panel tbody tr:nth-child(2n-1) {
+#recent-file-panel tbody tr:nth-child(2n) {
 	background-color: unset;
 }
