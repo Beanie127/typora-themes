@@ -1,5 +1,10 @@
 @import url('./snowdrop/miranda-sans.css');
 
+@font-face {
+	font-family: 'Sevka Fixed';
+	src: url('./snowdrop/SevkaFixed-Regular.ttf');
+}
+
 :root {
 	--background: hsl(140 5 96);
 	--background-secondary: hsl(140 5 90);
@@ -27,7 +32,7 @@
 	--search-select-bg-color: var(--background);
 	--select-text-bg-color: var(--foreground-secondary);
 	--mermaid-theme: forest;
-	--monospace: 'Iosevka Term';
+	--monospace: 'Sevka Fixed';
 	--ratio: 1;
 	color-scheme: light;
 }
@@ -457,7 +462,7 @@ sup.md-footnote {
 html::after {
 	content: url('./snowdrop/snowdrop.svg');
 	position: absolute;
-	width: 30px;
+	width: max(30px, 2vw);
 	opacity: 1;
 	right: 20px;
 	bottom: 0px;
